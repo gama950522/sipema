@@ -20,13 +20,23 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-            //$this->load->view('layout/header');
+            $this->load->view('layout/header');
             $this->load->view('welcome_message');
-            //$this->load->view('layout/footer');
+            $this->load->view('layout/footer');
 	}
 
 	public function login()
 	{
-		$this->load->view('sipema/login');
+            $this->load->view('layout/header');
+            $this->load->view('sipema/login');
+            $this->load->view('layout/footer');
+
 	}
+        
+        public function mir() 
+        {
+             $this->load->view('layout/header');
+             $this->load->view('sipema/mir');
+            $this->load->view('layout/footer');
+        }
 }
