@@ -7,7 +7,9 @@ and open the template in the editor.
     Created on : 17/01/2017, 03:08:10 PM
     Author     : PED
 */
-
+body{
+    background: #fff;
+}
 .masthead>.row>.col-md-4>img {
     height: 150px;
     display: block;

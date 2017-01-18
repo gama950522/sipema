@@ -23,18 +23,17 @@
         <div class="col-md-2">
             <a href="#" class="btn btn-primary btn-lg btn-block" id="enlace">Siguiente</a>
         </div>
-        <div id="message"></div>
     </div>
 </section>
 
 
 <script>
-$(document).ready(function() {
-    $("select").on("change", function() {
-        var cat = document.getElementById('sel-cat').value;
-        document.getElementById("enlace").href = "<?php echo site_url('index.php/welcome/sipema/'); ?>"+cat;
-        
-    });
+    $(document).ready(function () {
+        $("select").on("change", function () {
+            var cat = document.getElementById('sel-cat').value;
+            document.getElementById("enlace").href = "<?php echo site_url('index.php/welcome/sipema/'); ?>" + cat;
 
-});
+        });
+
+    });
 </script>

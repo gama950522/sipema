@@ -1,12 +1,8 @@
-    <div class="row" style="margin-top:20px">
-        <div class="col-md-4">
-            <button class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target=".bs-example-modal-sm">Algo</button>
-        </div>
-        <div class="col-md-4">
-            <button class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target=".bs-example-modal-sm">Algo</button>
-        </div>
-        <div class="col-md-4">
-            <button class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target=".bs-example-modal-sm">PROGRAMAS OPERATIVOS ANUALES POA's</button>
-        </div>
+<div class="row" style="margin-top:20px">
+    <div class="list-group">
+        <a href="#" class="list-group-item active">
+            <h4 class="list-group-item-heading">List group item heading</h4>
+            <p class="list-group-item-text">...</p>
+        </a>
     </div>
-   
+</div>
