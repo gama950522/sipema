@@ -16,6 +16,7 @@
 
         <!-- Custom styles for this template -->
         <link href="<?php echo site_url('assets/dist/css/justified-nav.css') ?>" rel="stylesheet">
+        <link href="<?php echo site_url('assets/dist/css/carousel.css') ?>" rel="stylesheet">
         <link href="<?php echo site_url('assets/dist/css/signin.css') ?>" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -29,8 +30,6 @@
 
         <div class="container">
 
-            <!-- The justified navigation menu is meant for single line per list item.
-                 Multiple lines will require custom code not provided by Bootstrap. -->
             <div class="masthead">
                 <div class="row">
                     <div class="col-md-4"><img src="<?php echo site_url('public/images/hidalgocrececontigo.png') ?>" class="img-responsive"></div>
@@ -49,5 +48,5 @@
                 </nav>
             </div>
 
-        
+
 
