@@ -7,10 +7,10 @@ $attr_psw_password = array('class' => 'form-control', 'id' => 'psw_password', 'p
 <section class="col-md-12" style="margin-top: 20px">
     <div class="row">
         <div class="col-md-4">
-            <div class="page-header">
+            <div class="page-header bg-success">
                 <h2 class="text-center">Cambio climatico</h2>
             </div>
-            <img src="<?php echo site_url('public/images/climatico.jpg'); ?>" class="img-responsive">
+            <!-- <img src="<?php echo site_url('public/images/climatico.jpg'); ?>" class="img-responsive"> -->
         </div>
         <div class="col-md-8">
             <div class="row">
@@ -41,6 +41,7 @@ $attr_psw_password = array('class' => 'form-control', 'id' => 'psw_password', 'p
     </div>
 
 </section>
+<div class="" style="display: block;">a</div>
 
 
 <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
