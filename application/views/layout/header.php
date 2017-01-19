@@ -11,13 +11,15 @@
         <title></title>
 
         <!-- Bootstrap core CSS -->
-        <link href="<?php echo site_url('assets/dist/css/bootstrap.min.css') ?>" rel="stylesheet">
-        <link href="<?php echo site_url('assets/build/css/custom.css') ?>" rel="stylesheet">
+        <link href="<?php echo site_url('assets/dist/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet" id="bootstrap-css">
+        <link href="<?php echo site_url('assets/dist/bootstrap/css/justified-nav.css') ?>" rel="stylesheet">
+        <link href="<?php echo site_url('assets/dist/bootstrap/css/carousel.css') ?>" rel="stylesheet">
+        <link href="<?php echo site_url('assets/dist/bootstrap/css/signin.css') ?>" rel="stylesheet">
+        <link href="<?php echo site_url('assets/dist/datepicker/css/bootstrap-datepicker3.min.css') ?>" rel="stylesheet">
+
 
         <!-- Custom styles for this template -->
-        <link href="<?php echo site_url('assets/dist/css/justified-nav.css') ?>" rel="stylesheet">
-        <link href="<?php echo site_url('assets/dist/css/carousel.css') ?>" rel="stylesheet">
-        <link href="<?php echo site_url('assets/dist/css/signin.css') ?>" rel="stylesheet">
+        <link href="<?php echo site_url('assets/build/css/custom.css') ?>" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

@@ -95,4 +95,12 @@ class Welcome extends CI_Controller {
         # code...
     }
 
+    public function wizard()
+    {
+    	$this->load->view('layout/header');
+        $this->load->view('sipema/steps');
+        $this->load->view('layout/footer');
+    }
+
+
 }

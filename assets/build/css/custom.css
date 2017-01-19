@@ -1,15 +1,8 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 17/01/2017, 03:08:10 PM
-    Author     : PED
-*/
+
 body{
     background: #fff;
 }
+
 .masthead>.row>.col-md-4>img {
     height: 150px;
     display: block;
@@ -17,12 +10,64 @@ body{
     margin-right: auto;
 }
 
-.masthead>.row{
-    padding: 10px 0;
+.form-control {border-radius: 0}
+
+
+.table > thead > tr > th {
+    vertical-align: middle;
+    text-align: center;
+}
+.table > tbody > tr > td {
+    vertical-align: middle;
+    text-align: center;
 }
 
-.jumbotron{
-    padding: 0 auto !important;
-    margin: 0;
+.thead-default th {
+    color: #464a4c;
+    background-color: #eceeef;
+}
+/*wizard*/
+
+.stepwizard-step p {
+    margin-top: 10px;
+}
+.stepwizard-row {
+    display: table-row;
+}
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
 }
 
+.stepwizard-step p {
+    text-transform: uppercase;
+}
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+}
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}

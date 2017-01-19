@@ -17,23 +17,23 @@ $attr_psw_password = array('class' => 'form-control', 'id' => 'psw_password', 'p
                 <div class="list-group">
                     <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
                         <h4 class="list-group-item-heading">Fondo ambiental y cambio climático</h4>
-                        <p class="list-group-item-text">...</p>
+                        <p class="list-group-item-text">Descripción</p>
                     </a>
                     <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
                         <h4 class="list-group-item-heading">Programa estatal de accion ante el cambio climatico</h4>
-                        <p class="list-group-item-text">...</p>
+                        <p class="list-group-item-text">Descripción</p>
                     </a>
                     <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
                         <h4 class="list-group-item-heading">Agenda esatatal e internacional para la gestión ambiental implemantada</h4>
-                        <p class="list-group-item-text">...</p>
+                        <p class="list-group-item-text">Descripción</p>
                     </a>
                     <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
                         <h4 class="list-group-item-heading">Mitigacion ante el cambio climatico</h4>
-                        <p class="list-group-item-text">...</p>
+                        <p class="list-group-item-text">Descripción</p>
                     </a>
                     <a href="#" class="list-group-item active" data-toggle="modal" data-target=".bs-example-modal-sm">
                         <h4 class="list-group-item-heading">Programas municipales de acciona nte el cambio climatico</h4>
-                        <p class="list-group-item-text">...</p>
+                        <p class="list-group-item-text">Descripción</p>
                     </a>
                 </div>
             </div>

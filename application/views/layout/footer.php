@@ -4,6 +4,15 @@
             </footer>
 
         </div> <!-- /container -->
-	<script src="<?php echo site_url('assets/dist/js/bootstrap.min.js') ?>"></script>
+	<script src="<?php echo site_url('assets/dist/bootstrap/js/bootstrap.min.js') ?>"></script>
+	<script src="<?php echo site_url('assets/dist/datepicker/js/bootstrap-datepicker.min.js') ?>"></script>
+	<script src="<?php echo site_url('assets/dist/datepicker/locales/bootstrap-datepicker.es.min.js') ?>"></script>
+	<script>
+    $("#datepicker input").datepicker({
+                    format: 'mm-dd-yyyy',
+                    language: "es"
+    });
+
+</script>
     </body>
 </html>
