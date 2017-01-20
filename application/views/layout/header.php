@@ -16,6 +16,7 @@
         <link href="<?php echo site_url('assets/dist/bootstrap/css/carousel.css') ?>" rel="stylesheet">
         <link href="<?php echo site_url('assets/dist/bootstrap/css/signin.css') ?>" rel="stylesheet">
         <link href="<?php echo site_url('assets/dist/datepicker/css/bootstrap-datepicker3.min.css') ?>" rel="stylesheet">
+        <link href="<?php echo site_url('assets/dist/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet">
 
 
         <!-- Custom styles for this template -->
@@ -30,7 +31,9 @@
     </head>
 
     <body>
-
+<div id="header">
+                <center> <img src="./imagenes/secretaria.png"></center>
+           </div>
         <div class="container">
 
             <div class="masthead">
@@ -50,6 +53,6 @@
                     </ul>
                 </nav>
             </div>
-
+        
 
 

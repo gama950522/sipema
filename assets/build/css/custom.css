@@ -9,10 +9,24 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+textarea {
+    resize: none;
+    scrollbar-face-color: #5a5e66;
+scrollbar-highlight-color: #666666;
+scrollbar-shadow-color: #666666;
+scrollbar-3dlight-color: #ffffc0;
+scrollbar-arrow-color: #ffffc0;
+scrollbar-track-color: #5a5e66;
+scrollbar-darkshadow-color: #666666;
+
+}
+
 
 .form-control {border-radius: 0}
 
-
+.btn{
+    border-radius: 0;
+}
 .table > thead > tr > th {
     vertical-align: middle;
     text-align: center;
