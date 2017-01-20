@@ -9,9 +9,15 @@
             <label for="inp_username" class="control-label">Nombre de usuario</label>
             <input type="text" name="inp_username" class="form-control">
 
+            
+        </div>
+        <div class="form-group">
             <label for="psw_password" class="control-label">Contraseña</label>
             <input type="password" name="psw_password" class="form-control">
 
+        </div>
+        <div class="form-group">
+            
             <button type="submit" id="btn-entrar" class="btn btn-primary pull-right" ><i class="fa fa-user" aria-hidden="true"></i> Entrar</button>
         </div>
 

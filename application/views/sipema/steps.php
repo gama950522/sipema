@@ -7,8 +7,8 @@
                     A continuación completa los datos del formulario
                 </h1>
             </div>
-            <div class="panel-body">
-                <div class="stepwizard col-md-12">
+            <div class="panel-body ">
+                <div class="stepwizard">
                     <div class="stepwizard-row setup-panel">
                         <div class="stepwizard-step">
                             <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
@@ -36,6 +36,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <form role="form" action="" method="post">
                     <div class="row setup-content" id="step-1">
                         <diw class="col-md-12">
@@ -200,7 +201,7 @@
                                                 <td>6</td>
                                                 <td>8</td>
                                                 <td>59</td>
-                                                <td>1</td>
+                                                <td><input type="button" value="0" class="btn btn-default btn-sm"></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -332,7 +333,7 @@
     </div>
 </div>
 <script type="text/javascript">
-    /* validation */
+    /* validation 
     $("#login-form").validate({
         rules:
                 {
@@ -352,9 +353,28 @@
                     user_email: "please enter your email address"
                 },
         submitHandler: submitForm
+    });*/
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".nextBtn").on("click", function (evt) {
+            //alert('message?: DOMString');
+
+        });
+
+
+        $("tr input").on("click", function (evt) {
+            var num = prompt('Introduzca cantidad:','1');
+            while (parseFloat(num) != num) {
+                num = prompt('Introduzca cantidad','1');
+            }
+            $(this).val(num);
+        });
     });
 </script>
 <script type="text/javascript">
+
     $(document).ready(function () {
         var navListItems = $('div.setup-panel div a'),
                 allWells = $('.setup-content'),
@@ -371,14 +391,14 @@
                 $item.addClass('btn-primary');
                 allWells.hide();
                 $target.show();
-                $target.find('input:eq(0)').focus();
+                $target.find('textarea:eq(0)').focus();
             }
         });
         allNextBtn.click(function () {
             var curStep = $(this).closest(".setup-content"),
                     curStepBtn = curStep.attr("id"),
                     nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-                    curInputs = curStep.find("input[type='text'],input[type='url'],textarea[textarea]"),
+                    curInputs = curStep.find("input[type='text'],input[type='url']"),
                     isValid = true;
             $(".form-group").removeClass("has-error");
             for (var i = 0; i < curInputs.length; i++) {
