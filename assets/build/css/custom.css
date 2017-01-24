@@ -11,7 +11,11 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
-
+@media (min-width: 768px)
+.nav-justified>li {
+    display: table-cell;
+    width: 10%;
+}
 textarea{
     resize: none;
 }

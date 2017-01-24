@@ -27,11 +27,25 @@ class Welcome extends CI_Controller
         $this->load->view('layout/footer');
     }
 
+    public function destruir()
+    {
+        $item_session = array('id','user');
+        $this->session->set_userdata('logged_in',FALSE);
+        $this->session->unset_userdata($item_session);
+    }
+
     public function login()
     {
-        $this->load->view('layout/header');
-        $this->load->view('sipema/login');
-        $this->load->view('layout/footer');
+        if ($this->session->userdata('logged_in') === TRUE) 
+        {
+            redirect(site_url('welcome/mir/'));
+        }
+        else 
+        {
+            $this->load->view('layout/header');
+            $this->load->view('sipema/login');
+            $this->load->view('layout/footer');
+        }
     }
 
     public function mir()

@@ -5,18 +5,18 @@
             <img src="<?php echo site_url('public/images/default.jpg') ?>" alt=""/>
         </div>
         <?php echo form_open('authentication/inicio_sesion/'); ?>
+        <div id="error"></div>
             <div class="form-group">
                 <label for="inp_username" class="control-label">Nombre de usuario</label>
-                <input type="text" class="form-control" />
-
+                <input type="text" class="form-control" name="inp_username" />
             </div>
             <div class="form-group">
                 <label for="psw_password" class="control-label">Contraseña</label>
-
-                <input type="password" class="form-control" />
+                <input type="password" class="form-control" name="psw_password" />
             </div>
             <div class="form-group">
                 <button type="submit" id="btn-entrar" class="btn btn-primary" ><i class="fa fa-user" aria-hidden="true"></i> Entrar</button>
+                <a href="<?php echo site_url('welcome/destruir/'); ?>">dESTRUIR SESION</a>
             </div>	
 
         <?php echo form_close(); ?>
@@ -43,12 +43,12 @@
                 success: function (e) {
                     if (e.action == true) {
                         $("#btn-entrar").html('<i class="fa fa-spinner fa-pulse fa-fw"></i> Entrando...');
-                        //setTimeout(' window.location.href = "home.php"; ', 4000);
-                        console.log(e);
+                        setTimeout(window.location.href = e.href , 4000);
+                        //console.log(e);
                     } else {
-                        //
+                        
                         $("#error").fadeIn(1000, function () {
-                            $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; Loser !</div>');
+                            $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; Usuario o contraseña mal escritos!</div>');
                             $("#btn-entrar").html('<i class="fa fa-user" aria-hidden="true"></i> Entrar');
                             $("#btn-entrar").attr("disabled", false);
                         });

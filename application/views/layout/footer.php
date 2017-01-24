@@ -27,7 +27,7 @@
 
         function run_waitMe(effect) {
             $('body').waitMe({
-                effect: 'roundBounce',
+                effect: effect,
                 text: 'Espere un momento por favor',
                 bg: 'rgba(0,0,0,0.7)',
                 color: '#fff',
