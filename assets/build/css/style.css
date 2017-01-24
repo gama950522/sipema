@@ -24,6 +24,10 @@ a{text-decoration:none;}
 nav.vertical ul li{	display:block;}/* vertical menu */
 nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
+.head img{
+    height: 120px;
+    width: 120px;
+}
 /*end reset*/
 /****-----start-body----****/
 .login-form {
@@ -36,8 +40,6 @@ img{max-width:100%;}
     -moz-border-radius: 0.4em;
     
 }
-
-
 
 .head {
     position: absolute;
@@ -104,7 +106,6 @@ form p a:hover {
     color:#fff;
 }
 /*-----start-responsive-design------*/
-
 @media (max-width:1440px){
     .login-form {
         width:30%;
@@ -134,16 +135,11 @@ form p a:hover {
         bottom:-18%;
     }
 }
-
 @media (max-width:1024px){
-    
-    
     .login-form  {
         margin:12% auto 0;
-        width:55%;
-    }
-    .modal-body > div.main > div.login-form {
-        background: #fff;
+        width:45%;
+        
     }
     .copy-right {
         left: 41%;

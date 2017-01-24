@@ -1,30 +1,28 @@
-
-<!-- Navigation bar ends -->
-<section class="container ">
-
-    <form class="form-signin" method="POST" action="<?php echo site_url('index.php/authentication/inicio_sesion/') ?>" accept-charset="utf-8">
-        <h2 class="page-header">Inroduce tus datos</h2>
-        <div id="error"></div>
-        <div class="form-group">
-            <label for="inp_username" class="control-label">Nombre de usuario</label>
-            <input type="text" name="inp_username" class="form-control">
-
-            
+<div class="main">
+    <div class="login-form">
+        <h1>Ingresa tus datos</h1>
+        <div class="head">
+            <img src="<?php echo site_url('public/images/default.jpg') ?>" alt=""/>
         </div>
-        <div class="form-group">
-            <label for="psw_password" class="control-label">Contraseña</label>
-            <input type="password" name="psw_password" class="form-control">
+        <?php echo form_open('authentication/inicio_sesion/'); ?>
+            <div class="form-group">
+                <label for="inp_username" class="control-label">Nombre de usuario</label>
+                <input type="text" class="form-control" />
 
-        </div>
-        <div class="form-group">
-            
-            <button type="submit" id="btn-entrar" class="btn btn-primary pull-right" ><i class="fa fa-user" aria-hidden="true"></i> Entrar</button>
-        </div>
+            </div>
+            <div class="form-group">
+                <label for="psw_password" class="control-label">Contraseña</label>
 
-    </form>
+                <input type="password" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" id="btn-entrar" class="btn btn-primary" ><i class="fa fa-user" aria-hidden="true"></i> Entrar</button>
+            </div>	
 
-    <a href="<?php echo site_url('index.php/welcome/mir'); ?>">OK</a>
-</section>
+        <?php echo form_close(); ?>
+        <a href="<?php echo site_url('welcome/mir'); ?>">OK</a>
+    </div>
+</div>
 
 
 <script type="text/javascript">
@@ -66,6 +64,6 @@
     });
 
     function validator(argument) {
-        
+
     }
 </script>

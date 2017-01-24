@@ -21,6 +21,7 @@
 
         <!-- Custom styles for this template -->
         <link href="<?php echo site_url('assets/build/css/custom.css') ?>" rel="stylesheet">
+        <link href="<?php echo site_url('assets/build/css/style.css') ?>" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -31,16 +32,15 @@
     </head>
 
     <body>
-<div id="header">
-                <center> <img src="./imagenes/secretaria.png"></center>
-           </div>
+
         <div class="container">
 
             <div class="masthead">
                 <div class="row">
-                    <div class="col-md-4"><img src="<?php echo site_url('public/images/hidalgocrececontigo.png') ?>" class="img-responsive"></div>
+<!--                    <div class="col-md-4"><img src="<?php echo site_url('public/images/hidalgocrececontigo.png') ?>" class="img-responsive"></div>
                     <div class="col-md-4"><img src="<?php echo site_url('public/images/hidalgo_logo.png') ?>" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="<?php echo site_url() ?>" class="img-responsive"></div>
+                    <div class="col-md-4"><img src="<?php echo site_url() ?>" class="img-responsive"></div>-->
+                    <img src="<?php echo site_url('public/images/secretaria.png'); ?>" class="center-block">
                 </div>
                 <nav>
                     <ul class="nav nav-justified">
@@ -49,7 +49,7 @@
                         <li><a href="<?php echo site_url() ?>">Contrarecibos</a></li>
                         <li><a href="<?php echo site_url() ?>">Inventarios</a></li>
                         <li><a href="<?php echo site_url() ?>">Correspondencia</a></li>
-                        <li><a href="<?php echo site_url('index.php/welcome/login') ?>">SIMEPA</a></li>
+                        <li><a href="<?php echo site_url('welcome/login') ?>">SIMEPA</a></li>
                     </ul>
                 </nav>
             </div>

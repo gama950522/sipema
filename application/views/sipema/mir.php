@@ -31,7 +31,7 @@
     $(document).ready(function () {
         $("select").on("change", function () {
             var cat = document.getElementById('sel-cat').value;
-            document.getElementById("enlace").href = "<?php echo site_url('index.php/welcome/sipema/'); ?>" + cat;
+            document.getElementById("enlace").href = "<?php echo site_url('welcome/sipema/'); ?>" + cat;
 
         });
 

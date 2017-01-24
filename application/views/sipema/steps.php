@@ -1,4 +1,3 @@
-
 <div class="row">
     <div class="col-md-12" style="margin-top: 20px">
         <div class="panel panel-default">
@@ -36,7 +35,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <form role="form" action="" method="post">
                     <div class="row setup-content" id="step-1">
                         <diw class="col-md-12">
@@ -334,30 +333,30 @@
 </div>
 <script type="text/javascript">
     /* validation 
-    $("#login-form").validate({
-        rules:
-                {
-                    password: {
-                        required: true,
-                    },
-                    user_email: {
-                        required: true,
-                        email: true
-                    }
-                },
-        messages:
-                {
-                    password: {
-                        required: "please enter your password"
-                    },
-                    user_email: "please enter your email address"
-                },
-        submitHandler: submitForm
-    });*/
+     $("#login-form").validate({
+     rules:
+     {
+     password: {
+     required: true,
+     },
+     user_email: {
+     required: true,
+     email: true
+     }
+     },
+     messages:
+     {
+     password: {
+     required: "please enter your password"
+     },
+     user_email: "please enter your email address"
+     },
+     submitHandler: submitForm
+     });*/
 </script>
 
 <script type="text/javascript">
-    $(document).ready(function(){
+    $(document).ready(function () {
         $(".nextBtn").on("click", function (evt) {
             //alert('message?: DOMString');
 
@@ -365,9 +364,9 @@
 
 
         $("tr input").on("click", function (evt) {
-            var num = prompt('Introduzca cantidad:','1');
+            var num = prompt('Introduzca cantidad:', '1');
             while (parseFloat(num) != num) {
-                num = prompt('Introduzca cantidad','1');
+                num = prompt('Introduzca cantidad', '1');
             }
             $(this).val(num);
         });
@@ -386,7 +385,7 @@
             e.preventDefault();
             var $target = $($(this).attr('href')),
                     $item = $(this);
-            if (!$item.hasClass('disabled')) {
+            if ( ! $item.hasClass('disabled')) {
                 navListItems.removeClass('btn-primary').addClass('btn-default');
                 $item.addClass('btn-primary');
                 allWells.hide();
@@ -407,7 +406,6 @@
                     $(curInputs[i]).closest(".form-group").addClass("has-error");
                 }
             }
-
             if (isValid)
                 nextStepWizard.removeAttr('disabled').trigger('click');
         });
