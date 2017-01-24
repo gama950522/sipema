@@ -5,7 +5,7 @@
         <h1 class="text-center">Sistema de planeación y evaluacion  para el medio ambiente</h1>
     </div>
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-10 col-xs-10">
             <select class="form-control input-lg" id="sel-cat">
                 <option>Selecciona una categoría</option>
                 <option value="1">1. Manejo industrial de residuos sólidos</option>
@@ -20,7 +20,7 @@
                 <option value="10">10. Gestión de la calidad del aire</option>
             </select>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 col-xs-2">
             <a href="#" class="btn btn-primary btn-lg btn-block" id="enlace">Siguiente</a>
         </div>
     </div>

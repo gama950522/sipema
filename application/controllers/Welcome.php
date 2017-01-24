@@ -2,7 +2,8 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends CI_Controller
+{
 
     /**
      * Index Page for this controller.
@@ -19,60 +20,43 @@ class Welcome extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
-    public function index() {
+    public function index()
+    {
         $this->load->view('layout/header');
         $this->load->view('welcome_message');
         $this->load->view('layout/footer');
     }
 
-    public function login() {
+    public function login()
+    {
         $this->load->view('layout/header');
         $this->load->view('sipema/login');
         $this->load->view('layout/footer');
     }
 
-    public function mir() {
+    public function mir()
+    {
         $this->load->view('layout/header');
         $this->load->view('sipema/mir');
         $this->load->view('layout/footer');
     }
 
-    public function sipema($value = '') {
-        if ($value === '') {
+    public function sipema($value = '')
+    {
+        if ($value === '')
+        {
             redirect(site_url('index.php/welcome/mir/'));
-        } else {
+        }
+        else
+        {
             $view = '';
-            switch ($value) {
-                case '1':
-                    $view = 'sipema/subprogramas';
-                    break;
-                case '2':
-                    $view = 'sipema/subprogramas';
-                    break;
-                case '3':
-                    $view = 'sipema/subprogramas';
-                    break;
-                case '4':
-                    $view = 'sipema/subprogramas';
-                    break;
-                case '5':
-                    $view = 'sipema/subprogramas';
-                    break;
-                case '6':
-                    $view = 'sipema/subprogramas';
-                    break;
-                case '7':
-                    $view = 'sipema/subprogramas';
-                    break;
+            switch ($value)
+            {
+
                 case '8':
                     $view = 'sipema/subprogramas';
                     break;
-                case '9':
-                    $view = 'sipema/subprogramas';
-                    break;
-                case '10':
-                    $view = 'sipema/subprogramas';
-                    break;
+
                 default:
                     redirect(site_url('index.php/welcome/mir/'));
                     break;
@@ -84,23 +68,22 @@ class Welcome extends CI_Controller {
         //
     }
 
-    public function division($sub = '', $div = '') 
+    public function division($sub = '', $div = '')
     {
-    	if ( ! ($sub === '' && $div === '')) 
-    	{
-    		$this->load->view('layout/header');
+        if ( ! ($sub === '' && $div === ''))
+        {
+            $this->load->view('layout/header');
             $this->load->view('sipema/division_programas');
             $this->load->view('layout/footer');
-    	}
+        }
         # code...
     }
 
     public function wizard()
     {
-    	$this->load->view('layout/header');
+        $this->load->view('layout/header');
         $this->load->view('sipema/steps');
         $this->load->view('layout/footer');
     }
-
 
 }

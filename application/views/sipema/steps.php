@@ -326,6 +326,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row setup-content" id="step-6">
+                        <button type="submit" class="btn btn-success" id="btn-send-form">Enviar formulario</button>
+                    </div>
                 </form>
             </div>
         </div> 
@@ -397,7 +400,7 @@
             var curStep = $(this).closest(".setup-content"),
                     curStepBtn = curStep.attr("id"),
                     nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-                    curInputs = curStep.find("input[type='text'],input[type='url']"),
+                    curInputs = curStep.find("input[type='url']"),
                     isValid = true;
             $(".form-group").removeClass("has-error");
             for (var i = 0; i < curInputs.length; i++) {

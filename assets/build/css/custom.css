@@ -12,6 +12,9 @@ body{
     margin-right: auto;
 }
 
+textarea{
+    resize: none;
+}
 .form-control {border-radius: 0}
 
 .btn{
@@ -24,6 +27,13 @@ body{
 .table > tbody > tr > td {
     vertical-align: middle;
     text-align: center;
+}
+.table-normal{
+    width: 100%;
+}
+.table-normal > tbody > tr > td {
+    vertical-align: middle;
+    text-align: left;
 }
 
 .thead-default th {

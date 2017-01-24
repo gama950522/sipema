@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +15,7 @@
         <link href="<?php echo site_url('assets/dist/bootstrap/css/justified-nav.css') ?>" rel="stylesheet">
         <link href="<?php echo site_url('assets/dist/bootstrap/css/carousel.css') ?>" rel="stylesheet">
         <link href="<?php echo site_url('assets/dist/bootstrap/css/signin.css') ?>" rel="stylesheet">
+        <link href="<?php echo site_url('assets/dist/waitme/waitMe.min.css') ?>" rel="stylesheet">
         <link href="<?php echo site_url('assets/dist/datepicker/css/bootstrap-datepicker3.min.css') ?>" rel="stylesheet">
         <link href="<?php echo site_url('assets/dist/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet">
 
@@ -22,7 +23,7 @@
         <!-- Custom styles for this template -->
         <link href="<?php echo site_url('assets/build/css/custom.css') ?>" rel="stylesheet">
         <link href="<?php echo site_url('assets/build/css/style.css') ?>" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
