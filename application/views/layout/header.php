@@ -31,14 +31,10 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-
     <body>
-
         <div class="container">
-
             <div class="masthead">
                 <div class="row">
-
                     <img src="<?php echo site_url('public/images/secretaria.png'); ?>" class="center-block">
                 </div>
                 <nav>
