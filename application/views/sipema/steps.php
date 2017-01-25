@@ -314,7 +314,7 @@
                                             <th>Programado</th>
                                             <th>Realizado</th>
                                             <th>Semaforo</th>
-                                        </tr>                                    
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         <tr></tr>
@@ -373,6 +373,18 @@
         });
     });
 </script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.form-group .form-control').on('blur', function () {
+            if (trim($(this).val()) == "") {
+                $(this).closest(".form-group").addClass("has-error");
+            } else {
+                $(this).closest(".form-group").removeClass("has-error");
+            }
+        });
+    });
+</script>
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -413,6 +425,8 @@
         $('div.setup-panel div a.btn-primary').trigger('click');
     });
 </script>
+
+
 
 
 
