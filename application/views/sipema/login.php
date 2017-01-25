@@ -43,15 +43,22 @@
                 success: function (e) {
                     if (e.action == true) {
                         $("#btn-entrar").html('<i class="fa fa-spinner fa-pulse fa-fw"></i> Entrando...');
-                        setTimeout(window.location.href = e.href , 4000);
+                        setTimeout(function() {
+                            window.location.href = e.href
+                        }, 1000);
                         //console.log(e);
                     } else {
                         
-                        $("#error").fadeIn(1000, function () {
-                            $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; Usuario o contraseña mal escritos!</div>');
+                        $("#error").fadeIn(100,function () {
                             $("#btn-entrar").html('<i class="fa fa-user" aria-hidden="true"></i> Entrar');
                             $("#btn-entrar").attr("disabled", false);
+                            $("#error").html('<div class="alert alert-danger alert-dismissible" role="alert">'+
+                                             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'+
+                                             '<span aria-hidden="true">&times;</span></button> '+
+                                             '<span class="glyphicon glyphicon-info-sign"></span> '+
+                                             '&nbsp; Usuario o contraseña mal escritos!</div>');
                         });
+                 
                     }
                 },
                 error: function () {

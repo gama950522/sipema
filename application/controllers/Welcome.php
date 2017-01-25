@@ -32,6 +32,7 @@ class Welcome extends CI_Controller
         $item_session = array('id','user');
         $this->session->set_userdata('logged_in',FALSE);
         $this->session->unset_userdata($item_session);
+        redirect(site_url('welcome/login/'));
     }
 
     public function login()
