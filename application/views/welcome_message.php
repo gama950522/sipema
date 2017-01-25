@@ -1,5 +1,7 @@
 
-<div class="col-md-4"></div>
+<div class="col-md-4">
+    
+</div>
 <div class="col-md-8" style="margin-top: 20px ">
     <div class="row">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">

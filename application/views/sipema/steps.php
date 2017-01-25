@@ -334,38 +334,9 @@
         </div> 
     </div>
 </div>
-<script type="text/javascript">
-    /* validation 
-     $("#login-form").validate({
-     rules:
-     {
-     password: {
-     required: true,
-     },
-     user_email: {
-     required: true,
-     email: true
-     }
-     },
-     messages:
-     {
-     password: {
-     required: "please enter your password"
-     },
-     user_email: "please enter your email address"
-     },
-     submitHandler: submitForm
-     });*/
-</script>
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $(".nextBtn").on("click", function (evt) {
-            //alert('message?: DOMString');
-
-        });
-
-
         $("tr input").on("click", function (evt) {
             var num = prompt('Introduzca cantidad:', '1');
             while (parseFloat(num) != num) {
