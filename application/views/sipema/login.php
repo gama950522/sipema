@@ -4,7 +4,7 @@
         <div class="head">
             <img src="<?php echo site_url('public/images/default.jpg') ?>" alt=""/>
         </div>
-        <?php echo form_open('authentication/inicio_sesion/'); ?>
+        <?php echo form_open('login/inicio_sesion/'); ?>
         <div id="error"></div>
             <div class="form-group">
                 <label for="inp_username" class="control-label">Nombre de usuario</label>
@@ -16,11 +16,11 @@
             </div>
             <div class="form-group">
                 <button type="submit" id="btn-entrar" class="btn btn-primary" ><i class="fa fa-user" aria-hidden="true"></i> Entrar</button>
-                <a href="<?php echo site_url('welcome/destruir/'); ?>">dESTRUIR SESION</a>
+                <a href="<?php echo site_url('login/destruir/'); ?>">dESTRUIR SESION</a>
             </div>	
 
         <?php echo form_close(); ?>
-        <a href="<?php echo site_url('welcome/mir'); ?>">OK</a>
+        <a href="<?php echo site_url('sipema/'); ?>">OK</a>
     </div>
 </div>
 

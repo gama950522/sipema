@@ -72,7 +72,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Verificar</button>
-                <a href="<?php echo site_url('welcome/division/8/') ?>">Next</a>
+                <a href="<?php echo site_url('sipema/programa/5/') ?>">Next</a>
             </div>
         </div>
         <?php
