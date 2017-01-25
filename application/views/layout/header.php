@@ -38,9 +38,7 @@
 
             <div class="masthead">
                 <div class="row">
-<!--                    <div class="col-md-4"><img src="<?php echo site_url('public/images/hidalgocrececontigo.png') ?>" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="<?php echo site_url('public/images/hidalgo_logo.png') ?>" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="<?php echo site_url() ?>" class="img-responsive"></div>-->
+
                     <img src="<?php echo site_url('public/images/secretaria.png'); ?>" class="center-block">
                 </div>
                 <nav>
