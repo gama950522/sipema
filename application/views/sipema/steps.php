@@ -78,19 +78,22 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-xs-6">
+                                        <div class="form-group">
                                             <label class="control-label">Fecha de Inicio</label>
                                             <div id="datepicker">
                                                 <input name="dte_fechaini" type="text" class="form-control datepicker" id="inp-fechaini">
                                             </div>
+                                            </div>
                                         </div>
                                         <div class="col-xs-6">
+                                        <div class="form-group">
                                             <label class="control-label">Fecha de Fin</label>
                                             <div id="datepicker">
                                                 <input name="dte_fecha_fin" type="text" class="form-control datepicker" id="inp-fechafin">
                                             </div>
                                         </div>
+                                        </div>
                                     </div>
-
                                 </div>
                                 <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                             </div>
@@ -110,7 +113,6 @@
                                     <textarea name="txt_estrategias" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-md-6">
                             <div class="col-md-12">
@@ -151,7 +153,6 @@
                                 <div class="form-group">
                                     <label class="control-label">Caracteristicas de la poblacion</label>
                                     <textarea name="txt_carac_poblacion" cols="30" rows="3" class="form-control"></textarea>
-
                                 </div>
                             </div>
                         </div>
@@ -340,7 +341,6 @@
             alert($(this).serialize());
         }).keypress(function (e) {
             if (e.which == 13) {
-                //e.which = 9;
                 alert('Antes de enviar la información llena todos los campos');
                 return false;
             }
@@ -377,10 +377,13 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('.form-group .form-control').on('blur', function () {
-            if (trim($(this).val()) == "") {
-                $(this).closest(".form-group").addClass("has-error");
-            } else {
-                $(this).closest(".form-group").removeClass("has-error");
+            $(this).closest('.form-group').removeClass('has-error').removeClass('has-feedback');
+            $(this).closest('.form-group').find('span').remove();
+            if ($(this).val().trim() === "") {
+                $(this).closest('.form-group')
+                .addClass('has-error')
+                .addClass('has-feedback');
+                $(this).after('<span class="fa fa-info-circle form-control-feedback" aria-hidden="true"></span>');
             }
         });
     });
@@ -412,15 +415,22 @@
                     nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
                     curInputs = curStep.find("input[type='text'], textarea"),
                     isValid = true;
-            $(".form-group").removeClass("has-error");
+            $(".form-group").removeClass('has-error').removeClass('has-feedback');
+            $('.form-group').find('span').remove();
             for (var i = 0; i < curInputs.length; i++) {
-                if (!curInputs[i].validity.valid) {
+                //if (!curInputs[i].validity.valid) {
                     isValid = false;
-                    $(curInputs[i]).closest(".form-group").addClass("has-error");
-                }
+                    $(curInputs[i]).closest('.form-group')
+                    .addClass('has-error')
+                    .addClass('has-feedback');
+                    $(curInputs[i]).after('<span class="fa fa-info-circle form-control-feedback" aria-hidden="true"></span>');
+                    //$(curInputs[i]).closest(".form-group").addClass("has-error");
+                //}
             }
             if (isValid)
                 nextStepWizard.removeAttr('disabled').trigger('click');
+            else
+                alert('Llena todos los campos');
         });
         $('div.setup-panel div a.btn-primary').trigger('click');
     });

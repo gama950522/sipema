@@ -69,7 +69,7 @@ class Sipema extends CI_Controller
     {
         if ($num === '')
         {
-            redirect($HTTP_REFERER);
+            redirect(site_url());
         }
         else
         {
@@ -80,7 +80,7 @@ class Sipema extends CI_Controller
                     $view = 'sipema/steps';
                     break;
                 default:
-                    redirect($HTTP_REFERER);
+                    redirect(site_url());
                     break;
             }
             $this->load->view('layout/header');

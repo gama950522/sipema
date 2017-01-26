@@ -23,9 +23,6 @@ class Usuarios_model extends CI_Model
                 'logged_in' => TRUE
             );
             $this->session->set_userdata($new_session);
-            
-            //$item_session = array('id','user','logged_in');
-            //echo json_encode($this->session->get_userdata());
             return TRUE;
         }
     }
