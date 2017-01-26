@@ -279,7 +279,7 @@
                         <div class="col-md-6 col-md-offset-6">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label class="control-label">Total &nbsp;<i class="fa fa-usd" aria-hidden="true"></i></label>&nbsp;<span class="control-label" id="td-month-s"> 0</span>
+                                    <label class="control-label">Total <i class="fa fa-usd" aria-hidden="true"></i></label><label class="control-label" id="td-month-s"> 0</label>
                                 </div>
                                 <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                             </div>
@@ -341,23 +341,24 @@
         </div> 
     </div>
 </div>
-
-
-
-
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('table tbody tr td input').keyup(function () {
+    $(document).ready(function ()
+    {
+        $('table tbody tr td input').keyup(function ()
+        {
             this.value = (this.value + '').replace(/[^0-9]/g, '');
-        }).on('change', function () {
+        }).on('change', function ()
+        {
             var tot_pre = 0;
             var input = $('#' + $(this).parents().attr('id') + ' input');
-            for (var i = 0; i < input.length; i++) {
+            for (var i = 0; i < input.length; i++)
+            {
                 tot_pre += parseInt((input[i].value === '') ? '0' : input[i].value);
             }
             $('#' + $(this).parents().attr('id') + '-s').text(tot_pre);
         });
-        $('.decimal').keyup(function () {
+        $('.decimal').keyup(function ()
+        {
             this.value = (this.value + '').replace(/[^0-9-.]/g, '');
         });
     });
@@ -374,11 +375,14 @@
 //    });
 </script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('.form-group .form-control').on('blur', function () {
+    $(document).ready(function ()
+    {
+        $('.form-group .form-control').on('blur', function ()
+        {
             $(this).closest('.form-group').removeClass('has-error').removeClass('has-feedback');
             $(this).closest('.form-group').find('span').remove();
-            if ($(this).val().trim() === "") {
+            if ($(this).val().trim() === "")
+            {
                 $(this).closest('.form-group')
                         .addClass('has-error')
                         .addClass('has-feedback');
@@ -389,18 +393,21 @@
 </script>
 <script type="text/javascript">
 
-    $(document).ready(function () {
+    $(document).ready(function ()
+    {
         var navListItems = $('div.setup-panel div a'),
                 allWells = $('.setup-content'),
                 allNextBtn = $('.nextBtn');
 
         allWells.hide();
 
-        navListItems.click(function (e) {
+        navListItems.click(function (e)
+        {
             e.preventDefault();
             var $target = $($(this).attr('href')),
                     $item = $(this);
-            if (!$item.hasClass('disabled')) {
+            if (!$item.hasClass('disabled'))
+            {
                 navListItems.removeClass('btn-primary').addClass('btn-default');
                 $item.addClass('btn-primary');
                 allWells.hide();
@@ -408,7 +415,8 @@
                 //$target.find('textarea:eq(0)').focus();
             }
         });
-        allNextBtn.click(function () {
+        allNextBtn.click(function ()
+        {
             var curStep = $(this).closest(".setup-content"),
                     curStepBtn = curStep.attr("id"),
                     nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
@@ -432,7 +440,7 @@
             {
                 nextStepWizard.removeAttr('disabled').trigger('click');
                 $('#error').html('');
-            } 
+            }
             else
             {
                 $('#error').html('<div class="col-md-12">' +
