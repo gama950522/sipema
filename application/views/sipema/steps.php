@@ -36,6 +36,7 @@
                     </div>
                 </div>
                 <?php echo form_open('sipema/guardar_reg/') ?>
+                <div id="error" class="col-md-12"></div>
                 <div class="row setup-content" id="step-1">
                     <div class="col-md-12">
                         <div class="col-md-6">
@@ -68,30 +69,30 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Objetivo general (En relacion al MIR)</label>
-                                    <textarea name="txt_obj_gral" cols="30" rows="3" class="form-control"></textarea>
+                                    <textarea name="txt_obj_gral" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Objetivo específico (En relacion al MIR)</label>
-                                    <textarea name="txt_obj_esp" cols="30" rows="3" class="form-control"></textarea>
+                                    <textarea name="txt_obj_esp" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="">
                                     <div class="row">
                                         <div class="col-xs-6">
-                                        <div class="form-group">
-                                            <label class="control-label">Fecha de Inicio</label>
-                                            <div id="datepicker">
-                                                <input name="dte_fechaini" type="text" class="form-control datepicker" id="inp-fechaini">
-                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Fecha de Inicio</label>
+                                                <div id="datepicker">
+                                                    <input name="dte_fechaini" type="text" class="form-control datepicker" id="inp-fechaini" required="required">
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-xs-6">
-                                        <div class="form-group">
-                                            <label class="control-label">Fecha de Fin</label>
-                                            <div id="datepicker">
-                                                <input name="dte_fecha_fin" type="text" class="form-control datepicker" id="inp-fechafin">
+                                            <div class="form-group">
+                                                <label class="control-label">Fecha de Fin</label>
+                                                <div id="datepicker">
+                                                    <input name="dte_fecha_fin" type="text" class="form-control datepicker" id="inp-fechafin" required="required">
+                                                </div>
                                             </div>
-                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -135,11 +136,11 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">Cobertura</label>
-                                    <textarea name="txt_cobertura" cols="30" rows="3" class="form-control"></textarea>
+                                    <textarea name="txt_cobertura" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Población beneficiada</label>
-                                    <input type="text" name="txt_poblacion_bene" required="required" class="form-control" />
+                                    <textarea name="xt_poblacion_bene" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
                             </div>                            
                         </div>
@@ -147,12 +148,12 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">Población objetivo</label>
-                                    <textarea name="txt_poblacion_obj" cols="30" rows="3" class="form-control"></textarea>
+                                    <textarea name="txt_poblacion_obj" cols="30" rows="3" class="form-control" required="required"></textarea>
 
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Caracteristicas de la poblacion</label>
-                                    <textarea name="txt_carac_poblacion" cols="30" rows="3" class="form-control"></textarea>
+                                    <textarea name="txt_carac_poblacion" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -209,7 +210,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">Impacto social</label>
-                                    <input name="txt_impacto_soc" maxlength="200" type="text" required="required" class="form-control" />
+                                    <textarea name="txt_impacto_soc" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
                                 <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                             </div>
@@ -222,18 +223,16 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">Monto del presupuesto</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control"  />
+                                    <input type="text" name="txt_monto_fin" required="required" class="form-control decimal"  />
                                 </div>
-
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">Fuente del financiamiento</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" />
+                                    <input name="txt_fuente_fin" type="text" required="required" class="form-control" />
                                 </div>
-
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -259,7 +258,18 @@
                                         <tbody>
                                             <tr>
                                                 <th>Monto</th>
-                                                <td></td>
+                                                <td id="td-month"><input type="text" name="txt_ene" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="txt_febr" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="txt_mzo" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="txt_abr" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="txt_may" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="txt_jun" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="txt_jul" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="txt_ago" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="txt_sep" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="txt_oct" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="txt_nov" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="txt_dic" class="form-control"></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -269,12 +279,9 @@
                         <div class="col-md-6 col-md-offset-6">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label class="control-label">Total</label>
-                                    <output  class="form-control"/>
-
+                                    <label class="control-label">Total &nbsp;<i class="fa fa-usd" aria-hidden="true"></i></label>&nbsp;<span class="control-label" id="td-month-s"> 0</span>
                                 </div>
                                 <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-caret-right" aria-hidden="true"></i></button>
-
                             </div>
                         </div>
                     </div>
@@ -334,19 +341,9 @@
         </div> 
     </div>
 </div>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('form').on('submit', function (evt) {
-            evt.preventDefault();
-            alert($(this).serialize());
-        }).keypress(function (e) {
-            if (e.which == 13) {
-                alert('Antes de enviar la información llena todos los campos');
-                return false;
-            }
-        });
-    });
-</script>
+
+
+
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -354,26 +351,28 @@
             this.value = (this.value + '').replace(/[^0-9]/g, '');
         }).on('change', function () {
             var tot_pre = 0;
-            var input = $("#" + $(this).parents().attr('id') + " input");
+            var input = $('#' + $(this).parents().attr('id') + ' input');
             for (var i = 0; i < input.length; i++) {
-                tot_pre += parseInt((input[i].value == '') ? '0' : input[i].value);
+                tot_pre += parseInt((input[i].value === '') ? '0' : input[i].value);
             }
-            $("#" + $(this).parents().attr('id') + "-s").text(tot_pre);
+            $('#' + $(this).parents().attr('id') + '-s').text(tot_pre);
         });
-    })
-</script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("tr input[type='button']").on("click", function (evt) {
-            var num = prompt('Introduzca cantidad:', '1');
-            while (parseInt(num) != num) {
-                num = prompt('Introduzca cantidad', '1');
-            }
-            $(this).val(num);
+        $('.decimal').keyup(function () {
+            this.value = (this.value + '').replace(/[^0-9-.]/g, '');
         });
     });
 </script>
-
+<script type="text/javascript">
+//    $(document).ready(function () {
+//        $("tr input[type='button']").on("click", function (evt) {
+//            var num = prompt('Introduzca cantidad:', '1');
+//            while (parseInt(num) !== num) {
+//                num = prompt('Introduzca cantidad', '1');
+//            }
+//            $(this).val(num);
+//        });
+//    });
+</script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('.form-group .form-control').on('blur', function () {
@@ -381,8 +380,8 @@
             $(this).closest('.form-group').find('span').remove();
             if ($(this).val().trim() === "") {
                 $(this).closest('.form-group')
-                .addClass('has-error')
-                .addClass('has-feedback');
+                        .addClass('has-error')
+                        .addClass('has-feedback');
                 $(this).after('<span class="fa fa-info-circle form-control-feedback" aria-hidden="true"></span>');
             }
         });
@@ -406,7 +405,7 @@
                 $item.addClass('btn-primary');
                 allWells.hide();
                 $target.show();
-                $target.find('textarea:eq(0)').focus();
+                //$target.find('textarea:eq(0)').focus();
             }
         });
         allNextBtn.click(function () {
@@ -417,23 +416,42 @@
                     isValid = true;
             $(".form-group").removeClass('has-error').removeClass('has-feedback');
             $('.form-group').find('span').remove();
-            for (var i = 0; i < curInputs.length; i++) {
-                //if (!curInputs[i].validity.valid) {
+            for (var i = 0; i < curInputs.length; i++)
+            {
+                if (!curInputs[i].validity.valid)
+                {
                     isValid = false;
                     $(curInputs[i]).closest('.form-group')
-                    .addClass('has-error')
-                    .addClass('has-feedback');
+                            .addClass('has-error')
+                            .addClass('has-feedback');
                     $(curInputs[i]).after('<span class="fa fa-info-circle form-control-feedback" aria-hidden="true"></span>');
                     //$(curInputs[i]).closest(".form-group").addClass("has-error");
-                //}
+                }
             }
             if (isValid)
+            {
                 nextStepWizard.removeAttr('disabled').trigger('click');
+                $('#error').html('');
+            } 
             else
-                alert('Llena todos los campos');
+            {
+                $('#error').html('<div class="col-md-12">' +
+                        '<div class="alert alert-danger alert-dismissible fade in" role="alert">' +
+                        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                        '<span aria-hidden="true">' +
+                        '<font><font>×</font></font>' +
+                        '</span></button>' +
+                        '<h4><font><font class=""><i class="fa fa-info-circle" aria-hidden="true"></i> Error! </font></font></h4> ' +
+                        '<p><font><font class="">Llene todos los campos para poder continuar. </font></div></div>');
+            }
+            //alert('Llena todos los campos');
         });
         $('div.setup-panel div a.btn-primary').trigger('click');
     });
+
+
+
+    //http://todowindowsfull.blogspot.mx/2016/02/photoshop-cs6-v130-full-32-y-64-bits-en.html
 </script>
 
 
