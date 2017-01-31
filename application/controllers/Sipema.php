@@ -28,7 +28,7 @@ class Sipema extends CI_Controller
             $view = '';
             switch ($value)
             {
-                case '8':
+                case '9':
                     $view = 'sipema/subprogramas';
                     break;
                 default:

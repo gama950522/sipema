@@ -6,7 +6,7 @@
             <tr>
                 <td class="col-md-4 ">
                     <div class="list-group">
-                        <h2 class=" list-group-item text-center">Cambio climatico</h2>
+                        <h2 class=" list-group-item text-center">Cambio climático</h2>
                     </div>
                 </td>
                 <td class="col-md-8">
@@ -18,7 +18,7 @@
                             <p class="list-group-item-text">Descripción</p>
                         </a>
                         <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
-                            <h4 class="list-group-item-heading">Programa estatal de accion ante el cambio climatico</h4>
+                            <h4 class="list-group-item-heading">Programa estatal de acción ante el cambio climático</h4>
                             <p class="list-group-item-text">Descripción</p>
                         </a>
                         <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
@@ -26,11 +26,11 @@
                             <p class="list-group-item-text">Descripción</p>
                         </a>
                         <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
-                            <h4 class="list-group-item-heading">Mitigacion ante el cambio climatico</h4>
+                            <h4 class="list-group-item-heading">Mitigación ante el cambio climático</h4>
                             <p class="list-group-item-text">Descripción</p>
                         </a>
                         <a href="#" class="list-group-item active" data-toggle="modal" data-target=".bs-example-modal-sm">
-                            <h4 class="list-group-item-heading">Programas municipales de acciona nte el cambio climatico</h4>
+                            <h4 class="list-group-item-heading">Programas municipales de acción ante el cambio climático</h4>
                             <p class="list-group-item-text">Descripción</p>
                         </a>
                     </div>
@@ -70,8 +70,8 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Verificar</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Validar</button>
                 <a href="<?php echo site_url('sipema/programa/5/') ?>">Next</a>
             </div>
         </div>

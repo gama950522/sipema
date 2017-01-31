@@ -63,7 +63,7 @@
                         <div class="col-md-6">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label class="control-label">Descripcion del problema</label>
+                                    <label class="control-label">Descripción del problema</label>
                                     <textarea name="txt_desc_prob" cols="30" rows="3" class="form-control" required="required"></textarea>
 
                                 </div>
@@ -96,7 +96,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                                <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                         <div class="col-md-6">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label class="control-label">Situacion actual</label>
+                                    <label class="control-label">Situación actual</label>
                                     <textarea name="txt_sit_actual" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
                                 <div class="form-group">
@@ -118,14 +118,14 @@
                         <div class="col-md-6">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label class="control-label">Situacion esperada</label>
+                                    <label class="control-label">Situación esperada</label>
                                     <textarea name="txt_sit_esperada" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Lineas de accion</label>
+                                    <label class="control-label">Líneas de acción</label>
                                     <textarea name="txt_lineas_accion" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
-                                <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                                <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Caracteristicas de la poblacion</label>
+                                    <label class="control-label">Características de la población</label>
                                     <textarea name="txt_carac_poblacion" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
                             </div>
@@ -212,7 +212,7 @@
                                     <label class="control-label">Impacto social</label>
                                     <textarea name="txt_impacto_soc" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
-                                <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                                <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
@@ -281,7 +281,7 @@
                                 <div class="form-group">
                                     <label class="control-label">Total <i class="fa fa-usd" aria-hidden="true"></i></label><label class="control-label" id="td-month-s"> 0</label>
                                 </div>
-                                <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                                <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
@@ -299,7 +299,7 @@
                                     <input maxlength="200" type="text" required="required" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Periodo de verificacion</label>
+                                    <label class="control-label">Periodo de verificación</label>
                                     <input maxlength="200" type="text" required="required" class="form-control" />
                                 </div>
                             </div>                            
@@ -328,13 +328,13 @@
                                         <tr></tr>
                                     </tbody>
                                 </table>
-                                <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                                <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row setup-content" id="step-6">
-                    <button type="submit" class="btn btn-success" id="btn-send-form">Enviar formulario</button>
+                    <button type="submit" class="btn btn-success" id="btn-send-form">Guardar información</button>
                 </div>
                 <?php echo form_close() ?>
             </div>
