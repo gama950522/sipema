@@ -33,10 +33,10 @@
                 },
                 success: function (data, textStatus, jqXHR) {
                     setTimeout(function () {
-                        // if (!data.success) 
-                        // {
-                        //     $('.bs-example-modal-sm').modal('show');
-                        // }
+                        if (!data.success) 
+                        {
+                            $('.bs-example-modal-sm').modal('show');
+                        }
                         $('body').waitMe('hide');
                     }, 4000);
                 },
