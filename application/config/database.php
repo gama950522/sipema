@@ -76,10 +76,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
     'dsn'          => '',
-    'hostname'     => '172.0.0.1',
+    'hostname'     => '127.0.0.1',
     'port'         => '1433',
-    'username'     => '',
-    'password'     => '',
+    'username'     => 'semarnat',
+    'password'     => '1234',
     'database'     => 'sipema_db',
     'dbdriver'     => 'sqlsrv',
     'dbprefix'     => '',
