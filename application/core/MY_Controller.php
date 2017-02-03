@@ -16,7 +16,24 @@
 
  	public function validacion_campos()
  	{
- 		return TRUE;
+
+ 		foreach ($this->input->post() as $key => $value) 
+ 		{
+ 			if (substr($key, 0, 3) === 'txa') 
+ 			{
+ 				$this->form_validation->set_rules($key, 'fieldlabel', 'trim|required|min_length[5]|max_length[12]');
+ 			}
+ 			elseif (substr($key, 0, 3) === 'int') 
+ 			{
+ 				# code...
+ 			}
+ 			elseif(TRUE)
+ 			{
+
+ 			}
+ 		}
+
+ 		return $this->form_validation->run();
  	}
 
  	public function algo()

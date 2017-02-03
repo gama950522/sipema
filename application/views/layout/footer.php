@@ -75,14 +75,12 @@
 </script>
 <script>
     //$('#waitMe_ex3').waitMe('hide');
-    $(function () {
+    $(document).ready(function () {
 
-        $('#btn-send-form').click(function () {
-            
-        });
-
-       
-
+        // $('input').on('focus', function () {
+        //     $('.form-group').removeClass('has-error').removeClass('has-feedback');
+        //     $('.form-group').find('span').remove();
+        // });
     });
 </script>
 </body>

@@ -97,8 +97,8 @@ class Sipema extends MY_Controller
 
     public function guardar_reg()
     {
-        // if( ! $this->validacion_campos())
-        // {
+        if($this->validacion_campos())
+        {
             $data = $this->input->post();
             foreach ($data as $key => $value) 
             {
@@ -106,7 +106,7 @@ class Sipema extends MY_Controller
             }
             $data['success'] = FALSE;
             echo json_encode($data);
-        // }
+        }
         // echo $this->algo();
     }
 
