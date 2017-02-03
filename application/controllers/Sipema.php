@@ -2,18 +2,18 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Sipema extends CI_Controller
+class Sipema extends MY_Controller
 {
 
     public function __construct()
     {
         parent::__construct();
         //echo('ALGO');
-        if (!$this->session->userdata('logged_in'))
-        {
-            redirect(site_url('login/'));
+        //if (!$this->session->userdata('logged_in'))
+        //{
+           // redirect(site_url('login/'));
             //echo 'algo';
-        }
+        //}
     }
 
     public function index()
@@ -97,14 +97,19 @@ class Sipema extends CI_Controller
 
     public function guardar_reg()
     {
-        $data = $this->input->post();
-        foreach ($data as $key => $value) 
-        {
-            $data[$key] = htmlentities($value);
-        }
-        echo json_encode($data);
-
-
+        // if( ! $this->validacion_campos())
+        // {
+            $data = $this->input->post();
+            foreach ($data as $key => $value) 
+            {
+                $data[$key] = htmlentities($value);
+            }
+            $data['success'] = FALSE;
+            echo json_encode($data);
+        // }
+        // echo $this->algo();
     }
+
+
 
 }

@@ -75,10 +75,10 @@ $active_group  = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-    'dsn'          => '',
+    //'dsn'          => '',
     'hostname'     => '127.0.0.1',
     'port'         => '1433',
-    'username'     => 'alexis',
+    'username'     => 'sa',
     'password'     => '1234',
     'database'     => 'sipema_db',
     'dbdriver'     => 'sqlsrv',

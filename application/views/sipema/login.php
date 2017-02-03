@@ -39,11 +39,11 @@
                     $("#btn-entrar").attr("disabled", true);
                     $("#btn-entrar").html('<i class="fa fa-spinner fa-pulse fa-fw"></i>');
                 },
-                success: function (e) {
-                    if (e.action == true) {
+                success: function (res) {
+                    if (res.action) {
                         $("#btn-entrar").html('<i class="fa fa-spinner fa-pulse fa-fw"></i> Entrando...');
                         setTimeout(function() {
-                            window.location.href = e.href
+                            window.location.href = res.href;
                         }, 1000);
                         //console.log(e);
                     } else {
@@ -62,6 +62,8 @@
                 },
                 error: function () {
                     alert("Error del sistema, cominiquese con el administrador!");
+                    $("#btn-entrar").html('<i class="fa fa-user" aria-hidden="true"></i> Entrar');
+                            $("#btn-entrar").attr("disabled", false);
                 }
             });
             return false;

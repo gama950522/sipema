@@ -26,16 +26,17 @@
         </div>
     </div>
 </section>
-                <a href="<?php echo site_url('login/destruir/'); ?>">DESTRUIR SESION</a>
+<a href="<?php echo site_url('login/destruir/'); ?>">DESTRUIR SESION</a>
 
 
 
 <script>
-    $(document).ready(function () {
-        $("select").on("change", function () {
+    $(document).ready(function ()
+    {
+        $("select").on("change", function ()
+        {
             var cat = document.getElementById('sel-cat').value;
-            document.getElementById("enlace").href = "<?php echo site_url('sipema/categoria/'); ?>" + cat +"/";
-
+            document.getElementById("enlace").href = "<?php echo site_url('sipema/categoria/'); ?>" + cat + "/";
         });
 
     });

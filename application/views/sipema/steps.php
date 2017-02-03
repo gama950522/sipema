@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <?php echo form_open('sipema/guardar_reg/') ?>
+                <?php echo form_open('sipema/guardar_reg/','id="form-reg"') ?>
                 <div id="error" class="col-md-12"></div>
                 <div class="row setup-content" id="step-1">
                     <div class="col-md-12">
@@ -159,6 +159,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="col-md-12">
+                            <div class="table-responsive">
                                 <table class="table thead-default">
                                     <thead>
                                         <tr>
@@ -204,6 +205,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-md-offset-6">
