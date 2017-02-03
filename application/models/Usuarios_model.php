@@ -12,7 +12,7 @@ class Usuarios_model extends CI_Model
             $this->db->from('usuarios');
             $this->db->where('username', $data['username']);
             $this->db->where('password', $data['password']);
-            $get         = $this->db->get()->row_array();
+            $get = $this->db->get()->row_array();
             if (is_null($get))
             {
                 return FALSE;
@@ -25,6 +25,11 @@ class Usuarios_model extends CI_Model
             $this->session->set_userdata($new_session);
             return TRUE;
         }
+    }
+
+    public function get_all()
+    {
+        return $this->db->get('usuarios')->result();
     }
 
 }

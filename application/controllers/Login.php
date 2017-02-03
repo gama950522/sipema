@@ -23,6 +23,7 @@ class Login extends CI_Controller
             $this->load->view('layout/header');
             $this->load->view('sipema/login');
             $this->load->view('layout/footer');
+            
         }
     }
 

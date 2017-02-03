@@ -15,12 +15,11 @@
                 <input type="password" class="form-control" name="psw_password" />
             </div>
             <div class="form-group">
-                <button type="submit" id="btn-entrar" class="btn btn-primary" ><i class="fa fa-user" aria-hidden="true"></i> Entrar</button>
-                <a href="<?php echo site_url('login/destruir/'); ?>">dESTRUIR SESION</a>
-            </div>	
+                <button type="submit" id="btn-entrar" class="btn btn-primary" >Entrar</button>
+                <a href="<?php echo site_url('sipema/'); ?>">OK</a>
+            </div>  
 
         <?php echo form_close(); ?>
-        <a href="<?php echo site_url('sipema/'); ?>">OK</a>
     </div>
 </div>
 

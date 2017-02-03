@@ -26,7 +26,7 @@
         </div>
     </div>
 </section>
-                <a href="<?php echo site_url('welcome/destruir/'); ?>">DESTRUIR SESION</a>
+                <a href="<?php echo site_url('login/destruir/'); ?>">DESTRUIR SESION</a>
 
 
 

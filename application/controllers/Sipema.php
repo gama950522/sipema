@@ -8,6 +8,12 @@ class Sipema extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        //echo('ALGO');
+        if (!$this->session->userdata('logged_in'))
+        {
+            redirect(site_url('login/'));
+            //echo 'algo';
+        }
     }
 
     public function index()
@@ -21,7 +27,7 @@ class Sipema extends CI_Controller
     {
         if ($value === '')
         {
-            redirect(site_url('index.php/welcome/mir/'));
+            redirect(site_url('welcome/mir/'));
         }
         else
         {

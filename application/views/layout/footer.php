@@ -19,6 +19,8 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('form').on('submit', function (evt) {
+            if ($(this).attr('id') === 'form-reg') 
+            {
             evt.preventDefault();
             //alert($(this).serialize());
             $.ajax({
@@ -43,6 +45,7 @@
                 error: function (jqXHR, textStatus, errorThrown) {
                 }
             });
+        }
         }).keypress(function (e) {
             if (e.which === 13) {
                 //alert('Antes de enviar la información llena todos los campos');
