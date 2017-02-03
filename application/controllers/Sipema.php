@@ -9,11 +9,11 @@ class Sipema extends MY_Controller
     {
         parent::__construct();
         //echo('ALGO');
-        //if (!$this->session->userdata('logged_in'))
-        //{
-           // redirect(site_url('login/'));
-            //echo 'algo';
-        //}
+        if (!$this->session->userdata('logged_in'))
+        {
+            redirect(site_url('login/'));
+            echo 'algo';
+        }
     }
 
     public function index()
