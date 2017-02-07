@@ -72,7 +72,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                 <button type="submit" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Validar</button>
-                <a href="<?php echo site_url('sipema/programa/5/') ?>">Next</a>
+                
             </div>
         </div>
         <?php

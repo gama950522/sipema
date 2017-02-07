@@ -8,7 +8,16 @@
         <div class="col-md-10 col-xs-10">
             <select class="form-control input-lg" id="sel-cat">
                 <option>Selecciona una categoría</option>
-                <option value="1">1. Manejo integral de residuos sólidos</option>
+                <?php
+                $cont = 1;
+                //echo print_r($fields);
+                foreach ($fields as $row) 
+                {
+                    echo '<option value="'.$row['id'].'">'.$cont.'. '. $row['nombre'].'</option>';
+                    $cont++;
+                }
+                ?>
+                <!-- <option value="1">1. Manejo integral de residuos sólidos</option>
                 <option value="2">2. Áreas naturales protegidas</option>
                 <option value="3">3. Prevención y control de la contaminación</option>
                 <option value="4">4. Procuración y acceso a la juasticia ambiental</option>
@@ -18,7 +27,7 @@
                 <option value="8">8. Desarrollo sustentable</option>
                 <option value="9">9. Cambio climático</option>
                 <option value="10">10. Biodiversidad y vida silvestre</option>
-                <option value="11">11. Gestión de la calidad del aire</option>
+                <option value="11">11. Gestión de la calidad del aire</option> -->
             </select>
         </div>
         <div class="col-md-2 col-xs-2">

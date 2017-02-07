@@ -42,7 +42,7 @@
                         }
                         else
                         {
-                            
+                            window.location = '<?php echo site_url('sipema/'); ?>';
                         }
                         //console.log(data.values);
                     }, 4000);

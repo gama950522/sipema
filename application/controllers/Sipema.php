@@ -15,11 +15,13 @@ class Sipema extends MY_Controller
             //E9QE746DSF32GFH5J78KLI4K5JMN1BCV4F8GT7
         }
         $this->load->model('registros_model');
+        $this->load->model('catalogos_model');
     }
 
     public function index()
     {
-        $this->load->view('layout/header');
+        $data['fields'] = $this->catalogos_model->get_sipema();
+        $this->load->view('layout/header', $data);
         $this->load->view('sipema/mir');
         $this->load->view('layout/footer');
     }

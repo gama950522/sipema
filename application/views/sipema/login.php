@@ -16,7 +16,7 @@
             </div>
             <div class="form-group">
                 <button type="submit" id="btn-entrar" class="btn btn-primary" >Entrar</button>
-                <a href="<?php echo site_url('sipema/'); ?>">OK</a>
+                
             </div>  
 
         <?php echo form_close(); ?>
