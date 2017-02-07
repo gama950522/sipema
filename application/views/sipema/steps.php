@@ -1,3 +1,5 @@
+
+<?php $this->load->view('layout/header'); ?>
 <div class="row">
     <div class="col-md-12" style="margin-top: 20px">
         <div class="panel panel-default">
@@ -82,7 +84,7 @@
                                             <div class="form-group">
                                                 <label class="control-label">Fecha de Inicio</label>
                                                 <div id="datepicker">
-                                                    <input name="dte_fechaini" type="text" class="form-control datepicker" id="inp-fechaini" required="required">
+                                                    <input name="dte_fecha_ini" type="text" class="form-control datepicker" id="inp-fechaini" required="required">
                                                 </div>
                                             </div>
                                         </div>
@@ -140,7 +142,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Población beneficiada</label>
-                                    <textarea name="xt_poblacion_bene" cols="30" rows="3" class="form-control" required="required"></textarea>
+                                    <textarea name="txt_poblacion_bene" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
                             </div>                            
                         </div>
@@ -178,21 +180,21 @@
                                     <tbody>
                                         <tr>
                                             <th>Hombres</th>
-                                            <td id="td-pre" class="col-md-2"><input type="text" name="txt_prenatal_h" class="form-control"></td>
-                                            <td id="td-nin" class="col-md-2"><input type="text" name="txt_ninos_h" class="form-control"></td>
-                                            <td id="td-adol" class="col-md-2"><input type="text" name="txt_adolcesc_h" class="form-control"></td>
-                                            <td id="td-jov" class="col-md-2"><input type="text" name="txt_joven_h" class="form-control"></td>
-                                            <td id="td-adul" class="col-md-2"><input type="text" name="txt_adulto_h" class="form-control"></td>
-                                            <td id="td-may" class="col-md-2"><input type="text" name="txt_mayor_h" class="form-control"></td>
+                                            <td id="td-pre" class="col-md-2"><input type="text" name="int_prenatal_h" class="form-control"></td>
+                                            <td id="td-nin" class="col-md-2"><input type="text" name="int_ninos_h" class="form-control"></td>
+                                            <td id="td-adol" class="col-md-2"><input type="text" name="int_adolcesc_h" class="form-control"></td>
+                                            <td id="td-jov" class="col-md-2"><input type="text" name="int_joven_h" class="form-control"></td>
+                                            <td id="td-adul" class="col-md-2"><input type="text" name="int_adulto_h" class="form-control"></td>
+                                            <td id="td-may" class="col-md-2"><input type="text" name="int_mayor_h" class="form-control"></td>
                                         </tr>
                                         <tr>
                                             <th>Mujeres</th>
-                                            <td id="td-pre" class="col-md-2"><input type="text" name="txt_prenatal_m" class="form-control"></td>
-                                            <td id="td-nin" class="col-md-2"><input type="text" name="txt_ninos_m" class="form-control"></td>
-                                            <td id="td-adol" class="col-md-2"><input type="text" name="txt_adolcesc_m" class="form-control"></td>
-                                            <td id="td-jov" class="col-md-2"><input type="text" name="txt_joven_m" class="form-control"></td>
-                                            <td id="td-adul" class="col-md-2"><input type="text" name="txt_adulto_m" class="form-control"></td>
-                                            <td id="td-may" class="col-md-2"><input type="text" name="txt_mayor_m" class="form-control"></td>
+                                            <td id="td-pre" class="col-md-2"><input type="text" name="int_prenatal_m" class="form-control"></td>
+                                            <td id="td-nin" class="col-md-2"><input type="text" name="int_ninos_m" class="form-control"></td>
+                                            <td id="td-adol" class="col-md-2"><input type="text" name="int_adolcesc_m" class="form-control"></td>
+                                            <td id="td-jov" class="col-md-2"><input type="text" name="int_joven_m" class="form-control"></td>
+                                            <td id="td-adul" class="col-md-2"><input type="text" name="int_adulto_m" class="form-control"></td>
+                                            <td id="td-may" class="col-md-2"><input type="text" name="int_mayor_m" class="form-control"></td>
                                         </tr>
                                         <tr>
                                             <th>Total</th>
@@ -225,7 +227,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">Monto del presupuesto</label>
-                                    <input type="text" name="txt_monto_fin" required="required" class="form-control decimal"  />
+                                    <input type="text" name="dbl_monto_pres" required="required" class="form-control decimal"  />
                                 </div>
                             </div>
                         </div>
@@ -233,7 +235,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">Fuente del financiamiento</label>
-                                    <input name="txt_fuente_fin" type="text" required="required" class="form-control" />
+                                    <input name="dbl_fuente_fin" type="text" required="required" class="form-control" />
                                 </div>
                             </div>
                         </div>
@@ -260,18 +262,18 @@
                                         <tbody>
                                             <tr>
                                                 <th>Monto</th>
-                                                <td id="td-month"><input type="text" name="txt_ene" class="form-control"></td>
-                                                <td id="td-month"><input type="text" name="txt_febr" class="form-control"></td>
-                                                <td id="td-month"><input type="text" name="txt_mzo" class="form-control"></td>
-                                                <td id="td-month"><input type="text" name="txt_abr" class="form-control"></td>
-                                                <td id="td-month"><input type="text" name="txt_may" class="form-control"></td>
-                                                <td id="td-month"><input type="text" name="txt_jun" class="form-control"></td>
-                                                <td id="td-month"><input type="text" name="txt_jul" class="form-control"></td>
-                                                <td id="td-month"><input type="text" name="txt_ago" class="form-control"></td>
-                                                <td id="td-month"><input type="text" name="txt_sep" class="form-control"></td>
-                                                <td id="td-month"><input type="text" name="txt_oct" class="form-control"></td>
-                                                <td id="td-month"><input type="text" name="txt_nov" class="form-control"></td>
-                                                <td id="td-month"><input type="text" name="txt_dic" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="int_ene" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="int_feb" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="int_mar" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="int_abr" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="int_may" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="int_jun" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="int_jul" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="int_ago" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="int_sep" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="int_oct" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="int_nov" class="form-control"></td>
+                                                <td id="td-month"><input type="text" name="int_dic" class="form-control"></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -294,15 +296,16 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">Nombre del indicador</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" />
+                                    <input type="text" name="str_nom_indicador" required="required" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Unidad de medida</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" />
+                                    <select name="sel_unidad_medida" class="form-control"><option>Selecciona</option></select>
+                                    <!-- <input type="text"  required="required" class="form-control" /> -->
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Periodo de verificación</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" />
+                                    <input type="text" name="str_periodo_verif" required="required" class="form-control" />
                                 </div>
                             </div>                            
                         </div>
@@ -311,11 +314,11 @@
 
                                 <div class="form-group">
                                     <label class="control-label">Fórmula</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" />
+                                    <input type="text" name="str_formula" required="required" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Meta</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" />
+                                    <input type="text" name="str_meta" required="required" class="form-control" />
                                 </div>
                                 <table class="table thead-default">
                                     <thead>

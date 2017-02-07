@@ -12,8 +12,9 @@ class Sipema extends MY_Controller
         if (!$this->session->userdata('logged_in'))
         {
             redirect(site_url('login/'));
-            echo 'algo';
+            //E9QE746DSF32GFH5J78KLI4K5JMN1BCV4F8GT7
         }
+        $this->load->model('registros_model');
     }
 
     public function index()
@@ -22,7 +23,7 @@ class Sipema extends MY_Controller
         $this->load->view('sipema/mir');
         $this->load->view('layout/footer');
     }
-
+   
     public function categoria($value = '')
     {
         if ($value === '')
@@ -89,7 +90,7 @@ class Sipema extends MY_Controller
                     redirect(site_url());
                     break;
             }
-            $this->load->view('layout/header');
+            //$this->load->view('layout/header');
             $this->load->view($view);
             $this->load->view('layout/footer');
         }
@@ -99,17 +100,77 @@ class Sipema extends MY_Controller
     {
         if($this->validacion_campos())
         {
-            $data = $this->input->post();
-            foreach ($data as $key => $value) 
-            {
-                $data[$key] = htmlentities($value);
-            }
-            $data['success'] = FALSE;
-            echo json_encode($data);
+            $data['success'] = ($this->registros_model->guardar_poas($this->get_data()) === NULL ? TRUE : FALSE);
         }
+        else
+        {
+            $data['success'] = FALSE;
+        }
+        echo json_encode($data);
         // echo $this->algo();
     }
 
+
+    public function get_data()
+    {
+        $data = array();
+        foreach ($this->input->post() as $key => $value) 
+        {
+            $data[substr($key, 3)] = htmlentities($value);
+            //echo substr($key, 3).'<br>';
+        }
+        return $data;
+    }
+
+// @_antecedentes text,
+// @_result_obt text,
+// @_justificacion text,
+// @_fundamento_legal text,
+// @_desc_prob text,
+// @_obj_gral text,
+// @_obj_esp text,
+// @_fechaini date,
+// @_fecha_fin date,
+// @_sit_actual text,
+// @_estrategias text,
+// @_sit_esperada text,
+// @_lineas_accion text,
+// @_cobertura text,
+// @_poblacion_bene text,
+// @_poblacion_obj text,
+// @_carac_poblacion text,
+// @_prenatal_h int,
+// @_ninos_h int,
+// @_adolcesc_h int,
+// @_joven_h int,
+// @_adulto_h int,
+// @_mayor_h int,
+// @_prenatal_m int,
+// @_ninos_m int,
+// @_adolcesc_m int,
+// @_joven_m int,
+// @_adulto_m int,
+// @_mayor_m int,
+// @_impacto_soc text,
+// @_monto_fin float,
+// @_fuente_fin varchar(100),
+// @_ene int,
+// @_febr int,
+// @_mzo int,
+// @_abr int,
+// @_may int,
+// @_jun int,
+// @_jul int,
+// @_ago int,
+// @_sep int,
+// @_oct int,
+// @_nov int,
+// @_dic int,
+// @_nom_indicador varchar(100),
+// @_unidad_medida varchar(100),
+// @_periodo_verif text,
+// @_formula text,
+// @_meta text,
 
 
 }

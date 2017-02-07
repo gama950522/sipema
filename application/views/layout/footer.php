@@ -12,7 +12,7 @@
 
 <script>
     $("#datepicker input").datepicker({
-        format: 'mm-dd-yyyy',
+        format: 'yyyy-mm-dd',
         language: "es"
     });
 </script>
@@ -37,16 +37,20 @@
                     setTimeout(function () {
                         if (!data.success) 
                         {
-                            // $('.bs-example-modal-sm').modal('show');
                             alert('Algo no salió bien intentalo mas tarde');
+                            $('body').waitMe('hide');
                         }
-                        $('body').waitMe('hide');
+                        else
+                        {
+                            
+                        }
+                        //console.log(data.values);
                     }, 4000);
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
-                    // console.log(jqXHR);
-                    // console.log(textStatus);
-                    // console.log(errorThrown);
+                     console.log(jqXHR);
+                     console.log(textStatus);
+                     console.log(errorThrown);
                     $('body').waitMe('hide');
                 }
             });

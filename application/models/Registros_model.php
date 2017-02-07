@@ -7,12 +7,18 @@ class Registros_model extends CI_Model
 
     public function guardar_poas($data)
     {
-        if (is_array($data))
-        {
-            $this->db->query('call sp_resgistro_poas(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', $data);
-        }
-        return FALSE;
+    	$data['_id_user'] = $this->session->userdata('id');
+    	//$this->db->query('DECLARE	@res int');
+    	$sql = "exec sp_resgistro_poas ";
+    	foreach ($data as $key => $value)
+    	{
+    		$sql .= "@$key = '$value',";
+    	}
+    	$sql = substr($sql, 0 ,-1);
+        return $this->db->query($sql)->row_array();
     }
+
+   
 
 }
 
