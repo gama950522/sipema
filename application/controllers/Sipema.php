@@ -125,8 +125,8 @@ class Sipema extends MY_Controller
     public function check_user()
     {
         $this->load->model('usuarios_model');
-        $username = $this->input->post('');
-        $password = hash('sha256', $this->input->post(''));
+        $username = $this->input->post('srt_username');
+        $password = (empty($this->input->post('psw_password')) ? '' : hash('sha256', $this->input->post('psw_password')));
         if ($this->session->userdata('user') === $username && $this->usuarios_model->is_same_password($password)) 
         {
             $this->session->set_userdata('check_after', TRUE);

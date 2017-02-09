@@ -33,6 +33,21 @@ class Usuarios_model extends CI_Model
         return $this->db->get('usuarios')->result();
     }
 
+    public function is_same_password($val = '')
+    {
+        if ($val !== '') 
+        {
+            $this->db->select('password');
+            $this->db->from('usuarios');
+            $this->db->where('username', $this->session->userdata('user'));
+            $result = $this->db->get();
+            if ($result->row()['password'] === $val) 
+            {
+                return TRUE;
+            }
+        }
+        return FALSE;
+    }
 }
 
 /* End of file Usuarios_model.php */

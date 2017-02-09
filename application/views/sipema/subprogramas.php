@@ -47,7 +47,7 @@
 <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
     <div class="modal-dialog modal-sm" role="document">
         <?php
-        echo form_open('', array('class' => 'form-signin'));
+        echo form_open('sipema/check_user/', array('class' => 'form-signin', 'id'=>'frm-check-user'));
         ?>
         <div class="modal-content">
             <div class="modal-header">
@@ -59,13 +59,13 @@
 
                 <div class="form-group">
                     <label class="control-label">Usuario</label>
-                    <input type="text" class="form-control" />
+                    <input type="text" name="str_username" class="form-control" />
 
                 </div>
 
                 <div class="form-group">
                     <label class="control-label">Contraseña</label>
-                    <input type="password" class="form-control" />
+                    <input type="password" name="psw_password" class="form-control" />
                 </div>
 
             </div>
@@ -82,3 +82,27 @@
 </div>
 
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#frm-check-user').on('submit', function(event) {
+            event.preventDefault();
+            //alert('hola');
+            
+            $.ajax({
+                url: $(this).attr('action'),
+                type: $(this).attr('method'),
+                dataType: 'json',
+                data: $(this).serialize(),
+                beforeSend:function(){
+                },
+                success:function (data) {
+                    console.log(data);
+                },
+                error:function () {
+                    
+                }
+            });
+            
+        });
+    });
+</script>
