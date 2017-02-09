@@ -18,9 +18,10 @@ class Usuarios_model extends CI_Model
                 return FALSE;
             }
             $new_session = array(
-                'id'        => $get['id'],
-                'user'      => $get['username'],
-                'logged_in' => TRUE
+                'id'         => $get['id'],
+                'user'       => $get['username'],
+                'logged_in'  => TRUE,
+                'check_after'=> FALSE
             );
             $this->session->set_userdata($new_session);
             return TRUE;

@@ -112,16 +112,26 @@ class Sipema extends MY_Controller
         // echo $this->algo();
     }
 
-
     public function get_data()
     {
         $data = array();
         foreach ($this->input->post() as $key => $value) 
         {
             $data[substr($key, 3)] = htmlentities($value);
-            //echo substr($key, 3).'<br>';
         }
         return $data;
+    }
+
+    public function check_user()
+    {
+        $this->load->model('usuarios_model');
+        $username = $this->input->post('');
+        $password = hash('sha256', $this->input->post(''));
+        if ($this->session->userdata('user') === $username && $this->usuarios_model->is_same_password($password)) 
+        {
+            $this->session->set_userdata('check_after', TRUE);
+            redirect(site_url('programas'));
+        }
     }
 
 // @_antecedentes text,
