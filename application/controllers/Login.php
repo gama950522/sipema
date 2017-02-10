@@ -9,7 +9,7 @@ class Login extends CI_Controller
     {
         parent::__construct();
         $this->load->model('usuarios_model');
-        //Do your magic here
+        $this->session->set_userdata('check_after', FALSE);
     }
 
     public function index()

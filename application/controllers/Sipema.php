@@ -12,6 +12,7 @@ class Sipema extends MY_Controller
         {
             redirect(site_url('login/'));
         }
+        //$this->session->set_userdata('check_after', FALSE);
         $this->load->model('registros_model');
         $this->load->model('catalogos_model');
     }
@@ -44,6 +45,9 @@ class Sipema extends MY_Controller
             // {
             //     redirect(site_url('sipema/'));
             // }
+            // $host= $_SERVER["HTTP_HOST"];
+            // $url= $_SERVER["REQUEST_URI"];
+            // echo "http://" . $host . $url;
             $data['info'] = $this->catalogos_model->get_programas($value);
             $data['categoria']     = $this->catalogos_model->get_nombre_categoria($value);
             $this->load->view('layout/header', $data);
@@ -52,24 +56,100 @@ class Sipema extends MY_Controller
         }
         else
         {
-            redirect(site_url('sipema'));
-        }
-            
+            redirect(site_url('sipema/'));
+        }       
     }
 
 
-    
+    public function programa($cat = '')
+    {
+        $ids = $this->catalogos_model->get_idcatalogo('cat_programas');
+        $columns = array_column($ids, 'id');
+        if ($cat !== '' && in_array($cat, $columns)) 
+        {
+            $data['info'] = $this->catalogos_model->get_subprogramas($cat);
+            $data['categoria']     = $this->catalogos_model->get_nombre_categoria($cat);
+
+            $this->load->view('layout/header', $data);
+            $this->load->view('sipema/division_programas');
+            $this->load->view('layout/footer');
+        }
+        
+        else
+        {
+            redirect(site_url('sipema/'));
+        }
+    }
+
+    public function subprograma($num = '')
+    {
+        if ($num === '')
+        {
+            redirect(site_url());
+        }
+        else
+        {
+            $view = '';
+            switch ($num)
+            {
+                case '3':
+                    $view = 'sipema/steps';
+                    break;
+                default:
+                    redirect(site_url());
+                    break;
+            }
+            //$this->load->view('layout/header');
+            $this->load->view($view);
+            $this->load->view('layout/footer');
+        }
+    }
+
+    public function guardar_reg()
+    {
+        if ($this->validacion_campos())
+        {
+            $data['success'] = ($this->registros_model->guardar_poas($this->get_data()) === NULL ? TRUE : FALSE);
+        }
+        else
+        {
+            $data['success'] = FALSE;
+        }
+        echo json_encode($data);
+        // echo $this->algo();
+    }
 
      public function check_user()
     {
-    //     $this->load->model('usuarios_model');
-    //     $username = $this->input->post('srt_username');
-    //     $password = (empty($this->input->post('psw_password')) ? '' : hash('sha256', $this->input->post('psw_password')));
-    //     if ($this->session->userdata('user') === $username && $this->usuarios_model->is_same_password($password)) 
-    //     {
-    //         $this->session->set_userdata('check_after', TRUE);
-             redirect(site_url('programas'));
-    //     }
+        $this->load->model('usuarios_model');
+        $username = $this->input->post('str_username');
+        $password = (empty($this->input->post('psw_password')) ? '' : hash('sha256', $this->input->post('psw_password')));
+        $value = $this->input->post('hid_idprograma');
+        $ids = $this->catalogos_model->get_idcatalogo('cat_programas');
+        
+        //$data['array'] = array_column($ids, 'id');
+        $data['user'] = $this->session->userdata('user') . ' -- ' . $username;
+        //$data['pass'] = ($this->usuarios_model->is_same_password($password));
+        //$data['in_array'] = (in_array($value, array_column($ids, 'id')));
+
+        if ($this->session->userdata('user') === $username 
+            && $this->usuarios_model->is_same_password($password)
+            && in_array($value, array_column($ids, 'id'))) 
+        {
+            $this->session->set_userdata('check_after', TRUE);
+            $data['url'] = site_url('sipema/programa/' . $value);
+            $data['success'] = TRUE;
+        }
+        else
+        {
+            //$host= $_SERVER["HTTP_HOST"];
+            //$url = $_SERVER["REQUEST_URI"];
+            // echo "http://" . $host . $url;
+            $data['url'] = $_SERVER['HTTP_REFERER'];
+            $data['success'] = FALSE;
+            //echo $_SERVER['HTTP_REFERER'];
+        }
+        echo json_encode($data);
      }
 
 // @_antecedentes text,

@@ -41,7 +41,7 @@ class Usuarios_model extends CI_Model
             $this->db->from('usuarios');
             $this->db->where('username', $this->session->userdata('user'));
             $result = $this->db->get();
-            if ($result->row()['password'] === $val) 
+            if ($result->row()->password === $val) 
             {
                 return TRUE;
             }

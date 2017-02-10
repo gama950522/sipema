@@ -49,7 +49,7 @@
 <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
     <div class="modal-dialog modal-sm" role="document">
         <?php
-        echo form_open('sipema/programa/', array('class' => 'form-signin', 'id'=>'frm-check-user'));
+        echo form_open('sipema/check_user/', array('class' => 'form-signin', 'id'=>'frm-check-user'));
         ?>
         <div class="modal-content">
             <div class="modal-header">
@@ -73,7 +73,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                 <button type="submit" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Validar</button>
-                <a href="<?php echo site_url('sipema/programa/5'); ?>">...</a>
+                <!-- <a href="<?php echo site_url('sipema/programa/5'); ?>">...</a> -->
             </div>
         </div>
         <?php
@@ -92,13 +92,20 @@
                 type: $(this).attr('method'),
                 dataType: 'json',
                 data: $(this).serialize(),
-                beforeSend: function(){
+                success: function (data, textStatus, jqXHR) {
+                    //setTimeout(function () {
+                        if (!data.success) 
+                        {
+                            alert('Tus datos no son correctos, intentalo nuevamente');
+                            $(this).reset();
+                        }
+                        window.location = data.url;
                 },
-                success:function (data) {
-                    console.log(data);
-                },
-                error:function () {
-                    
+                error: function (jqXHR, textStatus, errorThrown) {
+                     console.log(jqXHR);
+                     console.log(textStatus);
+                     console.log(errorThrown);
+                    //$('body').waitMe('hide');
                 }
             });
         });

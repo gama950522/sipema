@@ -37,6 +37,11 @@ class Catalogos_model extends CI_Model {
 		return $ids->row();
 	}
 
+	public function get_subprogramas($id='')
+	{
+		# code...
+	}
+
 }
 
 /* End of file modelName.php */
