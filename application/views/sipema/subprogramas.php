@@ -14,7 +14,7 @@
                     
                     <div class="list-group">
                         <?php foreach($info as $item): ?>
-                            <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
+                            <a href="#" id="<?php echo $item['id']; ?>" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
                                 <h4 class="list-group-item-heading"><?php echo $item['nombre']; ?></h4>
                                 <p class="list-group-item-text"><?php echo $item['descripcion']; ?></p>
                             </a>
@@ -62,13 +62,12 @@
                 <div class="form-group">
                     <label class="control-label">Usuario</label>
                     <input type="text" name="str_username" class="form-control" />
-
                 </div>
-
                 <div class="form-group">
                     <label class="control-label">Contraseña</label>
                     <input type="password" name="psw_password" class="form-control" />
                 </div>
+                <input type="hidden" id="hid_idprograma" name="hid_idprograma">
 
             </div>
             <div class="modal-footer">
@@ -82,29 +81,34 @@
         ?>
     </div>
 </div>
-
-
 <script type="text/javascript">
-    // $(document).ready(function () {
-    //     $('#frm-check-user').on('submit', function(event) {
-    //         event.preventDefault();
-    //         //alert('hola');
+    $(document).ready(function () {
+        $('#frm-check-user').on('submit', function(event) {
+            event.preventDefault();
+            //alert('hola');
             
-    //         $.ajax({
-    //             url: $(this).attr('action'),
-    //             type: $(this).attr('method'),
-    //             dataType: 'json',
-    //             data: $(this).serialize(),
-    //             beforeSend:function(){
-    //             },
-    //             success:function (data) {
-    //                 console.log(data);
-    //             },
-    //             error:function () {
+            $.ajax({
+                url: $(this).attr('action'),
+                type: $(this).attr('method'),
+                dataType: 'json',
+                data: $(this).serialize(),
+                beforeSend: function(){
+                },
+                success:function (data) {
+                    console.log(data);
+                },
+                error:function () {
                     
-    //             }
-    //         });
-            
-    //     });
-    // });
+                }
+            });
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.list-group-item').on('click', function(){
+            //alert($(this).attr('id'));
+            $('#hid_idprograma').val($(this).attr('id'));
+        });
+    });
 </script>
