@@ -6,10 +6,10 @@ class Porgrmas extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		if ($this->session->userdata('check_after') === FALSE) 
-		{
-			redirect(site_url('sipema'));
-		}
+		// if ($this->session->userdata('check_after') === FALSE) 
+		// {
+		// 	redirect(site_url('sipema'));
+		// }
 	}
 
 	public function index()

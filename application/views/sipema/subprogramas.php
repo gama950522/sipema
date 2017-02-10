@@ -47,7 +47,7 @@
 <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
     <div class="modal-dialog modal-sm" role="document">
         <?php
-        echo form_open('sipema/check_user/', array('class' => 'form-signin', 'id'=>'frm-check-user'));
+        echo form_open('sipema/programa/', array('class' => 'form-signin', 'id'=>'frm-check-user'));
         ?>
         <div class="modal-content">
             <div class="modal-header">
@@ -72,7 +72,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                 <button type="submit" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Validar</button>
-                
+                <a href="<?php echo site_url('sipema/programa/5'); ?>">...</a>
             </div>
         </div>
         <?php
@@ -83,26 +83,26 @@
 
 
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('#frm-check-user').on('submit', function(event) {
-            event.preventDefault();
-            //alert('hola');
+    // $(document).ready(function () {
+    //     $('#frm-check-user').on('submit', function(event) {
+    //         event.preventDefault();
+    //         //alert('hola');
             
-            $.ajax({
-                url: $(this).attr('action'),
-                type: $(this).attr('method'),
-                dataType: 'json',
-                data: $(this).serialize(),
-                beforeSend:function(){
-                },
-                success:function (data) {
-                    console.log(data);
-                },
-                error:function () {
+    //         $.ajax({
+    //             url: $(this).attr('action'),
+    //             type: $(this).attr('method'),
+    //             dataType: 'json',
+    //             data: $(this).serialize(),
+    //             beforeSend:function(){
+    //             },
+    //             success:function (data) {
+    //                 console.log(data);
+    //             },
+    //             error:function () {
                     
-                }
-            });
+    //             }
+    //         });
             
-        });
-    });
+    //     });
+    // });
 </script>

@@ -122,17 +122,17 @@ class Sipema extends MY_Controller
         return $data;
     }
 
-    public function check_user()
+     public function check_user()
     {
-        $this->load->model('usuarios_model');
-        $username = $this->input->post('srt_username');
-        $password = (empty($this->input->post('psw_password')) ? '' : hash('sha256', $this->input->post('psw_password')));
-        if ($this->session->userdata('user') === $username && $this->usuarios_model->is_same_password($password)) 
-        {
-            $this->session->set_userdata('check_after', TRUE);
-            redirect(site_url('programas'));
-        }
-    }
+    //     $this->load->model('usuarios_model');
+    //     $username = $this->input->post('srt_username');
+    //     $password = (empty($this->input->post('psw_password')) ? '' : hash('sha256', $this->input->post('psw_password')));
+    //     if ($this->session->userdata('user') === $username && $this->usuarios_model->is_same_password($password)) 
+    //     {
+    //         $this->session->set_userdata('check_after', TRUE);
+             redirect(site_url('programas'));
+    //     }
+     }
 
 // @_antecedentes text,
 // @_result_obt text,
