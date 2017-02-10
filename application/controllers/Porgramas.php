@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Porgrmas extends CI_Controller
+class Porgramas extends CI_Controller
 {
 
     public function __construct()
@@ -14,11 +14,11 @@ class Porgrmas extends CI_Controller
         // }
     }
 
-    public function index()
-    {
-        //$this->load->view('View File');
-        echo "do babes";
-    }
+//    public function index()
+//    {
+//        //$this->load->view('View File');
+//        echo "do babes";
+//    }
 
     public function programa($cat = '')
     {
