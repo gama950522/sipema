@@ -8,11 +8,9 @@ class Sipema extends MY_Controller
     public function __construct()
     {
         parent::__construct();
-        //echo('ALGO');
         if (!$this->session->userdata('logged_in'))
         {
             redirect(site_url('login/'));
-            //E9QE746DSF32GFH5J78KLI4K5JMN1BCV4F8GT7
         }
         $this->load->model('registros_model');
         $this->load->model('catalogos_model');
@@ -46,9 +44,9 @@ class Sipema extends MY_Controller
             {
                 redirect(site_url('sipema/'));
             }
-            // $this->load->view('layout/header');
-            // $this->load->view($view);
-            // $this->load->view('layout/footer');
+            $this->load->view('layout/header');
+            $this->load->view('sipema/'.$view);
+            $this->load->view('layout/footer');
         }
         else
         {
