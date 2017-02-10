@@ -1,27 +1,28 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Porgrmas extends CI_Controller {
+class Porgrmas extends CI_Controller
+{
 
-	public function __construct()
-	{
-		parent::__construct();
-		// if ($this->session->userdata('check_after') === FALSE) 
-		// {
-		// 	redirect(site_url('sipema'));
-		// }
-	}
-
-	public function index()
-	{
-		//$this->load->view('View File');
-		echo "do babes";
-	}
-
-
-	public function programa($cat = '')
+    public function __construct()
     {
-        if ( ! ($cat === ''))
+        parent::__construct();
+        // if ($this->session->userdata('check_after') === FALSE) 
+        // {
+        // 	redirect(site_url('sipema'));
+        // }
+    }
+
+    public function index()
+    {
+        //$this->load->view('View File');
+        echo "do babes";
+    }
+
+    public function programa($cat = '')
+    {
+        if (!($cat === ''))
         {
             $view = '';
             switch ($cat)
@@ -69,7 +70,7 @@ class Porgrmas extends CI_Controller {
 
     public function guardar_reg()
     {
-        if($this->validacion_campos())
+        if ($this->validacion_campos())
         {
             $data['success'] = ($this->registros_model->guardar_poas($this->get_data()) === NULL ? TRUE : FALSE);
         }
@@ -80,7 +81,6 @@ class Porgrmas extends CI_Controller {
         echo json_encode($data);
         // echo $this->algo();
     }
-	
 
 }
 

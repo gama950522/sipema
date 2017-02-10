@@ -20,6 +20,23 @@ class Catalogos_model extends CI_Model {
 		return $ids->result_array();
 	}
 
+	public function get_programas($idsipema = '')
+	{
+		$this->db->where('id_cat_sipema', $idsipema);
+		$result = $this->db->get('cat_programas');
+
+		return $result->result_array();
+	}
+
+	public function get_nombre_categoria($id='')
+	{
+		$this->db->select('nombre');
+		//$this->db->from('cat_sipema');
+		$this->db->where('id', $id);
+		$ids = $this->db->get('cat_sipema', 1);
+		return $ids->row();
+	}
+
 }
 
 /* End of file modelName.php */

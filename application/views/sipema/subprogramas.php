@@ -6,26 +6,20 @@
             <tr>
                 <td class="col-md-4 ">
                     <div class="list-group">
-                        <h2 class=" list-group-item text-center">Cambio climático</h2>
+                        <h2 class=" list-group-item text-center"><?php echo $categoria->nombre; ?></h2>
                     </div>
                 </td>
                 <td class="col-md-8">
                 <div class="row">
                     
                     <div class="list-group">
-
-
-                    <?php 
-                        echo "muchas cosas wuuu";
-
-
-                        
-                    ?>
-                        <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
-                            <h4 class="list-group-item-heading">Fondo ambiental y cambio climático</h4>
-                            <p class="list-group-item-text">Descripción</p>
-                        </a>
-                        <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
+                        <?php foreach($info as $item): ?>
+                            <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
+                                <h4 class="list-group-item-heading"><?php echo $item['nombre']; ?></h4>
+                                <p class="list-group-item-text"><?php echo $item['descripcion']; ?></p>
+                            </a>
+                        <?php endforeach; ?>
+                        <!-- <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
                             <h4 class="list-group-item-heading">Programa estatal de acción ante el cambio climático</h4>
                             <p class="list-group-item-text">Descripción</p>
                         </a>
@@ -40,7 +34,7 @@
                         <a href="#" class="list-group-item active" data-toggle="modal" data-target=".bs-example-modal-sm">
                             <h4 class="list-group-item-heading">Programas municipales de acción ante el cambio climático</h4>
                             <p class="list-group-item-text">Descripción</p>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 </td>

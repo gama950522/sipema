@@ -30,22 +30,24 @@ class Sipema extends MY_Controller
         $columns = array_column($ids, 'id');
         if ($value !== '' && in_array($value, $columns)) 
         {
-            $view = '';
-            foreach ($columns as $key) 
-            {
-                if ($key === $value) 
-                {
-                    echo "siiii";
-                    $view = 'hola';
-                    break;
-                }
-            }
-            if ($view === '')
-            {
-                redirect(site_url('sipema/'));
-            }
-            $this->load->view('layout/header');
-            $this->load->view('sipema/'.$view);
+            // $view = '';
+            // foreach ($columns as $key) 
+            // {
+            //     if ($key === $value) 
+            //     {
+            //         echo "siiii";
+            //         $view = 'hola';
+            //         break;
+            //     }
+            // }
+            // if ($view === '')
+            // {
+            //     redirect(site_url('sipema/'));
+            // }
+            $data['info'] = $this->catalogos_model->get_programas($value);
+            $data['categoria']     = $this->catalogos_model->get_nombre_categoria($value);
+            $this->load->view('layout/header', $data);
+            $this->load->view('sipema/subprogramas');
             $this->load->view('layout/footer');
         }
         else
