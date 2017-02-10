@@ -13,6 +13,14 @@
                 <div class="row">
                     
                     <div class="list-group">
+
+
+                    <?php 
+                        echo "muchas cosas wuuu";
+
+
+                        
+                    ?>
                         <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
                             <h4 class="list-group-item-heading">Fondo ambiental y cambio climático</h4>
                             <p class="list-group-item-text">Descripción</p>

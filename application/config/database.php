@@ -75,14 +75,13 @@ $active_group  = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-    //'dsn'          => '',
+    'dsn'          => '',
     'hostname'     => '127.0.0.1',
-    'port'         => '1433',
-    'username'     => 'semarnat',
+    'port'         => '3306',
+    'username'     => 'root',
     'password'     => '1234',
     'database'     => 'sipema_db',
-    'dbdriver'     => 'sqlsrv',
-    //'subdriver'    => 'pdo',
+    'dbdriver'     => 'mysqli',
     'dbprefix'     => '',
     'pconnect'     => FALSE,
     'db_debug'     => (ENVIRONMENT !== 'production'),
@@ -94,6 +93,6 @@ $db['default'] = array(
     'encrypt'      => FALSE,
     'compress'     => FALSE,
     'stricton'     => FALSE,
-    //'failover'     => array(),
+    'failover'     => array(),
     'save_queries' => TRUE
 );

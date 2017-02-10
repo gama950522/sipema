@@ -28,99 +28,37 @@ class Sipema extends MY_Controller
    
     public function categoria($value = '')
     {
-        if ($value === '')
-        {
-            redirect(site_url('welcome/mir/'));
-        }
-        else
+        $ids = $this->catalogos_model->get_idcatalogo('cat_sipema');
+        $columns = array_column($ids, 'id');
+        if ($value !== '' && in_array($value, $columns)) 
         {
             $view = '';
-            switch ($value)
+            foreach ($columns as $key) 
             {
-                case '9':
-                    $view = 'sipema/subprogramas';
+                if ($key === $value) 
+                {
+                    echo "siiii";
+                    $view = 'hola';
                     break;
-                default:
-                    redirect(site_url('sipema/'));
-                    break;
+                }
             }
-            $this->load->view('layout/header');
-            $this->load->view($view);
-            $this->load->view('layout/footer');
-        }
-    }
-
-    public function programa($cat = '')
-    {
-        if ( ! ($cat === ''))
-        {
-            $view = '';
-            switch ($cat)
+            if ($view === '')
             {
-                case '5':
-                    $view = 'sipema/division_programas';
-                    break;
-                default:
-                    # code...
-                    break;
+                redirect(site_url('sipema/'));
             }
-            $this->load->view('layout/header');
-            $this->load->view($view);
-            $this->load->view('layout/footer');
+            // $this->load->view('layout/header');
+            // $this->load->view($view);
+            // $this->load->view('layout/footer');
         }
         else
         {
-            redirect(site_url('sipema/'));
+            redirect(site_url('sipema'));
         }
+            
     }
 
-    public function subprograma($num = '')
-    {
-        if ($num === '')
-        {
-            redirect(site_url());
-        }
-        else
-        {
-            $view = '';
-            switch ($num)
-            {
-                case '3':
-                    $view = 'sipema/steps';
-                    break;
-                default:
-                    redirect(site_url());
-                    break;
-            }
-            //$this->load->view('layout/header');
-            $this->load->view($view);
-            $this->load->view('layout/footer');
-        }
-    }
 
-    public function guardar_reg()
-    {
-        if($this->validacion_campos())
-        {
-            $data['success'] = ($this->registros_model->guardar_poas($this->get_data()) === NULL ? TRUE : FALSE);
-        }
-        else
-        {
-            $data['success'] = FALSE;
-        }
-        echo json_encode($data);
-        // echo $this->algo();
-    }
-
-    public function get_data()
-    {
-        $data = array();
-        foreach ($this->input->post() as $key => $value) 
-        {
-            $data[substr($key, 3)] = htmlentities($value);
-        }
-        return $data;
-    }
+    
 
      public function check_user()
     {

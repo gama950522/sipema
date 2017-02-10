@@ -11,6 +11,15 @@ class Catalogos_model extends CI_Model {
 		return $result->result_array();
 	}
 
+	public function get_idcatalogo($catalogo)
+	{
+
+		$this->db->select('id');
+		$this->db->from($catalogo);
+		$ids = $this->db->get();
+		return $ids->result_array();
+	}
+
 }
 
 /* End of file modelName.php */

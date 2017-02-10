@@ -53,6 +53,16 @@ class MY_Controller extends CI_Controller
         return $this->form_validation->run();
     }
 
+    public function get_data()
+    {
+        $data = array();
+        foreach ($this->input->post() as $key => $value) 
+        {
+            $data[substr($key, 3)] = htmlentities($value);
+        }
+        return $data;
+    }
+
     // public function algo()
     // {
     //     echo "string";
