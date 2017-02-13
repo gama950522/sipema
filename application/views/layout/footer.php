@@ -21,40 +21,40 @@
         $('form').on('submit', function (evt) {
             if ($(this).attr('id') === 'form-reg') 
             {
-            evt.preventDefault();
-            //alert($(this).serialize());
-            $.ajax({
-                url: $(this).attr('action'),
-                type: $(this).attr('method'),
-                data: $(this).serialize(),
-                dataType: 'json',
-                async: true,
-                timeout: 4000,
-                beforeSend: function (xhr) {
-                    run_waitMe('roundBounce');
-                },
-                success: function (data, textStatus, jqXHR) {
-                    setTimeout(function () {
-                        if (!data.success) 
-                        {
-                            alert('Algo no salió bien intentalo mas tarde');
-                            $('body').waitMe('hide');
-                        }
-                        else
-                        {
-                            window.location = '<?php echo site_url('sipema/'); ?>';
-                        }
-                        //console.log(data.values);
-                    }, 4000);
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                     console.log(jqXHR);
-                     console.log(textStatus);
-                     console.log(errorThrown);
-                    $('body').waitMe('hide');
-                }
-            });
-        }
+                evt.preventDefault();
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: $(this).attr('method'),
+                    data: $(this).serialize(),
+                    dataType: 'json',
+                    async: true,
+                    timeout: 4000,
+                    beforeSend: function (xhr) {
+                        run_waitMe('roundBounce');
+                    },
+                    success: function (data, textStatus, jqXHR) {
+                        setTimeout(function () {
+                            if (data.success) 
+                            {
+                                window.location = data.url;
+                            }
+                            else
+                            {
+                                alert('Algo no salió bien intentalo mas tarde');
+                                $(this).reset();
+                                $('body').waitMe('hide');
+                            }
+                            //console.log(data.values);
+                        }, 4000);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                         console.log(jqXHR);
+                         console.log(textStatus);
+                         console.log(errorThrown);
+                        $('body').waitMe('hide');
+                    }
+                });
+            }
         }).keypress(function (e) {
             if (e.which === 13) {
                 //alert('Antes de enviar la información llena todos los campos');

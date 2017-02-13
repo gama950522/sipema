@@ -8,14 +8,13 @@
         <div class="col-md-10 col-xs-10">
             <select class="form-control input-lg" id="sel-cat">
                 <option>Selecciona una categoría</option>
-                <?php
-                $cont = 1;
-                foreach ($fields as $row) 
-                {
-                    echo '<option value="'.$row['id'].'">'.$cont.'. '. $row['nombre'].'</option>';
-                    $cont++;
-                }
-                ?>
+                <?php $cont = 1; ?>
+                <?php foreach ($fields as $row): ?>
+                
+                    <option value="<?php echo $row['id'] ?>"><?php echo $cont.'. '. $row['nombre'] ?></option>
+                    <?php $cont++; ?>
+                
+                <?php endforeach; ?>
             </select>
         </div>
         <div class="col-md-2 col-xs-2">

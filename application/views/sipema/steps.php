@@ -1,5 +1,4 @@
 
-<?php $this->load->view('layout/header'); ?>
 <div class="row">
     <div class="col-md-12" style="margin-top: 20px">
         <div class="panel panel-default">
@@ -31,14 +30,15 @@
                             <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
                             <p>Indicadores</p>
                         </div>
-                        <div class="stepwizard-step">
+                        <!-- <div class="stepwizard-step">
                             <a href="#step-6" type="button" class="btn btn-default btn-circle" disabled="disabled">6</a>
                             <p>Programación mensual</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <?php echo form_open('sipema/guardar_reg/','id="form-reg"') ?>
                 <div id="error" class="col-md-12"></div>
+                <input type="hidden" name="hdn_id_subprograma" value="<?php echo $idsubprograma ?>" />
                 <div class="row setup-content" id="step-1">
                     <div class="col-md-12">
                         <div class="col-md-6">
@@ -70,11 +70,11 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Objetivo general (En relacion al MIR)</label>
+                                    <label class="control-label">Objetivo general (En relación al MIR)</label>
                                     <textarea name="txt_obj_gral" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Objetivo específico (En relacion al MIR)</label>
+                                    <label class="control-label">Objetivo específico (En relación al MIR)</label>
                                     <textarea name="txt_obj_esp" cols="30" rows="3" class="form-control" required="required"></textarea>
                                 </div>
 
@@ -330,17 +330,24 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr></tr>
+                                        <tr>
+                                            <td class="col-xs-3"><input type="text" name="int_num_periodo" class="form-control"></td>
+                                            <td class="col-xs-3"><select name="sel_programado" class="form-control"><option>Selecciona</option></select></td>
+                                            <td class="col-xs-3"><select name="sel_realizado" class="form-control"><option>Selecciona</option></select></td>
+                                            <td class="col-xs-3"><select name="sel_semaforo" class="form-control"><option>Selecciona</option></select></td>
+                                        </tr>
                                     </tbody>
                                 </table>
-                                <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+
+                                <button type="submit" class="btn btn-success nextBtn pull-right" id="btn-send-form">Guardar información</button>
+                                <!-- <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button> -->
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row setup-content" id="step-6">
+                <!-- <div class="row setup-content" id="step-6">
                     <button type="submit" class="btn btn-success" id="btn-send-form">Guardar información</button>
-                </div>
+                </div> -->
                 <?php echo form_close() ?>
             </div>
         </div> 

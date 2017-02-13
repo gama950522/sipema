@@ -39,7 +39,10 @@ class Catalogos_model extends CI_Model {
 
 	public function get_subprogramas($id='')
 	{
-		# code...
+		$this->db->where('id_cat_programas', $id);
+		$result = $this->db->get('cat_sub_programas');
+
+		return $result->result_array();
 	}
 
 }

@@ -9,15 +9,17 @@ class Registros_model extends CI_Model
     {
     	$data['_id_user'] = $this->session->userdata('id');
     	//$this->db->query('DECLARE	@res int');
-    	$sql = "exec sp_resgistro_poas ";
-    	foreach ($data as $key => $value)
-    	{
-    		$sql .= "@$key = '$value',";
-    	}
-    	$sql = substr($sql, 0 ,-1);
-        return $this->db->query($sql)->row_array();
+    	$sql = "call sp_resgistro_poas(";
+        for($i = 0; $i < count($data); $i++)
+        {
+            $sql .= '?,';
+        }
+        $sql = substr($sql, 0,-1);
+        $sql .= ')';
+        $result = $this->db->query($sql, $data);
+        return $result->row();
     }
-
+//call sp_resgistro_poas(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
    
 
 }

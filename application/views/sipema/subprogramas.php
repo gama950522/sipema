@@ -16,7 +16,7 @@
                         <?php foreach($info as $item): ?>
                             <a href="#" id="<?php echo $item['id']; ?>" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
                                 <h4 class="list-group-item-heading"><?php echo $item['nombre']; ?></h4>
-                                <p class="list-group-item-text"><?php echo $item['descripcion']; ?></p>
+                                <p class="list-group-item-text"><?php echo $item['descripcion'] . '.'; ?></p>
                             </a>
                         <?php endforeach; ?>
                         <!-- <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
@@ -73,7 +73,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                 <button type="submit" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Validar</button>
-                <!-- <a href="<?php echo site_url('sipema/programa/5'); ?>">...</a> -->
+                <!-- <a href="<?php //echo site_url('sipema/programa/5'); ?>">...</a> -->
             </div>
         </div>
         <?php

@@ -37,8 +37,9 @@ class MY_Controller extends CI_Controller
             {
                 $this->form_validation->set_rules($key, '', 'trim|required');
             }
-            else 
+            else
             {
+                $this->form_validation->set_rules($key, '', 'trim');
             }
         }
         return $this->form_validation->run();
