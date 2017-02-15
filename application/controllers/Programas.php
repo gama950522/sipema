@@ -5,22 +5,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Programas extends CI_Controller
 {
 
-    // public function __construct()
-    // {
-    //     parent::__construct();
-    //     if ($this->session->userdata('check_after') === FALSE)
-    //     {
-    //         redirect(site_url('sipema'));
-    //     }
-    //     $this->session->set_userdata('check_after', TRUE);
-    // }
+    public function __construct()
+    {
+        parent::__construct();
+        // if ($this->session->userdata('check_after') === FALSE)
+        // {
+        //     redirect(site_url('sipema'));
+        // }
+        // $this->session->set_userdata('check_after', TRUE);
+    }
 
-    // public function index()
-    // {
-    //     //$this->load->view('View File');
-    //     redirect(site_url('programas/programa/5/'));
-    //     //echo "do babes";
-    // }
+    public function index()
+    {
+        $this->load->helper('smiley');
+        $this->load->library('table');
+
+        $image_array = get_clickable_smileys(site_url('public/images/svg/'), 'comments');
+        $col_array = $this->table->make_columns($image_array, 8);
+
+        $data['smiley_table'] = $this->table->generate($col_array);
+        $this->load->view('smiley/table_smiley', $data);
+    }
+
+    public function FunctionName($value='')
+    {
+
+    }
+
+
+
+
 
     // public function programa($cat = '')
     // {

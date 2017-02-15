@@ -23,6 +23,17 @@
     </div>
 </div>
 
+<?php 
+$images_svg = scandir('public/images/svg');
+ foreach ($images_svg as $image) 
+//echo json_encode($images_svg);
+{
+    //echo $image;
+     echo '<img src="'.site_url('public/images/svg/'.$image.'/').'" width="16" />';
+}
+ ?>
+
+
 
 <script type="text/javascript">
     $(document).ready(function () {
