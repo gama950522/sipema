@@ -29,7 +29,7 @@ $images_svg = scandir('public/images/svg');
 //echo json_encode($images_svg);
 {
     //echo $image;
-     echo '<img src="'.site_url('public/images/svg/'.$image.'/').'" width="16" />';
+     echo '<img src="'.site_url('public/images/svg/'.$image.'').'" width="16" />';
 }
  ?>
 
