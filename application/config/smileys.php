@@ -16,6 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 $smileys = array(
 //	smiley			image name						width	height	alt
+    ':grinning:'                     => array('1f600.svg', '25', '25'),
     ':grin:'                         => array('1f601.svg', '25', '25'),
     ':joy:'                          => array('1f602.svg', '25', '25', ''),
     ':rofl:'                         => array('1f923.svg', '25', '25', ''),
@@ -80,9 +81,9 @@ $smileys = array(
     ':flushed:'                      => array('1f633.svg', '25', '25', ''),
     ':dizzy_face:'                   => array('1f635.svg', '25', '25', ''),
     ':rage:'                         => array('1f621.svg', '25', '25', ''),
-    ':angry:'                        => array('1f625.svg', '25', '25', ''),
+    ':angry:'                        => array('1f620.svg', '25', '25', ''),
     ':innocent:'                     => array('1f607.svg', '25', '25', ''),
-    ':cowboy:'                       => array('1f925.svg', '25', '25', ''),
+    ':cowboy:'                       => array('1f920.svg', '25', '25', ''),
     ':clown:'                        => array('1f921.svg', '25', '25', ''),
     ':lying_face:'                   => array('1f925.svg', '25', '25', ''),
     ':mask:'                         => array('1f637.svg', '25', '25', ''),

@@ -9,21 +9,33 @@
 // //echo json_encode($images_svg);
     //foreach ($smiley_table as $image) 
     //{
+    echo count($smiley_table);
+
     for ($j = 0; $j < count($smiley_table); $j++)
     {
         echo '<tr>';
-        for ($i = 0; $i < 10; $i++)
+        for ($i = 0; $i < 23; $i++)
         {
-        	if ($j >= count($smiley_table)) 
-        	{
-        		break;
-        	}
+            if ($j >= count($smiley_table))
+            {
+                echo 'salio cuando j valia' . $j;
+                break;
+            }
+
             echo '<td>';
-            echo $smiley_table[$j];
+            echo $smiley_table[$j] . ' + ' . $j;
             echo '</td>';
             $j++;
         }
-    	echo '</tr>';
+        if ($j >= count($smiley_table))
+        {
+            echo 'salio cuando j valia' . $j;
+            break;
+        }
+        echo '<td>';
+        echo $smiley_table[$j] . '+' . $j;
+        echo '</td>';
+        echo '</tr>';
     }
     ?>
 </table>
