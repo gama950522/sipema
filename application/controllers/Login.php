@@ -22,15 +22,9 @@ class Login extends CI_Controller
         {
 
 
-            $this->load->helper('smiley');
-            $this->load->library('table');
+            
 
-            $image_array = get_clickable_smileys(site_url('public/images/svg/'), 'comments');
-            $col_array = $this->table->make_columns($image_array, 8);
-
-            $data['smiley_table'] = $this->table->generate($col_array);
-
-            $this->load->view('layout/header',$data);
+            $this->load->view('layout/header');
             $this->load->view('sipema/login');
             $this->load->view('layout/footer');
             

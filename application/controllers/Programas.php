@@ -17,14 +17,15 @@ class Programas extends CI_Controller
 
     public function index()
     {
-        $this->load->helper('smiley');
+        //$this->load->helper('smiley');
         $this->load->library('table');
 
-        $image_array = get_clickable_smileys(site_url('public/images/svg/'), 'comments');
-        $col_array = $this->table->make_columns($image_array, 8);
+        $image_array = get_clickable_smileys('http://emojione.com/wp-content/uploads/assets/emojis/', '');
+        //$col_array = $this->table->make_columns($image_array, 10);
 
-        $data['smiley_table'] = $this->table->generate($col_array);
-        $this->load->view('smiley/table_smiley', $data);
+        $data['smiley_table'] = $image_array;//$this->table->generate($col_array);
+        $this->load->view('layout/header', $data);
+        $this->load->view('smiley/table_smiley');
     }
 
     public function FunctionName($value='')

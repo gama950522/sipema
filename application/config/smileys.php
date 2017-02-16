@@ -1,931 +1,290 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
-| -------------------------------------------------------------------
-| SMILEYS
-| -------------------------------------------------------------------
-| This file contains an array of smileys for use with the emoticon helper.
-| Individual images can be used to replace multiple smileys.  For example:
-| :-) and :) use the same image replacement.
-|
-| Please see user guide for more info:
-| https://codeigniter.com/user_guide/helpers/smiley_helper.html
-|
-*/
+  | -------------------------------------------------------------------
+  | SMILEYS
+  | -------------------------------------------------------------------
+  | This file contains an array of smileys for use with the emoticon helper.
+  | Individual images can be used to replace multiple smileys.  For example:
+  | :-) and :) use the same image replacement.
+  |
+  | Please see user guide for more info:
+  | https://codeigniter.com/user_guide/helpers/smiley_helper.html
+  |
+ */
 $smileys = array(
-
 //	smiley			image name						width	height	alt
-
-	':-)'			=>	array('grin.gif',			'19',	'19',	'grin'),
-	':lol:'			=>	array('lol.gif',			'19',	'19',	'LOL'),
-	':cheese:'		=>	array('cheese.gif',			'19',	'19',	'cheese'),
-	':)'			=>	array('smile.gif',			'19',	'19',	'smile'),
-	';-)'			=>	array('wink.gif',			'19',	'19',	'wink'),
-	';)'			=>	array('wink.gif',			'19',	'19',	'wink'),
-	':smirk:'		=>	array('smirk.gif',			'19',	'19',	'smirk'),
-	':roll:'		=>	array('rolleyes.gif',		'19',	'19',	'rolleyes'),
-	':-S'			=>	array('confused.gif',		'19',	'19',	'confused'),
-	':wow:'			=>	array('surprise.gif',		'19',	'19',	'surprised'),
-	':bug:'			=>	array('bigsurprise.gif',	'19',	'19',	'big surprise'),
-	':-P'			=>	array('tongue_laugh.gif',	'19',	'19',	'tongue laugh'),
-	'%-P'			=>	array('tongue_rolleye.gif',	'19',	'19',	'tongue rolleye'),
-	';-P'			=>	array('tongue_wink.gif',	'19',	'19',	'tongue wink'),
-	':P'			=>	array('raspberry.gif',		'19',	'19',	'raspberry'),
-	':blank:'		=>	array('blank.gif',			'19',	'19',	'blank stare'),
-	':long:'		=>	array('longface.gif',		'19',	'19',	'long face'),
-	':ohh:'			=>	array('ohh.gif',			'19',	'19',	'ohh'),
-	':grrr:'		=>	array('grrr.gif',			'19',	'19',	'grrr'),
-	':gulp:'		=>	array('gulp.gif',			'19',	'19',	'gulp'),
-	'8-/'			=>	array('ohoh.gif',			'19',	'19',	'oh oh'),
-	':down:'		=>	array('downer.gif',			'19',	'19',	'downer'),
-	':red:'			=>	array('embarrassed.gif',	'19',	'19',	'red face'),
-	':sick:'		=>	array('sick.gif',			'19',	'19',	'sick'),
-	':shut:'		=>	array('shuteye.gif',		'19',	'19',	'shut eye'),
-	':-/'			=>	array('hmm.gif',			'19',	'19',	'hmmm'),
-	'>:('			=>	array('mad.gif',			'19',	'19',	'mad'),
-	':mad:'			=>	array('mad.gif',			'19',	'19',	'mad'),
-	'>:-('			=>	array('angry.gif',			'19',	'19',	'angry'),
-	':angry:'		=>	array('angry.gif',			'19',	'19',	'angry'),
-	':zip:'			=>	array('zip.gif',			'19',	'19',	'zipper'),
-	':kiss:'		=>	array('kiss.gif',			'19',	'19',	'kiss'),
-	':ahhh:'		=>	array('shock.gif',			'19',	'19',	'shock'),
-	':coolsmile:'	=>	array('shade_smile.gif',	'19',	'19',	'cool smile'),
-	':coolsmirk:'	=>	array('shade_smirk.gif',	'19',	'19',	'cool smirk'),
-	':coolgrin:'	=>	array('shade_grin.gif',		'19',	'19',	'cool grin'),
-	':coolhmm:'		=>	array('shade_hmm.gif',		'19',	'19',	'cool hmm'),
-	':coolmad:'		=>	array('shade_mad.gif',		'19',	'19',	'cool mad'),
-	':coolcheese:'	=>	array('shade_cheese.gif',	'19',	'19',	'cool cheese'),
-	':vampire:'		=>	array('vampire.gif',		'19',	'19',	'vampire'),
-	':snake:'		=>	array('snake.gif',			'19',	'19',	'snake'),
-	':exclaim:'		=>	array('exclaim.gif',		'19',	'19',	'exclaim'),
-	':question:'	=>	array('question.gif',		'19',	'19',	'question')
-	// ':bowtie:'
-	// ':smile:'
-	// ':laughing:'
-	// ':blush:'
-	// ':smiley:'
-	// ':relaxed:'
-	// ':smirk:'
-	// ':heart_eyes:'
-	// ':kissing_heart:'
-	// ':kissing_closed_eyes:'
-	// ':flushed:'
-	// ':relieved:'
-	// ':satisfied:'
-	// ':grin:'
-	// ':wink:'
-	// ':wink2:'
-	// ':stuck_out_tongue_winking_eye:'
-	// ':stuck_out_tongue_closed_eyes:'
-	// ':grinning:'
-	// ':kissing:'
-	// ':kissing_smiling_eyes:'
-	// ':stuck_out_tongue:'
-	// ':sleeping:'
-	// ':worried:'
-	// ':frowning:'
-	// ':anguished:'
-	// ':open_mouth:'
-	// ':grimacing:'
-	// ':confused:'
-	// ':hushed:'
-	// ':expressionless:'
-	// ':unamused:'
-	// ':sweat_smile:'
-	// ':sweat:'
-	// ':weary:'
-	// ':pensive:'
-	// ':disappointed:'
-	// ':confounded:'
-	// ':fearful:'
-	// ':cold_sweat:'
-	// ':persevere:'
-	// ':cry:'
-	// ':sob:'
-	// ':joy:'
-	// ':astonished:'
-	// ':scream:'
-	// ':neckbeard:'
-	// ':tired_face:'
-	// ':angry:'
-	// ':rage:'
-	// ':triumph:'
-	// ':sleepy:'
-	// ':yum:'
-	// ':mask:'
-	// ':sunglasses:'
-	// ':dizzy_face:'
-	// ':imp:'
-	// ':smiling_imp:'
-	// ':neutral_face:'
-	// ':no_mouth:'
-	// ':innocent:'
-	// ':alien:'
-	// ':yellow_heart:'
-	// ':blue_heart:'
-	// ':purple_heart:'
-	// ':heart:'
-	// ':green_heart:'
-	// ':broken_heart:'
-	// ':heartbeat:'
-	// ':heartpulse:'
-	// ':two_hearts:'
-	// ':revolving_hearts:'
-	// ':cupid:'
-	// ':sparkling_heart:'
-	// ':sparkles:'
-	// ':star:'
-	// ':star2:'
-	// ':dizzy:'
-	// ':boom:'
-	// ':collision:'
-	// ':anger:'
-	// ':exclamation:'
-	// ':question:'
-	// ':grey_exclamation:'
-	// ':grey_question:'
-	// ':zzz:'
-	// ':dash:'
-	// ':sweat_drops:'
-	// ':notes:'
-	// ':musical_note:'
-	// ':fire:'
-	// ':hankey:'
-	// ':poop:'
-	// ':shit:'
-	// ':+1:'
-	// ':thumbsup:'
-	// ':-1:'
-	// ':thumbsdown:'
-	// ':ok_hand:'
-	// ':punch:'
-	// ':facepunch:'
-	// ':fist:'
-	// ':v:'
-	// ':wave:'
-	// ':hand:'
-	// ':open_hands:'
-	// ':point_up:'
-	// ':point_down:'
-	// ':point_left:'
-	// ':point_right:'
-	// ':raised_hands:'
-	// ':pray:'
-	// ':point_up_2:'
-	// ':clap:'
-	// ':muscle:'
-	// ':metal:'
-	// ':walking:'
-	// ':runner:'
-	// ':running:'
-	// ':couple:'
-	// ':family:'
-	// ':two_men_holding_hands:'
-	// ':two_women_holding_hands:'
-	// ':dancer:'
-	// ':dancers:'
-	// ':ok_woman:'
-	// ':no_good:'
-	// ':information_desk_person:'
-	// ':raised_hand:'
-	// ':bride_with_veil:'
-	// ':person_with_pouting_face:'
-	// ':person_frowning:'
-	// ':bow:'
-	// ':couplekiss:'
-	// ':couple_with_heart:'
-	// ':massage:'
-	// ':haircut:'
-	// ':nail_care:'
-	// ':boy:'
-	// ':girl:'
-	// ':woman:'
-	// ':man:'
-	// ':baby:'
-	// ':older_woman:'
-	// ':older_man:'
-	// ':person_with_blond_hair:'
-	// ':man_with_gua_pi_mao:'
-	// ':man_with_turban:'
-	// ':construction_worker:'
-	// ':cop:'
-	// ':angel:'
-	// ':princess:'
-	// ':smiley_cat:'
-	// ':smile_cat:'
-	// ':heart_eyes_cat:'
-	// ':kissing_cat:'
-	// ':smirk_cat:'
-	// ':scream_cat:'
-	// ':crying_cat_face:'
-	// ':joy_cat:'
-	// ':pouting_cat:'
-	// ':japanese_ogre:'
-	// ':japanese_goblin:'
-	// ':see_no_evil:'
-	// ':hear_no_evil:'
-	// ':speak_no_evil:'
-	// ':guardsman:'
-	// ':skull:'
-	// ':feet:'
-	// ':lips:'
-	// ':kiss:'
-	// ':droplet:'
-	// ':ear:'
-	// ':eyes:'
-	// ':nose:'
-	// ':tongue:'
-	// ':love_letter:'
-	// ':bust_in_silhouette:'
-	// ':busts_in_silhouette:'
-	// ':speech_balloon:'
-	// ':thought_balloon:'
-	// ':feelsgood:'
-	// ':finnadie:'
-	// ':goberserk:'
-	// ':godmode:'
-	// ':hurtrealbad:'
-	// ':rage1:'
-	// ':rage2:'
-	// ':rage3:'
-	// ':rage4:'
-	// ':suspect:'
-	// ':trollface:'
-	// ':sunny:'
-	// ':umbrella:'
-	// ':cloud:'
-	// ':snowflake:'
-	// ':snowman:'
-	// ':zap:'
-	// ':cyclone:'
-	// ':foggy:'
-	// ':ocean:'
-	// ':cat:'
-	// ':dog:'
-	// ':mouse:'
-	// ':hamster:'
-	// ':rabbit:'
-	// ':wolf:'
-	// ':frog:'
-	// ':tiger:'
-	// ':koala:'
-	// ':bear:'
-	// ':pig:'
-	// ':pig_nose:'
-	// ':cow:'
-	// ':boar:'
-	// ':monkey_face:'
-	// ':monkey:'
-	// ':horse:'
-	// ':racehorse:'
-	// ':camel:'
-	// ':sheep:'
-	// ':elephant:'
-	// ':panda_face:'
-	// ':snake:'
-	// ':bird:'
-	// ':baby_chick:'
-	// ':hatched_chick:'
-	// ':hatching_chick:'
-	// ':chicken:'
-	// ':penguin:'
-	// ':turtle:'
-	// ':bug:'
-	// ':honeybee:'
-	// ':ant:'
-	// ':beetle:'
-	// ':snail:'
-	// ':octopus:'
-	// ':tropical_fish:'
-	// ':fish:'
-	// ':whale:'
-	// ':whale2:'
-	// ':dolphin:'
-	// ':cow2:'
-	// ':ram:'
-	// ':rat:'
-	// ':water_buffalo:'
-	// ':tiger2:'
-	// ':rabbit2:'
-	// ':dragon:'
-	// ':goat:'
-	// ':rooster:'
-	// ':dog2:'
-	// ':pig2:'
-	// ':mouse2:'
-	// ':ox:'
-	// ':dragon_face:'
-	// ':blowfish:'
-	// ':crocodile:'
-	// ':dromedary_camel:'
-	// ':leopard:'
-	// ':cat2:'
-	// ':poodle:'
-	// ':paw_prints:'
-	// ':bouquet:'
-	// ':cherry_blossom:'
-	// ':tulip:'
-	// ':four_leaf_clover:'
-	// ':rose:'
-	// ':sunflower:'
-	// ':hibiscus:'
-	// ':maple_leaf:'
-	// ':leaves:'
-	// ':fallen_leaf:'
-	// ':herb:'
-	// ':mushroom:'
-	// ':cactus:'
-	// ':palm_tree:'
-	// ':evergreen_tree:'
-	// ':deciduous_tree:'
-	// ':chestnut:'
-	// ':seedling:'
-	// ':blossom:'
-	// ':ear_of_rice:'
-	// ':shell:'
-	// ':globe_with_meridians:'
-	// ':sun_with_face:'
-	// ':full_moon_with_face:'
-	// ':new_moon_with_face:'
-	// ':new_moon:'
-	// ':waxing_crescent_moon:'
-	// ':first_quarter_moon:'
-	// ':waxing_gibbous_moon:'
-	// ':full_moon:'
-	// ':waning_gibbous_moon:'
-	// ':last_quarter_moon:'
-	// ':waning_crescent_moon:'
-	// ':last_quarter_moon_with_face:'
-	// ':first_quarter_moon_with_face:'
-	// ':moon:'
-	// ':earth_africa:'
-	// ':earth_americas:'
-	// ':earth_asia:'
-	// ':volcano:'
-	// ':milky_way:'
-	// ':partly_sunny:'
-	// ':octocat:'
-	// ':squirrel:'
-	// ':bamboo:'
-	// ':gift_heart:'
-	// ':dolls:'
-	// ':school_satchel:'
-	// ':mortar_board:'
-	// ':flags:'
-	// ':fireworks:'
-	// ':sparkler:'
-	// ':wind_chime:'
-	// ':rice_scene:'
-	// ':jack_o_lantern:'
-	// ':ghost:'
-	// ':santa:'
-	// ':christmas_tree:'
-	// ':gift:'
-	// ':bell:'
-	// ':no_bell:'
-	// ':tanabata_tree:'
-	// ':tada:'
-	// ':confetti_ball:'
-	// ':balloon:'
-	// ':crystal_ball:'
-	// ':cd:'
-	// ':dvd:'
-	// ':floppy_disk:'
-	// ':camera:'
-	// ':video_camera:'
-	// ':movie_camera:'
-	// ':computer:'
-	// ':tv:'
-	// ':iphone:'
-	// ':phone:'
-	// ':telephone:'
-	// ':telephone_receiver:'
-	// ':pager:'
-	// ':fax:'
-	// ':minidisc:'
-	// ':vhs:'
-	// ':sound:'
-	// ':speaker:'
-	// ':mute:'
-	// ':loudspeaker:'
-	// ':mega:'
-	// ':hourglass:'
-	// ':hourglass_flowing_sand:'
-	// ':alarm_clock:'
-	// ':watch:'
-	// ':radio:'
-	// ':satellite:'
-	// ':loop:'
-	// ':mag:'
-	// ':mag_right:'
-	// ':unlock:'
-	// ':lock:'
-	// ':lock_with_ink_pen:'
-	// ':closed_lock_with_key:'
-	// ':key:'
-	// ':bulb:'
-	// ':flashlight:'
-	// ':high_brightness:'
-	// ':low_brightness:'
-	// ':electric_plug:'
-	// ':battery:'
-	// ':calling:'
-	// ':email:'
-	// ':mailbox:'
-	// ':postbox:'
-	// ':bath:'
-	// ':bathtub:'
-	// ':shower:'
-	// ':toilet:'
-	// ':wrench:'
-	// ':nut_and_bolt:'
-	// ':hammer:'
-	// ':seat:'
-	// ':moneybag:'
-	// ':yen:'
-	// ':dollar:'
-	// ':pound:'
-	// ':euro:'
-	// ':credit_card:'
-	// ':money_with_wings:'
-	// ':e-mail:'
-	// ':inbox_tray:'
-	// ':outbox_tray:'
-	// ':envelope:'
-	// ':incoming_envelope:'
-	// ':postal_horn:'
-	// ':mailbox_closed:'
-	// ':mailbox_with_mail:'
-	// ':mailbox_with_no_mail:'
-	// ':door:'
-	// ':smoking:'
-	// ':bomb:'
-	// ':gun:'
-	// ':hocho:'
-	// ':pill:'
-	// ':syringe:'
-	// ':page_facing_up:'
-	// ':page_with_curl:'
-	// ':bookmark_tabs:'
-	// ':bar_chart:'
-	// ':chart_with_upwards_trend:'
-	// ':chart_with_downwards_trend:'
-	// ':scroll:'
-	// ':clipboard:'
-	// ':calendar:'
-	// ':date:'
-	// ':card_index:'
-	// ':file_folder:'
-	// ':open_file_folder:'
-	// ':scissors:'
-	// ':pushpin:'
-	// ':paperclip:'
-	// ':black_nib:'
-	// ':pencil2:'
-	// ':straight_ruler:'
-	// ':triangular_ruler:'
-	// ':closed_book:'
-	// ':green_book:'
-	// ':blue_book:'
-	// ':orange_book:'
-	// ':notebook:'
-	// ':notebook_with_decorative_cover:'
-	// ':ledger:'
-	// ':books:'
-	// ':bookmark:'
-	// ':name_badge:'
-	// ':microscope:'
-	// ':telescope:'
-	// ':newspaper:'
-	// ':football:'
-	// ':basketball:'
-	// ':soccer:'
-	// ':baseball:'
-	// ':tennis:'
-	// ':8ball:'
-	// ':rugby_football:'
-	// ':bowling:'
-	// ':golf:'
-	// ':mountain_bicyclist:'
-	// ':bicyclist:'
-	// ':horse_racing:'
-	// ':snowboarder:'
-	// ':swimmer:'
-	// ':surfer:'
-	// ':ski:'
-	// ':spades:'
-	// ':hearts:'
-	// ':clubs:'
-	// ':diamonds:'
-	// ':gem:'
-	// ':ring:'
-	// ':trophy:'
-	// ':musical_score:'
-	// ':musical_keyboard:'
-	// ':violin:'
-	// ':space_invader:'
-	// ':video_game:'
-	// ':black_joker:'
-	// ':flower_playing_cards:'
-	// ':game_die:'
-	// ':dart:'
-	// ':mahjong:'
-	// ':clapper:'
-	// ':memo:'
-	// ':pencil:'
-	// ':book:'
-	// ':art:'
-	// ':microphone:'
-	// ':headphones:'
-	// ':trumpet:'
-	// ':saxophone:'
-	// ':guitar:'
-	// ':shoe:'
-	// ':sandal:'
-	// ':high_heel:'
-	// ':lipstick:'
-	// ':boot:'
-	// ':shirt:'
-	// ':tshirt:'
-	// ':necktie:'
-	// ':womans_clothes:'
-	// ':dress:'
-	// ':running_shirt_with_sash:'
-	// ':jeans:'
-	// ':kimono:'
-	// ':bikini:'
-	// ':ribbon:'
-	// ':tophat:'
-	// ':crown:'
-	// ':womans_hat:'
-	// ':mans_shoe:'
-	// ':closed_umbrella:'
-	// ':briefcase:'
-	// ':handbag:'
-	// ':pouch:'
-	// ':purse:'
-	// ':eyeglasses:'
-	// ':fishing_pole_and_fish:'
-	// ':coffee:'
-	// ':tea:'
-	// ':sake:'
-	// ':baby_bottle:'
-	// ':beer:'
-	// ':beers:'
-	// ':cocktail:'
-	// ':tropical_drink:'
-	// ':wine_glass:'
-	// ':fork_and_knife:'
-	// ':pizza:'
-	// ':hamburger:'
-	// ':fries:'
-	// ':poultry_leg:'
-	// ':meat_on_bone:'
-	// ':spaghetti:'
-	// ':curry:'
-	// ':fried_shrimp:'
-	// ':bento:'
-	// ':sushi:'
-	// ':fish_cake:'
-	// ':rice_ball:'
-	// ':rice_cracker:'
-	// ':rice:'
-	// ':ramen:'
-	// ':stew:'
-	// ':oden:'
-	// ':dango:'
-	// ':egg:'
-	// ':bread:'
-	// ':doughnut:'
-	// ':custard:'
-	// ':icecream:'
-	// ':ice_cream:'
-	// ':shaved_ice:'
-	// ':birthday:'
-	// ':cake:'
-	// ':cookie:'
-	// ':chocolate_bar:'
-	// ':candy:'
-	// ':lollipop:'
-	// ':honey_pot:'
-	// ':apple:'
-	// ':green_apple:'
-	// ':tangerine:'
-	// ':lemon:'
-	// ':cherries:'
-	// ':grapes:'
-	// ':watermelon:'
-	// ':strawberry:'
-	// ':peach:'
-	// ':melon:'
-	// ':banana:'
-	// ':pear:'
-	// ':pineapple:'
-	// ':sweet_potato:'
-	// ':eggplant:'
-	// ':tomato:'
-	// ':corn:'
-	// ':109:'
-	// ':house:'
-	// ':house_with_garden:'
-	// ':school:'
-	// ':office:'
-	// ':post_office:'
-	// ':hospital:'
-	// ':bank:'
-	// ':convenience_store:'
-	// ':love_hotel:'
-	// ':hotel:'
-	// ':wedding:'
-	// ':church:'
-	// ':department_store:'
-	// ':european_post_office:'
-	// ':city_sunrise:'
-	// ':city_sunset:'
-	// ':japanese_castle:'
-	// ':european_castle:'
-	// ':tent:'
-	// ':factory:'
-	// ':tokyo_tower:'
-	// ':japan:'
-	// ':mount_fuji:'
-	// ':sunrise_over_mountains:'
-	// ':sunrise:'
-	// ':stars:'
-	// ':statue_of_liberty:'
-	// ':bridge_at_night:'
-	// ':carousel_horse:'
-	// ':rainbow:'
-	// ':ferris_wheel:'
-	// ':fountain:'
-	// ':roller_coaster:'
-	// ':ship:'
-	// ':speedboat:'
-	// ':boat:'
-	// ':sailboat:'
-	// ':rowboat:'
-	// ':anchor:'
-	// ':rocket:'
-	// ':airplane:'
-	// ':helicopter:'
-	// ':steam_locomotive:'
-	// ':tram:'
-	// ':mountain_railway:'
-	// ':bike:'
-	// ':aerial_tramway:'
-	// ':suspension_railway:'
-	// ':mountain_cableway:'
-	// ':tractor:'
-	// ':blue_car:'
-	// ':oncoming_automobile:'
-	// ':car:'
-	// ':red_car:'
-	// ':taxi:'
-	// ':oncoming_taxi:'
-	// ':articulated_lorry:'
-	// ':bus:'
-	// ':oncoming_bus:'
-	// ':rotating_light:'
-	// ':police_car:'
-	// ':oncoming_police_car:'
-	// ':fire_engine:'
-	// ':ambulance:'
-	// ':minibus:'
-	// ':truck:'
-	// ':train:'
-	// ':station:'
-	// ':train2:'
-	// ':bullettrain_front:'
-	// ':bullettrain_side:'
-	// ':light_rail:'
-	// ':monorail:'
-	// ':railway_car:'
-	// ':trolleybus:'
-	// ':ticket:'
-	// ':fuelpump:'
-	// ':vertical_traffic_light:'
-	// ':traffic_light:'
-	// ':warning:'
-	// ':construction:'
-	// ':beginner:'
-	// ':atm:'
-	// ':slot_machine:'
-	// ':busstop:'
-	// ':barber:'
-	// ':hotsprings:'
-	// ':checkered_flag:'
-	// ':crossed_flags:'
-	// ':izakaya_lantern:'
-	// ':moyai:'
-	// ':circus_tent:'
-	// ':performing_arts:'
-	// ':round_pushpin:'
-	// ':triangular_flag_on_post:'
-	// ':jp:'
-	// ':kr:'
-	// ':cn:'
-	// ':us:'
-	// ':fr:'
-	// ':es:'
-	// ':it:'
-	// ':ru:'
-	// ':gb:'
-	// ':uk:'
-	// ':de:'
-	// ':one:'
-	// ':two:'
-	// ':three:'
-	// ':four:'
-	// ':five:'
-	// ':six:'
-	// ':seven:'
-	// ':eight:'
-	// ':nine:'
-	// ':keycap_ten:'
-	// ':1234:'
-	// ':zero:'
-	// ':hash:'
-	// ':symbols:'
-	// ':arrow_backward:'
-	// ':arrow_down:'
-	// ':arrow_forward:'
-	// ':arrow_left:'
-	// ':capital_abcd:'
-	// ':abcd:'
-	// ':abc:'
-	// ':arrow_lower_left:'
-	// ':arrow_lower_right:'
-	// ':arrow_right:'
-	// ':arrow_up:'
-	// ':arrow_upper_left:'
-	// ':arrow_upper_right:'
-	// ':arrow_double_down:'
-	// ':arrow_double_up:'
-	// ':arrow_down_small:'
-	// ':arrow_heading_down:'
-	// ':arrow_heading_up:'
-	// ':leftwards_arrow_with_hook:'
-	// ':arrow_right_hook:'
-	// ':left_right_arrow:'
-	// ':arrow_up_down:'
-	// ':arrow_up_small:'
-	// ':arrows_clockwise:'
-	// ':arrows_counterclockwise:'
-	// ':rewind:'
-	// ':fast_forward:'
-	// ':information_source:'
-	// ':ok:'
-	// ':twisted_rightwards_arrows:'
-	// ':repeat:'
-	// ':repeat_one:'
-	// ':new:'
-	// ':top:'
-	// ':up:'
-	// ':cool:'
-	// ':free:'
-	// ':ng:'
-	// ':cinema:'
-	// ':koko:'
-	// ':signal_strength:'
-	// ':u5272:'
-	// ':u5408:'
-	// ':u55b6:'
-	// ':u6307:'
-	// ':u6708:'
-	// ':u6709:'
-	// ':u6e80:'
-	// ':u7121:'
-	// ':u7533:'
-	// ':u7a7a:'
-	// ':u7981:'
-	// ':sa:'
-	// ':restroom:'
-	// ':mens:'
-	// ':womens:'
-	// ':baby_symbol:'
-	// ':no_smoking:'
-	// ':parking:'
-	// ':wheelchair:'
-	// ':metro:'
-	// ':baggage_claim:'
-	// ':accept:'
-	// ':wc:'
-	// ':potable_water:'
-	// ':put_litter_in_its_place:'
-	// ':secret:'
-	// ':congratulations:'
-	// ':m:'
-	// ':passport_control:'
-	// ':left_luggage:'
-	// ':customs:'
-	// ':ideograph_advantage:'
-	// ':cl:'
-	// ':sos:'
-	// ':id:'
-	// ':no_entry_sign:'
-	// ':underage:'
-	// ':no_mobile_phones:'
-	// ':do_not_litter:'
-	// ':non-potable_water:'
-	// ':no_bicycles:'
-	// ':no_pedestrians:'
-	// ':children_crossing:'
-	// ':no_entry:'
-	// ':eight_spoked_asterisk:'
-	// ':eight_pointed_black_star:'
-	// ':heart_decoration:'
-	// ':vs:'
-	// ':vibration_mode:'
-	// ':mobile_phone_off:'
-	// ':chart:'
-	// ':currency_exchange:'
-	// ':aries:'
-	// ':taurus:'
-	// ':gemini:'
-	// ':cancer:'
-	// ':leo:'
-	// ':virgo:'
-	// ':libra:'
-	// ':scorpius:'
-	// ':sagittarius:'
-	// ':capricorn:'
-	// ':aquarius:'
-	// ':pisces:'
-	// ':ophiuchus:'
-	// ':six_pointed_star:'
-	// ':negative_squared_cross_mark:'
-	// ':a:'
-	// ':b:'
-	// ':ab:'
-	// ':o2:'
-	// ':diamond_shape_with_a_dot_inside:'
-	// ':recycle:'
-	// ':end:'
-	// ':on:'
-	// ':soon:'
-	// ':clock1:'
-	// ':clock130:'
-	// ':clock10:'
-	// ':clock1030:'
-	// ':clock11:'
-	// ':clock1130:'
-	// ':clock12:'
-	// ':clock1230:'
-	// ':clock2:'
-	// ':clock230:'
-	// ':clock3:'
-	// ':clock330:'
-	// ':clock4:'
-	// ':clock430:'
-	// ':clock5:'
-	// ':clock530:'
-	// ':clock6:'
-	// ':clock630:'
-	// ':clock7:'
-	// ':clock730:'
-	// ':clock8:'
-	// ':clock830:'
-	// ':clock9:'
-	// ':clock930:'
-	// ':heavy_dollar_sign:'
-	// ':copyright:'
-	// ':registered:'
-	// ':tm:'
-	// ':x:'
-	// ':heavy_exclamation_mark:'
-	// ':bangbang:'
-	// ':interrobang:'
-	// ':o:'
-	// ':heavy_multiplication_x:'
-	// ':heavy_plus_sign:'
-	// ':heavy_minus_sign:'
-	// ':heavy_division_sign:'
-	// ':white_flower:'
-	// ':100:'
-	// ':heavy_check_mark:'
-	// ':ballot_box_with_check:'
-	// ':radio_button:'
-	// ':link:'
-	// ':curly_loop:'
-	// ':wavy_dash:'
-	// ':part_alternation_mark:'
-	// ':trident:'
-	// ':black_square:'
-	// ':white_square:'
-	// ':white_check_mark:'
-	// ':black_square_button:'
-	// ':white_square_button:'
-	// ':black_circle:'
-	// ':white_circle:'
-	// ':red_circle:'
-	// ':large_blue_circle:'
-	// ':large_blue_diamond:'
-	// ':large_orange_diamond:'
-	// ':small_blue_diamond:'
-	// ':small_orange_diamond:'
-	// ':small_red_triangle:'
-	// ':small_red_triangle_down:'
-	// ':shipit:'
-
+    ':grin:'                         => array('1f601.svg', '25', '25'),
+    ':joy:'                          => array('1f602.svg', '25', '25', ''),
+    ':rofl:'                         => array('1f923.svg', '25', '25', ''),
+    ':smiley:'                       => array('1f603.svg', '25', '25', ''),
+    ':smile:'                        => array('1f604.svg', '25', '25', ''),
+    ':sweat_smile:'                  => array('1f605.svg', '25', '25', ''),
+    ':laughing:'                     => array('1f606.svg', '25', '25', ''),
+    ':wink:'                         => array('1f609.svg', '25', '25', ''),
+    ':blush:'                        => array('1f60a.svg', '25', '25', ''),
+    ':yum:'                          => array('1f60b.svg', '25', '25', ''),
+    ':sunglasses:'                   => array('1f60e.svg', '25', '25', ''),
+    ':heart_eyes:'                   => array('1f60d.svg', '25', '25', ''),
+    ':kissing_heart:'                => array('1f618.svg', '25', '25', ''),
+    ':kissing:'                      => array('1f617.svg', '25', '25', ''),
+    ':kissing_smiling_eyes:'         => array('1f619.svg', '25', '25', ''),
+    ':kissing_closed_eyes:'          => array('1f61a.svg', '25', '25', ''),
+    ':drelaxed:'                     => array('263a.svg', '25', '25', ''),
+    ':slight_smile:'                 => array('1f642.svg', '25', '25', ''),
+    ':hugging:'                      => array('1f917.svg', '25', '25', ''),
+    ':thinking:'                     => array('1f914.svg', '25', '25', ''),
+    ':neutral_face:'                 => array('1f610.svg', '25', '25', ''),
+    ':expressionless:'               => array('1f611.svg', '25', '25', ''),
+    ':no_mouth:'                     => array('1f636.svg', '25', '25', ''),
+    ':rolling_eyes:'                 => array('1f644.svg', '25', '25', ''),
+    ':smirk:'                        => array('1f60f.svg', '25', '25', ''),
+    ':persevere:'                    => array('1f623.svg', '25', '25', ''),
+    ':disappointed_relieved:'        => array('1f625.svg', '25', '25', ''),
+    ':open_mouth:'                   => array('1f62e.svg', '25', '25', ''),
+    ':zipper_mouth:'                 => array('1f910.svg', '25', '25', ''),
+    ':hushed:'                       => array('1f62f.svg', '25', '25', ''),
+    ':sleepy:'                       => array('1f62a.svg', '25', '25', ''),
+    ':tired_face:'                   => array('1f62b.svg', '25', '25', ''),
+    ':sleeping:'                     => array('1f634.svg', '25', '25', ''),
+    ':relieved:'                     => array('1f60c.svg', '25', '25', ''),
+    ':nerd:'                         => array('1f913.svg', '25', '25', ''),
+    ':stuck_out_tongue:'             => array('1f61b.svg', '25', '25', ''),
+    ':stuck_out_tongue_winking_eye:' => array('1f61c.svg', '25', '25', ''),
+    ':stuck_out_tongue_closed_eyes:' => array('1f61d.svg', '25', '25', ''),
+    ':drooling_face:'                => array('1f924.svg', '25', '25', ''),
+    ':unamused:'                     => array('1f612.svg', '25', '25', ''),
+    ':sweat:'                        => array('1f613.svg', '25', '25', ''),
+    ':pensive:'                      => array('1f614.svg', '25', '25', ''),
+    ':confused:'                     => array('1f615.svg', '25', '25', ''),
+    ':upside_down:'                  => array('1f643.svg', '25', '25', ''),
+    ':money_mouth:'                  => array('1f911.svg', '25', '25', ''),
+    ':astonished:'                   => array('1f632.svg', '25', '25', ''),
+    ':frowning2:'                    => array('2639.svg', '25', '25', ''),
+    ':slight_frown:'                 => array('1f641.svg', '25', '25', ''),
+    ':confounded:'                   => array('1f616.svg', '25', '25', ''),
+    ':disappointed:'                 => array('1f61e.svg', '25', '25', ''),
+    ':worried:'                      => array('1f61f.svg', '25', '25', ''),
+    ':triumph:'                      => array('1f624.svg', '25', '25', ''),
+    ':cry:'                          => array('1f622.svg', '25', '25', ''),
+    ':sob:'                          => array('1f62d.svg', '25', '25', ''),
+    ':frowning:'                     => array('1f626.svg', '25', '25', ''),
+    ':anguished:'                    => array('1f627.svg', '25', '25', ''),
+    ':fearful:'                      => array('1f628.svg', '25', '25', ''),
+    ':weary:'                        => array('1f629.svg', '25', '25', ''),
+    ':grimacing:'                    => array('1f62c.svg', '25', '25', ''),
+    ':cold_sweat:'                   => array('1f630.svg', '25', '25', ''),
+    ':scream:'                       => array('1f631.svg', '25', '25', ''),
+    ':flushed:'                      => array('1f633.svg', '25', '25', ''),
+    ':dizzy_face:'                   => array('1f635.svg', '25', '25', ''),
+    ':rage:'                         => array('1f621.svg', '25', '25', ''),
+    ':angry:'                        => array('1f625.svg', '25', '25', ''),
+    ':innocent:'                     => array('1f607.svg', '25', '25', ''),
+    ':cowboy:'                       => array('1f925.svg', '25', '25', ''),
+    ':clown:'                        => array('1f921.svg', '25', '25', ''),
+    ':lying_face:'                   => array('1f925.svg', '25', '25', ''),
+    ':mask:'                         => array('1f637.svg', '25', '25', ''),
+    ':thermometer_face:'             => array('1f912.svg', '25', '25', ''),
+    ':head_bandage:'                 => array('1f915.svg', '25', '25', ''),
+    ':nauseated_face:'               => array('1f922.svg', '25', '25', ''),
+    ':sneezing_face:'                => array('1f927.svg', '25', '25', ''),
+    ':smiling_imp:'                  => array('1f608.svg', '25', '25', ''),
+    ':imp:'                          => array('1f47f.svg', '25', '25', ''),
+    ':japanese_ogre:'                => array('1f479.svg', '25', '25', ''),
+    ':japanese_goblin:'              => array('1f47a.svg', '25', '25', ''),
+    ':skull:'                        => array('1f480.svg', '25', '25', ''),
+    ':ghost:'                        => array('1f47b.svg', '25', '25', ''),
+    ':alien:'                        => array('1f47d.svg', '25', '25', ''),
+    ':robot:'                        => array('1f916.svg', '25', '25', ''),
+    ':poop:'                         => array('1f4a9.svg', '25', '25', ''),
+    ':smiley_cat:'                   => array('1f63a.svg', '25', '25', ''),
+    ':smile_cat:'                    => array('1f638.svg', '25', '25', ''),
+    ':joy_cat:'                      => array('1f639.svg', '25', '25', ''),
+    ':heart_eyes_cat:'               => array('1f63b.svg', '25', '25', ''),
+    ':smirk_cat:'                    => array('1f63c.svg', '25', '25', ''),
+    ':kissing_cat:'                  => array('1f63d.svg', '25', '25', ''),
+    ':scream_cat:'                   => array('1f640.svg', '25', '25', ''),
+    ':crying_cat_face:'              => array('1f63f.svg', '25', '25', ''),
+    ':pouting_cat:'                  => array('1f63e.svg', '25', '25', ''),
+    ':boy:'                          => array('1f466.svg', '25', '25', ''),
+    ':girl:'                         => array('1f467.svg', '25', '25', ''),
+    ':man:'                          => array('1f468.svg', '25', '25', ''),
+    ':woman:'                        => array('1f469.svg', '25', '25', ''),
+    ':older_man:'                    => array('1f474.svg', '25', '25', ''),
+    ':older_woman:'                  => array('1f475.svg', '25', '25', ''),
+    ':baby:'                         => array('1f476.svg', '25', '25', ''),
+    ':angel:'                        => array('1f47c.svg', '25', '25', ''),
+    ':cop:'                          => array('1f46e.svg', '25', '25', ''),
+    ':spy:'                          => array('1f575.svg', '25', '25', ''),
+    ':guardsman:'                    => array('1f482.svg', '25', '25', ''),
+    ':construction_worker:'          => array('1f477.svg', '25', '25', ''),
+    ':man_with_turban:'              => array('1f473.svg', '25', '25', ''),
+    ':person_with_blond_hair:'       => array('1f471.svg', '25', '25', ''),
+    ':santa:'                        => array('1f385.svg', '25', '25', ''),
+    ':mrs_claus:'                    => array('1f936.svg', '25', '25', ''),
+    ':princess:'                     => array('1f478.svg', '25', '25', ''),
+    ':prince:'                       => array('1f934.svg', '25', '25', ''),
+    ':bride_with_veil:'              => array('1f470.svg', '25', '25', ''),
+    ':man_in_tuxedo:'                => array('1f935.svg', '25', '25', ''),
+    ':pregnant_woman:'               => array('1f930.svg', '25', '25', ''),
+    ':man_with_gua_pi_mao:'          => array('1f472.svg', '25', '25', ''),
+    ':person_frowning:'              => array('1f64d.svg', '25', '25', ''),
+    ':person_with_pouting_face:'     => array('1f64e.svg', '25', '25', ''),
+    ':no_good:'                      => array('1f645.svg', '25', '25', ''),
+    ':ok_woman:'                     => array('1f646.svg', '25', '25', ''),
+    ':information_desk_person:'      => array('1f481.svg', '25', '25', ''),
+    ':raising_hand:'                 => array('1f64b.svg', '25', '25', ''),
+    ':bow:'                          => array('1f647.svg', '25', '25', ''),
+    ':face_palm:'                    => array('1f926.svg', '25', '25', ''),
+    ':shrug:'                        => array('1f937.svg', '25', '25', ''),
+    ':massage:'                      => array('1f486.svg', '25', '25', ''),
+    ':haircut:'                      => array('1f487.svg', '25', '25', ''),
+    ':walking:'                      => array('1f6b6.svg', '25', '25', ''),
+    ':runner:'                       => array('1f3c3.svg', '25', '25', ''),
+    ':dancer:'                       => array('1f483.svg', '25', '25', ''),
+    ':man_dancing:'                  => array('1f57a.svg', '25', '25', ''),
+    ':dancers:'                      => array('1f46f.svg', '25', '25', ''),
+    ':speaking_head:'                => array('1f5e3.svg', '25', '25', ''),
+    ':bust_in_silhouette:'           => array('1f464.svg', '25', '25', ''),
+    ':busts_in_silhouette:'          => array('1f465.svg', '25', '25', ''),
+    ':couple:'                       => array('1f46b.svg', '25', '25', ''),
+    ':two_men_holding_hands:'        => array('1f46c.svg', '25', '25', ''),
+    ':two_women_holding_hands:'      => array('1f46d.svg', '25', '25', ''),
+    ':couplekiss:'                   => array('1f48f.svg', '25', '25', ''),
+    ':kiss_mm:'                      => array('1f468-2764-1f48b-1f468.svg', '25', '25', ''),
+    ':kiss_ww:'                      => array('1f469-2764-1f48b-1f469.svg', '25', '25', ''),
+    ':couple_with_heart:'            => array('1f491.svg', '25', '25', ''),
+    ':couple_mm:'                    => array('1f468-2764-1f468.svg', '25', '25', ''),
+    ':couple_ww:'                    => array('1f469-2764-1f469.svg', '25', '25', ''),
+    ':family:'                       => array('1f46a.svg', '25', '25', ''),
+    ':family_mwg'                    => array('1f468-1f469-1f467.svg', '25', '25', ''),
+    ':family_mwgb:'                  => array('1f468-1f469-1f467-1f466.svg', '25', '25', ''),
+    ':family_mwbb:'                  => array('1f468-1f469-1f466-1f466.svg', '25', '25', ''),
+    ':family_mwgg:'                  => array('1f468-1f469-1f467-1f467.svg', '25', '25', ''),
+    ':family_mmb:'                   => array('1f468-1f468-1f466.svg', '25', '25', ''),
+    ':family_mmg:'                   => array('1f468-1f468-1f467.svg', '25', '25', ''),
+    ':family_mmgb:'                  => array('1f468-1f468-1f467-1f466.svg', '25', '25', ''),
+    ':family_mmbb:'                  => array('1f468-1f468-1f466-1f466.svg', '25', '25', ''),
+    ':family_mmgg:'                  => array('1f468-1f468-1f467-1f467.svg', '25', '25', ''),
+    ':family_wwb:'                   => array('1f469-1f469-1f466.svg', '25', '25', ''),
+    ':family_wwg:'                   => array('1f469-1f469-1f467.svg', '25', '25', ''),
+    ':family_wwgb:" '                => array('1f469-1f469-1f467-1f466.svg', '25', '25', ''),
+    ':family_wwbb:" '                => array('1f469-1f469-1f466-1f466.svg', '25', '25', ''),
+    ':family_wwgg:" '                => array('1f469-1f469-1f467-1f467.svg', '25', '25', ''),
+    ':muscle:'                       => array('1f4aa.svg', '25', '25', ''),
+    ':selfie:'                       => array('1f933.svg', '25', '25', ''),
+    ':point_left:'                   => array('1f448.svg', '25', '25', ''),
+    ':point_right:'                  => array('1f449.svg', '25', '25', ''),
+    ':point_up:'                     => array('261d.svg', '25', '25', ''),
+    ':point_up_2:'                   => array('1f446.svg', '25', '25', ''),
+    ':middle_finger:'                => array('1f595.svg', '25', '25', ''),
+    ':point_down:'                   => array('1f447.svg', '25', '25', ''),
+    ':v:'                            => array('270c.svg', '25', '25', ''),
+    ':fingers_crossed:'              => array('1f91e.svg', '25', '25', ''),
+    ':vulcan:'                       => array('1f596.svg', '25', '25', ''),
+    ':metal:'                        => array('1f918.svg', '25', '25', ''),
+    ':call_me:'                      => array('1f919.svg', '25', '25', ''),
+    ':hand_splayed:'                 => array('1f590.svg', '25', '25', ''),
+    ':raised_hand:'                  => array('270b.svg', '25', '25', ''),
+    ':ok_hand:'                      => array('1f44c.svg', '25', '25', ''),
+    ':thumbsup:'                     => array('1f44d.svg', '25', '25', ''),
+    ':thumbsdown:'                   => array('1f44e.svg', '25', '25', ''),
+    ':fist:'                         => array('270a.svg', '25', '25', ''),
+    ':punch:'                        => array('1f44a.svg', '25', '25', ''),
+    ':left_facing_fist:'             => array('1f91b.svg', '25', '25', ''),
+    ':right_facing_fist:'            => array('1f91c.svg', '25', '25', ''),
+    ':raised_back_of_hand:'          => array('1f91a.svg', '25', '25', ''),
+    ':wave:'                         => array('1f44b.svg', '25', '25', ''),
+    ':clap:'                         => array('1f44f.svg', '25', '25', ''),
+    ':writing_hand:'                 => array('270d.svg', '25', '25', ''),
+    ':open_hands:'                   => array('1f450.svg', '25', '25', ''),
+    ':raised_hands:'                 => array('1f64c.svg', '25', '25', ''),
+    ':pray:'                         => array('1f64f.svg', '25', '25', ''),
+    ':handshake:'                    => array('1f91d.svg', '25', '25', ''),
+    ':nail_care:'                    => array('1f485.svg', '25', '25', ''),
+    ':ear:'                          => array('1f442.svg', '25', '25', ''),
+    ':nose:'                         => array('1f443.svg', '25', '25', ''),
+    ':footprints:'                   => array('1f463.svg', '25', '25', ''),
+    ':eyes:'                         => array('1f440.svg', '25', '25', ''),
+    ':eye:'                          => array('1f441.svg', '25', '25', ''),
+    ':tongue:'                       => array('1f445.svg', '25', '25', ''),
+    ':lips:'                         => array('1f444.svg', '25', '25', ''),
+    ':kiss:'                         => array('1f48b.svg', '25', '25', ''),
+    ':zzz:'                          => array('1f4a4.svg', '25', '25', ''),
+    ':eyeglasses:'                   => array('1f453.svg', '25', '25', ''),
+    ':dark_sunglasses:'              => array('1f576.svg', '25', '25', ''),
+    ':necktie:'                      => array('1f454.svg', '25', '25', ''),
+    ':shirt:'                        => array('1f455.svg', '25', '25', ''),
+    ':jeans:'                        => array('1f456.svg', '25', '25', ''),
+    ':dress:'                        => array('1f457.svg', '25', '25', ''),
+    ':kimono:'                       => array('1f458.svg', '25', '25', ''),
+    ':bikini:'                       => array('1f459.svg', '25', '25', ''),
+    ':womans_clothes:'               => array('1f45a.svg', '25', '25', ''),
+    ':purse:'                        => array('1f45b.svg', '25', '25', ''),
+    ':handbag:'                      => array('1f45c.svg', '25', '25', ''),
+    ':pouch:'                        => array('1f45d.svg', '25', '25', ''),
+    ':school_satchel:'               => array('1f392.svg', '25', '25', ''),
+    ':mans_shoe:'                    => array('1f45e.svg', '25', '25', ''),
+    ':athletic_shoe:'                => array('1f45f.svg', '25', '25', ''),
+    ':high_heel:'                    => array('1f460.svg', '25', '25', ''),
+    ':sandal:'                       => array('1f461.svg', '25', '25', ''),
+    ':boot:'                         => array('1f462.svg', '25', '25', ''),
+    ':crown:'                        => array('1f451.svg', '25', '25', ''),
+    ':womans_hat:'                   => array('1f452.svg', '25', '25', ''),
+    ':tophat:'                       => array('1f3a9.svg', '25', '25', ''),
+    ':mortar_board:'                 => array('1f393.svg', '25', '25', ''),
+    ':helmet_with_cross:'            => array('26d1.svg', '25', '25', ''),
+    ':lipstick:'                     => array('1f484.svg', '25', '25', ''),
+    ':ring:'                         => array('1f48d.svg', '25', '25', ''),
+    ':closed_umbrella:'              => array('1f302.svg', '25', '25', ''),
+    ':briefcase:'                    => array('1f4bc.svg', '25', '25', '')
 );
+
+// ':-)'			=>	array('grin.gif',			'19',	'19',	'grin'),
+	// ':lol:'			=>	array('lol.gif',			'19',	'19',	'LOL'),
+	// ':cheese:'		=>	array('cheese.gif',			'19',	'19',	'cheese'),
+	// ':)'			=>	array('smile.gif',			'19',	'19',	'smile'),
+	// ';-)'			=>	array('wink.gif',			'19',	'19',	'wink'),
+	// ';)'			=>	array('wink.gif',			'19',	'19',	'wink'),
+	// ':smirk:'		=>	array('smirk.gif',			'19',	'19',	'smirk'),
+	// ':roll:'		=>	array('rolleyes.gif',		'19',	'19',	'rolleyes'),
+	// ':-S'			=>	array('confused.gif',		'19',	'19',	'confused'),
+	// ':wow:'			=>	array('surprise.gif',		'19',	'19',	'surprised'),
+	// ':bug:'			=>	array('bigsurprise.gif',	'19',	'19',	'big surprise'),
+	// ':-P'			=>	array('tongue_laugh.gif',	'19',	'19',	'tongue laugh'),
+	// '%-P'			=>	array('tongue_rolleye.gif',	'19',	'19',	'tongue rolleye'),
+	// ';-P'			=>	array('tongue_wink.gif',	'19',	'19',	'tongue wink'),
+	// ':P'			=>	array('raspberry.gif',		'19',	'19',	'raspberry'),
+	// ':blank:'		=>	array('blank.gif',			'19',	'19',	'blank stare'),
+	// ':long:'		=>	array('longface.gif',		'19',	'19',	'long face'),
+	// ':ohh:'			=>	array('ohh.gif',			'19',	'19',	'ohh'),
+	// ':grrr:'		=>	array('grrr.gif',			'19',	'19',	'grrr'),
+	// ':gulp:'		=>	array('gulp.gif',			'19',	'19',	'gulp'),
+	// '8-/'			=>	array('ohoh.gif',			'19',	'19',	'oh oh'),
+	// ':down:'		=>	array('downer.gif',			'19',	'19',	'downer'),
+	// ':red:'			=>	array('embarrassed.gif',	'19',	'19',	'red face'),
+	// ':sick:'		=>	array('sick.gif',			'19',	'19',	'sick'),
+	// ':shut:'		=>	array('shuteye.gif',		'19',	'19',	'shut eye'),
+	// ':-/'			=>	array('hmm.gif',			'19',	'19',	'hmmm'),
+	// '>:('			=>	array('mad.gif',			'19',	'19',	'mad'),
+	// ':mad:'			=>	array('mad.gif',			'19',	'19',	'mad'),
+	// '>:-('			=>	array('angry.gif',			'19',	'19',	'angry'),
+	// ':angry:'		=>	array('angry.gif',			'19',	'19',	'angry'),
+	// ':zip:'			=>	array('zip.gif',			'19',	'19',	'zipper'),
+	// ':kiss:'		=>	array('kiss.gif',			'19',	'19',	'kiss'),
+	// ':ahhh:'		=>	array('shock.gif',			'19',	'19',	'shock'),
+	// ':coolsmile:'	=>	array('shade_smile.gif',	'19',	'19',	'cool smile'),
+	// ':coolsmirk:'	=>	array('shade_smirk.gif',	'19',	'19',	'cool smirk'),
+	// ':coolgrin:'	=>	array('shade_grin.gif',		'19',	'19',	'cool grin'),
+	// ':coolhmm:'		=>	array('shade_hmm.gif',		'19',	'19',	'cool hmm'),
+	// ':coolmad:'		=>	array('shade_mad.gif',		'19',	'19',	'cool mad'),
+	// ':coolcheese:'	=>	array('shade_cheese.gif',	'19',	'19',	'cool cheese'),
+	// ':vampire:'		=>	array('vampire.gif',		'19',	'19',	'vampire'),
+	// ':snake:'		=>	array('snake.gif',			'19',	'19',	'snake'),
+	// ':exclaim:'		=>	array('exclaim.gif',		'19',	'19',	'exclaim'),
+	// ':question:'	=>	array('question.gif',		'19',	'19',	'question')
+	
+
+
