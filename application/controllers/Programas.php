@@ -20,17 +20,50 @@ class Programas extends CI_Controller
         //$this->load->helper('smiley');
         $this->load->library('table');
 
-        $image_array = get_clickable_smileys('http://emojione.com/wp-content/uploads/assets/emojis/', '');
-        //$col_array = $this->table->make_columns($image_array, 10);
+        $image_array = get_clickable_smileys('http://emojione.com/wp-content/uploads/assets/emojis/', 'comment_textarea_alias');
+        //$col_array = $this->table->make_columns($image_array, 8);
 
         $data['smiley_table'] = $image_array;//$this->table->generate($col_array);
+        $data['texto'] = 'xxx :yum: xxx :persevere: xxx :confused: xxx :stuck_out_tongue_closed_eyes: xxx';
         $this->load->view('layout/header', $data);
         $this->load->view('smiley/table_smiley');
     }
 
-    public function FunctionName($value='')
+    public function pdf()
     {
+        $this->load->library('pdf');
+             $this->pdf = new Pdf();
+        // Agregamos una página
+        $this->pdf->AddPage();
+        // Define el alias para el número de página que se imprimirá en el pie
+        $this->pdf->AliasNbPages();
 
+        /* Se define el titulo, márgenes izquierdo, derecho y
+         * el color de relleno predeterminado
+         */
+        $this->pdf->SetTitle("Lista de alumnos");
+        $this->pdf->SetLeftMargin(15);
+        $this->pdf->SetRightMargin(15);
+        $this->pdf->SetFillColor(200,200,200);
+
+        // Se define    el formato de fuente: Arial, negritas, tamaño 9
+        $this->pdf->SetFont('Arial', 'B', 9);
+        /*
+         * TITULOS DE COLUMNAS
+         *
+         * $this->pdf->Cell(Ancho, Alto,texto,borde,posición,alineación,relleno);
+         */
+
+        $this->pdf->Cell(15,7,'NUM','TBL',0,'C','1');
+        $this->pdf->Cell(25,7,'PATERNO','TB',0,'L','1');
+        $this->pdf->Cell(25,7,'MATERNO','TB',0,'L','1');
+        $this->pdf->Cell(25,7,'NOMBRE','TB',0,'L','1');
+        $this->pdf->Cell(40,7,'FECHA DE NACIMIENTO','TB',0,'C','1');
+        $this->pdf->Cell(25,7,'GRADO','TB',0,'L','1');
+        $this->pdf->Cell(25,7,'GRUPO','TBR',0,'C','1');
+        $this->pdf->Ln(7);
+
+        $this->pdf->Output("Lista de alumnos.pdf", 'I');
     }
 
 
