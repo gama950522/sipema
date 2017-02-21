@@ -11,6 +11,7 @@ class Sipema extends MY_Controller
         if (!$this->session->userdata('logged_in'))
         {
             redirect(site_url('login/'));
+            
         }
         $this->load->model('registros_model');
         $this->load->model('catalogos_model');
@@ -23,6 +24,7 @@ class Sipema extends MY_Controller
         $this->load->view('sipema/mir');
         $this->load->view('layout/footer');
     }
+
 
     public function categoria($value = '')
     {

@@ -5,8 +5,9 @@ class Catalogos_model extends CI_Model {
 
 	public function get_sipema()
 	{
+            
 		//$this->db->select('id, nombre');
-		//$this->db->from('cat_sipema');
+		$this->db->escape('d,snfjdsn\n');
 		$result = $this->db->get('cat_sipema');
 		return $result->result_array();
 	}

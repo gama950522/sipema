@@ -22,7 +22,7 @@
         </div>
     </div>
 </section>
-
+<input type="search" />
 <a href="<?php echo site_url('login/destruir/'); ?>">CERRAR SESION</a>
 
 
