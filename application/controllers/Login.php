@@ -11,7 +11,7 @@ class Login extends CI_Controller
         $this->load->model('usuarios_model');
         $this->session->set_userdata('check_after', FALSE);
     }
-
+ 
     public function index()
     {
         if ($this->session->userdata('logged_in') === TRUE)
@@ -20,14 +20,9 @@ class Login extends CI_Controller
         }
         else
         {
-
-
-            
-
             $this->load->view('layout/header');
             $this->load->view('sipema/login');
             $this->load->view('layout/footer');
-            
         }
     }
 
