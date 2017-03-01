@@ -10,10 +10,8 @@
                 <option>Selecciona una categoría</option>
                 <?php $cont = 1; ?>
                 <?php foreach ($fields as $row): ?>
-                
                     <option value="<?php echo $row['id'] ?>"><?php echo $cont.'. '. $row['nombre'] ?></option>
                     <?php $cont++; ?>
-                
                 <?php endforeach; ?>
             </select>
         </div>
@@ -22,7 +20,6 @@
         </div>
     </div>
 </section>
-<input type="search" />
 <a href="<?php echo site_url('login/destruir/'); ?>">CERRAR SESION</a>
 
 

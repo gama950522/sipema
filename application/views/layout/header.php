@@ -8,7 +8,7 @@
         <meta name="author" content="">
 
         <title></title>
-
+        <link rel="shortcut icon" href="<?php echo site_url('public/icon/footer_logo.png') ?>">
         <link href="<?php echo site_url('assets/dist/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet" id="bootstrap-css">
         <link href="<?php echo site_url('assets/dist/bootstrap/css/justified-nav.css') ?>" rel="stylesheet">
         <link href="<?php echo site_url('assets/dist/bootstrap/css/carousel.css') ?>" rel="stylesheet">
