@@ -15,6 +15,12 @@ class Semarnat extends CI_Controller {
         $this->load->view('layout/footer');
 	}
 
+
+	public function form()
+	{
+		echo json_encode($this->input->post());
+	}
+
 }
 
 /* End of file Semarnat.php */

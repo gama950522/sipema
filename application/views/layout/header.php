@@ -20,7 +20,8 @@
 
         <link href="<?php echo site_url('assets/build/css/custom.css') ?>" rel="stylesheet">
         <link href="<?php echo site_url('assets/build/css/style.css') ?>" rel="stylesheet">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script> -->
+        <script src="<?php echo site_url('assets/dist/jquery/jquery.min.js') ?>"></script>
         <?php echo smiley_js('comment_textarea_alias', 'coments'); ?>
     
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -33,8 +34,18 @@
         <div class="container">
             <div class="masthead">
                 <div class="row">
-                    <img src="<?php echo site_url('public/images/secretaria.png'); ?>" class="center-block">
+                    <div class="col-md-4 col-xs-4">
+                        <img src="<?php echo site_url('public/images/footer_logo.png') ?>">
+                    </div>                    
+                    <div class="col-md-4 col-xs-4">
+                        <img src="<?php echo site_url('public/images/hidalgo_logo.png') ?>">
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <!-- <img src="<?php echo site_url('public/images/hidalgo_logo.png') ?>"> -->
+                    </div>
+                    <!-- <img src="<?php echo site_url('public/images/secretaria.png'); ?>" class="center-block"> -->
                 </div>
+                <div style="margin-top: 15px"></div>
                 <nav>
                     <ul class="nav nav-justified">
                         <li><a href="<?php echo site_url() ?>">Inicio</a></li>

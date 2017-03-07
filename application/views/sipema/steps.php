@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-md-12" style="margin-top: 20px">
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading hidalgo">
                 <h1 class="panel-title">
                     A continuación completa los datos del formulario
                 </h1>

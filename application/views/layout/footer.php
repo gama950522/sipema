@@ -1,6 +1,6 @@
 <!-- Site footer -->
 <footer class="footer">
-    <p>&copy; 2016 Company, Inc.</p>
+    <!-- <p>&copy; 2016 Company, Inc.</p> -->
 </footer>
 
 </div> <!-- /container -->
@@ -55,12 +55,13 @@
                     }
                 });
             }
-        }).keypress(function (e) {
-            if (e.which === 13) {
-                //alert('Antes de enviar la información llena todos los campos');
-                return false;
-            }
         });
+        // .keypress(function (e) {
+        //     if (e.which === 13) {
+        //         //alert('Antes de enviar la información llena todos los campos');
+        //         return false;
+        //     }
+        // });
     });
 
 
