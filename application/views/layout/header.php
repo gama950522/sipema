@@ -8,7 +8,7 @@
         <meta name="author" content="">
 
         <title></title>
-        <link rel="shortcut icon" href="<?php echo site_url('public/icon/footer_logo.png') ?>">
+        <link rel="shortcut icon" href="<?php echo site_url('public/icon/icon_2_small.png') ?>">
         <link href="<?php echo site_url('assets/dist/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet" id="bootstrap-css">
         <link href="<?php echo site_url('assets/dist/bootstrap/css/justified-nav.css') ?>" rel="stylesheet">
         <link href="<?php echo site_url('assets/dist/bootstrap/css/carousel.css') ?>" rel="stylesheet">
@@ -20,8 +20,8 @@
 
         <link href="<?php echo site_url('assets/build/css/custom.css') ?>" rel="stylesheet">
         <link href="<?php echo site_url('assets/build/css/style.css') ?>" rel="stylesheet">
-        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script> -->
-        <script src="<?php echo site_url('assets/dist/jquery/jquery.min.js') ?>"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="<?php //echo site_url('assets/dist/jquery/jquery.min.js') ?>"></script>
         <?php echo smiley_js('comment_textarea_alias', 'coments'); ?>
     
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

@@ -1,8 +1,3 @@
-<!-- <div class="jumbotron">
-  <div class="page-header">
-  <h1>Example page header <small>Subtext for header</small></h1>
-</div>
-</div> -->
 <div style="margin-top: 20px"></div>
 <div class="panel panel-default">
     <div class="panel-heading">
@@ -10,7 +5,7 @@
             <div class="col-md-12">
 
                 <!-- <div style="padding: 0 10px; width: 20%" class="pull-left">
-                    <img src="<?php //echo site_url('public/images/hidalgocrececontigo.png')                ?>" style="width: 100px">
+                    <img src="<?php //echo site_url('public/images/hidalgocrececontigo.png')                  ?>" style="width: 100px">
                 </div> -->
                 <div style="padding: 0 10px;" class="pull-left">
                     <!-- <div class="page-header"> -->
@@ -169,7 +164,6 @@
         </div>
 
         <div class="col-md-12 setup-content" id="step-2">
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
@@ -177,9 +171,7 @@
                         <input type="text" name="str_cobertura" id="str_cobertura" class="form-control">
                     </div>
                 </div>
-
             </div>
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="table-responsive">
@@ -204,7 +196,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-
                                 <tr id="tr-hombres">
                                     <th>Hombres</th>
                                     <td id="td-pre"><input type="number" name="int_prenatal_h" id="int_prenatal_h" min="0" max="1000000" class="form-control"></td>
@@ -228,12 +219,12 @@
                     </div>
                 </div>
             </div>
-            <p>
-                <button type="button" id="btn-gen-total"  class="btn btn-default">Generar totales</button>
-            </p>
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
+                        <p>
+                            <button type="button" id="btn-gen-total"  class="btn btn-default">Generar totales</button>
+                        </p>
                         <div class="col-md-4">
                             <table class="table thead-default table-bordered table-condensed">
                                 <thead>
@@ -286,8 +277,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="" class="control-label">Nombre del componente</label>
-                        <input type="text" class="form-control">
+                        <label for="str_nombre_componente" class="control-label">Nombre del componente</label>
+                        <input type="text" name="str_nombre_componente" id="str_nombre_componente" class="form-control">
                     </div>
                     <div class="table-responsive">
                         <table class="table thead-default table-bordered table-condensed">
@@ -299,9 +290,9 @@
                                     <th>Marzo</th>
                                 </tr>
                                 <tr>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_comp_ene" id="txt_comp_ene" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_comp_feb" id="txt_comp_feb" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_comp_mar" id="txt_comp_mar" rows="5" class="form-control"></textarea></td>
                                 </tr>
                                 <tr>
                                     <th>Abril</th>
@@ -309,9 +300,9 @@
                                     <th>Junio</th>
                                 </tr>
                                 <tr>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_comp_abr" id="txt_comp_abr" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_comp_may" id="txt_comp_may" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_comp_jun" id="txt_comp_jun" rows="5" class="form-control"></textarea></td>
                                 </tr>
                                 <tr>
                                     <th>Julio</th>
@@ -319,9 +310,9 @@
                                     <th>Septiembre</th>
                                 </tr>
                                 <tr>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_comp_jul" id="txt_comp_jul" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_comp_ago" id="txt_comp_ago" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_comp_sep" id="txt_comp_sep" rows="5" class="form-control"></textarea></td>
                                 </tr>
                                 <tr>
                                     <th>Octubre</th>
@@ -329,22 +320,21 @@
                                     <th>Diciembre</th>
                                 </tr>
                                 <tr>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_comp_oct" id="txt_comp_oct" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_comp_nov" id="txt_comp_nov" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_comp_dic" id="txt_comp_dic" rows="5" class="form-control"></textarea></td>
                                 </tr>
                                 <tr>
                                     <th colspan="3">Meta final</th>
                                 </tr>
                                 <tr>
-                                    <td colspan="3"><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
+                                    <td colspan="3"><textarea name="txt_comp_meta_final" id="txt_comp_meta_final" rows="5" class="form-control"></textarea></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="bg-primary" style="margin: 0 -30px 10px">
@@ -366,9 +356,9 @@
                                     <th>Marzo</th>
                                 </tr>
                                 <tr>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_acti_ene" id="txt_acti_ene" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_acti_feb" id="txt_acti_feb" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_acti_mar" id="txt_acti_mar" rows="5" class="form-control"></textarea></td>
                                 </tr>
                                 <tr>
                                     <th>Abril</th>
@@ -376,9 +366,9 @@
                                     <th>Junio</th>
                                 </tr>
                                 <tr>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_acti_abr" id="txt_acti_abr" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_acti_may" id="txt_acti_may" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_acti_jun" id="txt_acti_jun" rows="5" class="form-control"></textarea></td>
                                 </tr>
                                 <tr>
                                     <th>Julio</th>
@@ -386,9 +376,9 @@
                                     <th>Septiembre</th>
                                 </tr>
                                 <tr>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_acti_jul" id="txt_acti_jul" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_acti_ago" id="txt_acti_ago" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_acti_sep" id="txt_acti_sep" rows="5" class="form-control"></textarea></td>
                                 </tr>
                                 <tr>
                                     <th>Octubre</th>
@@ -396,22 +386,19 @@
                                     <th>Diciembre</th>
                                 </tr>
                                 <tr>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
-                                    <td><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_acti_oct" id="txt_acti_oct" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_acti_nov" id="txt_acti_nov" rows="5" class="form-control"></textarea></td>
+                                    <td><textarea name="txt_acti_dic" id="txt_acti_dic" rows="5" class="form-control"></textarea></td>
                                 </tr>
                                 <tr>
                                     <th colspan="3">Meta final</th>
                                 </tr>
                                 <tr>
-                                    <td colspan="3"><textarea name="" id="" cols="30" rows="5" class="form-control"></textarea></td>
+                                    <td colspan="3"><textarea name="txt_acti_meta_final" id="txt_acti_meta_final" rows="5" class="form-control"></textarea></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <div class="col-md-12">
-                    <h2></h2>
                 </div>
             </div>
             <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
@@ -421,31 +408,30 @@
             <div class="row">
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
-                        <label class="control-label">Órgano superior</label>
-                        <input type="text" name="" class="form-control">
+                        <label for="str_organo_sup" class="control-label">Órgano superior</label>
+                        <input type="text" name="str_organo_sup" id="str_organo_sup" class="form-control">
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label">Nombre del proyecto</label>
-                        <input type="text" name="" class="form-control">
+                        <label for="str_nombre_proyecto" class="control-label">Nombre del proyecto</label> <i>aqui que pedo!</i>
+                        <input type="text" name="str_nombre_proyecto" id="str_nombre_proyecto" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
-                        <label for="" class="control-label">Unidad presupuestal</label>
-                        <input type="text" class="form-control">
+                        <label for="str_unidad_presupestal" class="control-label">Unidad presupuestal</label>
+                        <input type="text" name="str_unidad_presupestal" id="str_unidad_presupestal" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="" class="control-label">Descripción del proyecto</label>
-                        <textarea name="" id="" cols="30" rows="4" class="form-control"></textarea>
+                        <label for="txt_descripcion_proyecto" class="control-label">Descripción del proyecto</label>
+                        <textarea name="txt_descripcion_proyecto" id="txt_descripcion_proyecto" rows="4" class="form-control"></textarea>
                     </div>
                 </div>
             </div>
-
-            <div class="row">
+            <div class="row" style="margin-left: -46px; margin-right: -46px">
                 <div class="col-md-12">
                     <div class="table-responsive">
-                        <table class="table thead-default table-bordered table-condensed">
+                        <table class="table thead-default table-bordered table-condensed" style="margin-bottom: 0" id="tbl-presupuesto">
                             <thead>
                                 <tr>
                                     <th rowspan="2">
@@ -455,27 +441,64 @@
                                         Objeto de gasto (COG)
                                     </th>
                                     <th rowspan="2">Monto total solicitado</th>
+                                    <th colspan="12">Meses</th>
                                 </tr>
                                 <tr>
                                     <th>Partida específica</th>
                                     <th>Nombre de la partida</th>
+
+                                    <th>Enero</th>
+                                    <th>Febrero</th>
+                                    <th>Marzo</th>
+                                    <th>Abril</th>
+                                    <th>Mayo</th>
+                                    <th>Junio</th>
+                                    <th>Julio</th>
+                                    <th>Agosto</th>
+                                    <th>Septiembre</th>
+                                    <th>Octubre</th>
+                                    <th>Noviembre</th>
+                                    <th>Diciembre</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td><input type="text" class="form-control"></td>
-                                    <td><input type="text" class="form-control"></td>
-                                    <td><input type="number" class="form-control"></td>
+                                    <td><input type="text" name="str_partida_especifica[]" class="form-control"></td>
+                                    <td><input type="text" name="str_nombre_partida[]" class="form-control"></td>
+                                    <td><input type="number" name="int_monto_total_solicitado[]" class="form-control"></td>
+
+                                    <td><input type="number" name="int_ene[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_feb[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mar[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_abr[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_may[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_jun[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_jul[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_ago[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_sep[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_oct[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_nov[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_dic[]" min="0" max="1000000" class="form-control"></td>
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="row">
+                            <div class="col-md-6 col-xs-6" style="padding-right: 0">
+                                <button type="button" id="btn-new-row" class="btn btn-primary btn-block">Nueva fila</button>
 
+                            </div>
+                            <div class="col-md-6 col-xs-6" style="padding-left: 0">
+                                <button type="button" id="btn-delete-row" disabled="disabled" class="btn btn-danger btn-block">Eliminar ultima fila</button>
+
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 20px"></div>
                     </div>
                 </div>
             </div>
-
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-12">
                     <div class="table-responsive">
                         <table class="table thead-default table-bordered table-condensed">
@@ -497,33 +520,29 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td id="td-month"><input type="number" name="int_ene" class="form-control"></td>
-                                    <td id="td-month"><input type="number" name="int_feb" class="form-control"></td>
-                                    <td id="td-month"><input type="number" name="int_mar" class="form-control"></td>
-                                    <td id="td-month"><input type="number" name="int_abr" class="form-control"></td>
-                                    <td id="td-month"><input type="number" name="int_may" class="form-control"></td>
-                                    <td id="td-month"><input type="number" name="int_jun" class="form-control"></td>
-                                    <td id="td-month"><input type="number" name="int_jul" class="form-control"></td>
-                                    <td id="td-month"><input type="number" name="int_ago" class="form-control"></td>
-                                    <td id="td-month"><input type="number" name="int_sep" class="form-control"></td>
-                                    <td id="td-month"><input type="number" name="int_oct" class="form-control"></td>
-                                    <td id="td-month"><input type="number" name="int_nov" class="form-control"></td>
-                                    <td id="td-month"><input type="number" name="int_dic" class="form-control"></td>
+                                    <td><input type="number" name="int_ene" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_feb" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mar" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_abr" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_may" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_jun" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_jul" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_ago" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_sep" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_oct" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_nov" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_dic" min="0" max="1000000" class="form-control"></td>
                                 </tr>
                             </tbody>
                         </table>
 
                     </div>
                 </div>
-            </div>
-
+            </div> -->
             <button type="submit" class="btn btn-success">Enviar información</button>
-            <!-- <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button> -->
         </div>
-
         <?php echo form_close() ?>
     </div>
-
 </div>
 <script type="text/javascript">
 
@@ -657,6 +676,33 @@
                 if (tds.hasOwnProperty(j))
                 {
                     $('#tbl-total-edad tbody tr #' + j).text(tds[j]);
+                }
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).on('ready', function ()
+    {
+        $('#btn-new-row').on('click', function ()
+        {
+            $("#tbl-presupuesto tbody tr:eq(0)").clone(true).appendTo("#tbl-presupuesto");
+            var inputs = $("#tbl-presupuesto tbody tr:last td input");
+            for (var i = 0; i < inputs.length; i++)
+            {
+                inputs[i].value = '';
+            }
+            $('#btn-delete-row').removeAttr('disabled');
+        });
+        $('#btn-delete-row').on('click', function ()
+        {
+            if ($("#tbl-presupuesto tbody tr").length > 1)
+            {
+                $("#tbl-presupuesto tbody tr:last").remove();
+                if ($("#tbl-presupuesto tbody tr").length === 1)
+                {
+                    $('#btn-delete-row').attr('disabled', 'disabled');
                 }
             }
         });

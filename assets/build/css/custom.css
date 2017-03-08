@@ -11,35 +11,28 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
-
-table > tbody > tr > td > input {
+table > tbody > tr > td > input[type=text] {
+    text-align: start;
+}
+table > tbody > tr > td > input[type=number] {
     text-align: center;
-    /*width: 50% !important;
-    margin: auto;*/
-    padding: 0 !important;
+}
+table > tbody > tr > td > input {
+    padding: 5px !important;
     border: 0 !important;
     box-shadow: none !important;
 }
 table > tbody > tr > td > input:focus {
-    /*width: 50% !important;
-    margin: auto;
-    padding: 0 !important;*/
     border: 0 !important;
     border-color: transparent;
     outline: 0;
 }
 table > tbody > tr > td > textarea {
-    /*text-align: center;*/
-    /*width: 50% !important;
-    margin: auto;*/
-    padding: 0 !important;
+    padding: 5px !important;
     border: 0 !important;
     box-shadow: none !important;
 }
 table > tbody > tr > td > textarea:focus {
-    /*width: 50% !important;
-    margin: auto;
-    padding: 0 !important;*/
     border: 0 !important;
     border-color: transparent;
     outline: 0;
@@ -65,7 +58,8 @@ input[type=number]::-webkit-inner-spin-button {
     background-color: #0f243e;
 }
 input[type=number] {
-    -moz-appearance:textfield;
+    -webkit-appearance: field;
+    -moz-appearance:field;
 }
 .totales-poblacion{
     border:none;
@@ -74,9 +68,9 @@ input[type=number] {
     padding: 10px 0;
 }
 .rotate{
-writing-mode: vertical-rl;
--webkit-transform: rotate(-180deg); 
--moz-transform: rotate(-180deg);
+    writing-mode: vertical-rl;
+    -webkit-transform: rotate(-180deg); 
+    -moz-transform: rotate(-180deg);
 }
 .panel{
     border-radius: 0;
@@ -88,7 +82,7 @@ writing-mode: vertical-rl;
     color: #fff;
     background-color: #0f243e;
     background-image: linear-gradient(to bottom, #0f243e 0%,#0f243e 100%);
-        border-bottom: 1px solid #0b192b;
+    border-bottom: 1px solid #0b192b;
     border-top: 1px solid #0f294a;
 }
 
@@ -128,26 +122,26 @@ writing-mode: vertical-rl;
     border-top: 1px solid #0f294a;
 }
 @media (min-width: 768px){
-.nav-justified > li > a {
+    .nav-justified > li > a {
         border-right: 1px solid #0c1723;
-    border-left: 1px solid #203c61;
-  }
-.nav-justified > li:first-child > a {
-    border-left: 0;
-    border-radius: 0;
-}
-.nav-justified {
-    max-height: 55px;
-}
-.nav-justified > li:last-child > a {
-    border-right: 0;
-    border-radius: 0;
-}
+        border-left: 1px solid #203c61;
+    }
+    .nav-justified > li:first-child > a {
+        border-left: 0;
+        border-radius: 0;
+    }
+    .nav-justified {
+        max-height: 55px;
+    }
+    .nav-justified > li:last-child > a {
+        border-right: 0;
+        border-radius: 0;
+    }
 
-.nav-justified>li {
-    display: table-cell;
-    width: 10%;
-}
+    .nav-justified>li {
+        display: table-cell;
+        width: 10%;
+    }
 }
 
 textarea{
