@@ -1,11 +1,11 @@
 <div style="margin-top: 20px"></div>
-<div class="panel panel-default">
+<div class="panel panel-default" style="margin: 0 -65px">
     <div class="panel-heading">
         <div class="row">
             <div class="col-md-12">
 
                 <!-- <div style="padding: 0 10px; width: 20%" class="pull-left">
-                    <img src="<?php //echo site_url('public/images/hidalgocrececontigo.png')                  ?>" style="width: 100px">
+                    <img src="<?php //echo site_url('public/images/hidalgocrececontigo.png')                   ?>" style="width: 100px">
                 </div> -->
                 <div style="padding: 0 10px;" class="pull-left">
                     <!-- <div class="page-header"> -->
@@ -30,66 +30,70 @@
                     </div>
                     <div class="stepwizard-step">
                         <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-                        <p>Programación de Metas <br> nivel Componente (MIR)</p>
+                        <p>Presupuesto <br>desagregado</p>
                     </div>
                     <div class="stepwizard-step">
                         <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
-                        <p>Presupuesto desagregado</p>
+                        <p>Programación de Metas <br> nivel Componente (MIR)</p>
                     </div>
-                    <!-- <div class="stepwizard-step">
+                    <div class="stepwizard-step">
                         <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
-                        <p></p>
-                    </div> -->
+                        <p>Programación de Metas <br> nivel Actividades (MIR)</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <?php echo form_open('semarnat/form/') ?>
-
+        <div id="error"></div>
         <div class="col-md-12 setup-content" id="step-1">
             <div class="row">
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
                         <label for="str_eje_tematico" class="control-label" >Eje temático (Eje DEP)</label>
-                        <input type="text" name="str_eje_tematico" id="str_eje_tematico" class="form-control">
+                        <input type="text" name="str_eje_tematico" id="str_eje_tematico" class="form-control" required="required">
                     </div>
                     <div class="form-group">
                         <label for="str_programa_sectorial" class="control-label">Programa sectorial</label>
-                        <input type="text" name="str_programa_sectorial" id="str_programa_sectorial" class="form-control">
+                        <input type="text" name="str_programa_sectorial" id="str_programa_sectorial" class="form-control" required="required">
                     </div>
                     <div class="form-group">
                         <label for="str_programa_presupuestario" class="control-label">Programa presupestario</label>
-                        <input type="text" name="str_programa_presupuestario" id="str_programa_presupuestario" class="form-control">
+                        <input type="text" name="str_programa_presupuestario" id="str_programa_presupuestario" class="form-control" required="required">
                     </div>
                     <div class="form-group">
-                        <label for="str_nombre_proyecto" class="control-label">Nombre del proyecto (Componente)</label>
-                        <input type="text" name="str_nombre_proyecto" id="str_nombre_proyecto" class="form-control">
+                        <label for="str_nombre_proyecto_componente" class="control-label">Nombre del proyecto (Componente)</label>
+                        <input type="text" name="str_nombre_proyecto_componente" id="str_nombre_proyecto_componente" class="form-control" required="required">
                     </div>
                     <div class="form-group">
                         <label for="dte_periodo_ejec_inicio" class="control-label">Periodo de ejecución (Inicio)</label>
-                        <input type="text" name="dte_periodo_ejec_inicio" id="dte_periodo_ejec_inicio" class="form-control">
+                        <div id="datepicker">
+                            <input type="text" name="dte_periodo_ejec_inicio" id="dte_periodo_ejec_inicio" class="form-control" required="required">
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
                         <label for="str_subeje" class="control-label">Subeje</label>
-                        <input type="text" name="str_subeje" id="str_subeje" class="form-control">
+                        <input type="text" name="str_subeje" id="str_subeje" class="form-control" required="required">
                     </div>
                     <div class="form-group">
                         <label for="str_area_responsable" class="control-label">Área responsable</label>
-                        <input type="text" name="str_area_responsable" id="str_area_responsable" class="form-control">
+                        <input type="text" name="str_area_responsable" id="str_area_responsable" class="form-control" required="required">
                     </div>
                     <div class="form-group">
                         <label for="str_titular" class="control-label">Titular</label>
-                        <input type="text" name="str_titular" id="str_titular" class="form-control">
+                        <input type="text" name="str_titular" id="str_titular" class="form-control" required="required">
                     </div>
                     <div class="form-group">
                         <label for="str_responsable" class="control-label">Responsable</label>
-                        <input type="text" name="str_responsable" id="str_responsable" class="form-control">
+                        <input type="text" name="str_responsable" id="str_responsable" class="form-control" required="required">
                     </div>
                     <div class="form-group">
                         <label for="dte_priodo_ejec_fin" class="control-label">Periodo de ejecución (Termino)</label>
-                        <input type="text" name="dte_priodo_ejec_fin" id="dte_priodo_ejec_fin" class="form-control">
+                        <div id="datepicker">
+                            <input type="text" name="dte_priodo_ejec_fin" id="dte_priodo_ejec_fin" class="form-control" required="required">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,13 +102,13 @@
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
                         <label for="txt_fundamento_legal" class="control-label">Fundamento legal</label>
-                        <textarea name="txt_fundamento_legal" id="txt_fundamento_legal" rows="5" class="form-control"></textarea>
+                        <textarea name="txt_fundamento_legal" id="txt_fundamento_legal" rows="5" class="form-control" required="required"></textarea>
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
                         <label for="txt_situacion_actual" class="control-label">Sitación actual</label>
-                        <textarea name="txt_situacion_actual" id="txt_situacion_actual" rows="5" class="form-control"></textarea>
+                        <textarea name="txt_situacion_actual" id="txt_situacion_actual" rows="5" class="form-control" required="required"></textarea>
                     </div>
                 </div>
             </div>
@@ -113,13 +117,13 @@
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
                         <label for="txt_justificacion_proyecto" class="control-label">Justificación del proyecto</label>
-                        <textarea name="txt_justificacion_proyecto" id="txt_justificacion_proyecto" rows="5" class="form-control"></textarea>
+                        <textarea name="txt_justificacion_proyecto" id="txt_justificacion_proyecto" rows="5" class="form-control" required="required"></textarea>
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
                         <label for="txt_objetivo_proyecto" class="control-label">Objetivo del proyecto</label>
-                        <textarea name="txt_objetivo_proyecto" id="txt_objetivo_proyecto" rows="5" class="form-control"></textarea>
+                        <textarea name="txt_objetivo_proyecto" id="txt_objetivo_proyecto" rows="5" class="form-control" required="required"></textarea>
                     </div>
                 </div>
             </div>
@@ -128,11 +132,11 @@
                 <div class="col-md-12 col-xs-12">
                     <div class="form-group">
                         <label for="txt_estategias" class="control-label">Estrategias (Alineadas al PED y plan sectorial 2016 - 2022)</label>
-                        <textarea name="txt_estategias" id="txt_estategias" rows="4" class="form-control"></textarea>
+                        <textarea name="txt_estategias" id="txt_estategias" rows="4" class="form-control" required="required"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="txt_lineas_accion" class="control-label">Lineas de acción (Alineadas al PED y plan sectorial 2016 - 2022)</label>
-                        <textarea name="txt_lineas_accion" id="txt_lineas_accion" rows="4" class="form-control"></textarea>
+                        <textarea name="txt_lineas_accion" id="txt_lineas_accion" rows="4" class="form-control" required="required"></textarea>
                     </div>
                 </div>
             </div>
@@ -141,7 +145,7 @@
                 <div class="col-md-12 col-xs-12">
                     <div class="form-group">
                         <label for="txt_situacion_esperada" class="control-label">Situación esperada 2017 (En función de la metas programadas en los indicadores estratégicos)</label>
-                        <textarea name="txt_situacion_esperada" id="txt_situacion_esperada" rows="4" class="form-control"></textarea>
+                        <textarea name="txt_situacion_esperada" id="txt_situacion_esperada" rows="4" class="form-control" required="required"></textarea>
                     </div>
                 </div>
             </div>
@@ -150,13 +154,13 @@
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
                         <label for="txt_justificacion_recursos" class="control-label">Justificación de recursos</label>
-                        <textarea name="txt_justificacion_recursos" id="txt_justificacion_recursos" rows="5" class="form-control"></textarea>
+                        <textarea name="txt_justificacion_recursos" id="txt_justificacion_recursos" rows="5" class="form-control" required="required"></textarea>
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
                         <label for="txt_observaciones" class="control-label">Observaciones 2017</label>
-                        <textarea name="txt_observaciones" id="txt_observaciones" rows="5" class="form-control"></textarea>
+                        <textarea name="txt_observaciones" id="txt_observaciones" rows="5" class="form-control" required="required"></textarea>
                     </div>
                 </div>
             </div>
@@ -168,7 +172,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="str_cobertura" class="control-label">Cobertura</label>
-                        <input type="text" name="str_cobertura" id="str_cobertura" class="form-control">
+                        <input type="text" name="str_cobertura" id="str_cobertura" class="form-control" required="required">
                     </div>
                 </div>
             </div>
@@ -272,8 +276,101 @@
             </div>
             <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
         </div>
+<div class="col-md-12 setup-content" id="step-3">
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="str_organo_sup" class="control-label">Órgano superior</label>
+                        <input type="text" name="str_organo_sup" id="str_organo_sup" class="form-control">
+                    </div>
 
-        <div class="col-md-12 setup-content" id="step-3">
+                    <div class="form-group">
+                        <label for="str_nombre_proyecto" class="control-label">Nombre del proyecto</label> <i>aqui que pedo!</i>
+                        <input type="text" name="str_nombre_proyecto" id="str_nombre_proyecto" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="str_unidad_presupestal" class="control-label">Unidad presupuestal</label>
+                        <input type="text" name="str_unidad_presupestal" id="str_unidad_presupestal" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_descripcion_proyecto" class="control-label">Descripción del proyecto</label>
+                        <textarea name="txt_descripcion_proyecto" id="txt_descripcion_proyecto" rows="4" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-left: -46px; margin-right: -46px">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table thead-default table-bordered table-condensed" style="margin-bottom: 0" id="tbl-presupuesto">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        Objeto de gasto (COG)
+                                    </th>
+                                    <th rowspan="2">Monto total solicitado</th>
+                                    <th colspan="12">Meses</th>
+                                </tr>
+                                <tr>
+                                    <th style="width: 220px">Partida específica</th>
+                                    <th style="width: 220px">Nombre de la partida</th>
+
+                                    <th>Enero</th>
+                                    <th>Febrero</th>
+                                    <th>Marzo</th>
+                                    <th>Abril</th>
+                                    <th>Mayo</th>
+                                    <th>Junio</th>
+                                    <th>Julio</th>
+                                    <th>Agosto</th>
+                                    <th>Septiembre</th>
+                                    <th>Octubre</th>
+                                    <th>Noviembre</th>
+                                    <th>Diciembre</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" name="str_partida_especifica[]" class="form-control"></td>
+                                    <td><input type="text" name="str_nombre_partida[]" class="form-control"></td>
+                                    <td><input type="number" name="int_monto_total_solicitado[]" class="form-control"></td>
+
+                                    <td><input type="number" name="int_mto_ene[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mto_feb[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mto_mar[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mto_abr[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mto_may[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mto_jun[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mto_jul[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mto_ago[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mto_sep[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mto_oct[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mto_nov[]" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mto_dic[]" min="0" max="1000000" class="form-control"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-md-6 col-xs-6" style="padding-right: 0">
+                                <button type="button" id="btn-new-row" class="btn btn-primary btn-block">Nueva fila</button>
+
+                            </div>
+                            <div class="col-md-6 col-xs-6" style="padding-left: 0">
+                                <button type="button" id="btn-delete-row" disabled="disabled" class="btn btn-danger btn-block">Eliminar ultima fila</button>
+
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 20px"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+
+            <!-- <button type="submit" class="btn btn-success">Enviar información</button> -->
+        </div>
+        <div class="col-md-12 setup-content" id="step-4">
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
@@ -343,8 +440,8 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="" class="control-label">Nombre de la actividad</label>
-                        <input type="text" class="form-control">
+                        <label for="str_nombre_actividad" class="control-label">Nombre de la actividad</label>
+                        <input type="text" name="str_nombre_actividad" id="str_nombre_actividad" class="form-control">
                     </div>
                     <div class="table-responsive">
                         <table class="table thead-default table-bordered table-condensed">
@@ -404,143 +501,7 @@
             <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
         </div>
 
-        <div class="col-md-12 setup-content" id="step-4">
-            <div class="row">
-                <div class="col-md-6 col-xs-6">
-                    <div class="form-group">
-                        <label for="str_organo_sup" class="control-label">Órgano superior</label>
-                        <input type="text" name="str_organo_sup" id="str_organo_sup" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="str_nombre_proyecto" class="control-label">Nombre del proyecto</label> <i>aqui que pedo!</i>
-                        <input type="text" name="str_nombre_proyecto" id="str_nombre_proyecto" class="form-control">
-                    </div>
-                </div>
-                <div class="col-md-6 col-xs-6">
-                    <div class="form-group">
-                        <label for="str_unidad_presupestal" class="control-label">Unidad presupuestal</label>
-                        <input type="text" name="str_unidad_presupestal" id="str_unidad_presupestal" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="txt_descripcion_proyecto" class="control-label">Descripción del proyecto</label>
-                        <textarea name="txt_descripcion_proyecto" id="txt_descripcion_proyecto" rows="4" class="form-control"></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="margin-left: -46px; margin-right: -46px">
-                <div class="col-md-12">
-                    <div class="table-responsive">
-                        <table class="table thead-default table-bordered table-condensed" style="margin-bottom: 0" id="tbl-presupuesto">
-                            <thead>
-                                <tr>
-                                    <th rowspan="2">
-                                        #
-                                    </th>
-                                    <th colspan="2">
-                                        Objeto de gasto (COG)
-                                    </th>
-                                    <th rowspan="2">Monto total solicitado</th>
-                                    <th colspan="12">Meses</th>
-                                </tr>
-                                <tr>
-                                    <th>Partida específica</th>
-                                    <th>Nombre de la partida</th>
-
-                                    <th>Enero</th>
-                                    <th>Febrero</th>
-                                    <th>Marzo</th>
-                                    <th>Abril</th>
-                                    <th>Mayo</th>
-                                    <th>Junio</th>
-                                    <th>Julio</th>
-                                    <th>Agosto</th>
-                                    <th>Septiembre</th>
-                                    <th>Octubre</th>
-                                    <th>Noviembre</th>
-                                    <th>Diciembre</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td><input type="text" name="str_partida_especifica[]" class="form-control"></td>
-                                    <td><input type="text" name="str_nombre_partida[]" class="form-control"></td>
-                                    <td><input type="number" name="int_monto_total_solicitado[]" class="form-control"></td>
-
-                                    <td><input type="number" name="int_ene[]" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_feb[]" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_mar[]" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_abr[]" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_may[]" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_jun[]" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_jul[]" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_ago[]" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_sep[]" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_oct[]" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_nov[]" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_dic[]" min="0" max="1000000" class="form-control"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-6" style="padding-right: 0">
-                                <button type="button" id="btn-new-row" class="btn btn-primary btn-block">Nueva fila</button>
-
-                            </div>
-                            <div class="col-md-6 col-xs-6" style="padding-left: 0">
-                                <button type="button" id="btn-delete-row" disabled="disabled" class="btn btn-danger btn-block">Eliminar ultima fila</button>
-
-                            </div>
-                        </div>
-
-                        <div style="margin-bottom: 20px"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="row">
-                <div class="col-md-12">
-                    <div class="table-responsive">
-                        <table class="table thead-default table-bordered table-condensed">
-                            <thead>
-                                <tr>
-                                    <th>Enero</th>
-                                    <th>Febrero</th>
-                                    <th>Marzo</th>
-                                    <th>Abril</th>
-                                    <th>Mayo</th>
-                                    <th>Junio</th>
-                                    <th>Julio</th>
-                                    <th>Agosto</th>
-                                    <th>Septiembre</th>
-                                    <th>Octubre</th>
-                                    <th>Noviembre</th>
-                                    <th>Diciembre</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="number" name="int_ene" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_feb" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_mar" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_abr" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_may" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_jun" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_jul" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_ago" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_sep" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_oct" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_nov" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_dic" min="0" max="1000000" class="form-control"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-                </div>
-            </div> -->
-            <button type="submit" class="btn btn-success">Enviar información</button>
-        </div>
+        
         <?php echo form_close() ?>
     </div>
 </div>
@@ -573,7 +534,7 @@
             var curStep = $(this).closest(".setup-content"),
                     curStepBtn = curStep.attr("id"),
                     nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-                    curInputs = curStep.find("input[type='text'], textarea"),
+                    curInputs = curStep.find(/*"input[type='text'], textarea"*/),
                     isValid = true;
             $(".form-group").removeClass('has-error').removeClass('has-feedback');
             $('.form-group').find('span').remove();
@@ -708,3 +669,45 @@
         });
     });
 </script>
+
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table thead-default table-bordered table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Enero</th>
+                                    <th>Febrero</th>
+                                    <th>Marzo</th>
+                                    <th>Abril</th>
+                                    <th>Mayo</th>
+                                    <th>Junio</th>
+                                    <th>Julio</th>
+                                    <th>Agosto</th>
+                                    <th>Septiembre</th>
+                                    <th>Octubre</th>
+                                    <th>Noviembre</th>
+                                    <th>Diciembre</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="number" name="int_ene" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_feb" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_mar" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_abr" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_may" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_jun" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_jul" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_ago" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_sep" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_oct" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_nov" min="0" max="1000000" class="form-control"></td>
+                                    <td><input type="number" name="int_dic" min="0" max="1000000" class="form-control"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div> -->

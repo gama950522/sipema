@@ -17,10 +17,14 @@ table > tbody > tr > td > input[type=text] {
 table > tbody > tr > td > input[type=number] {
     text-align: center;
 }
+table{
+    font-size: 11px !important;
+}
 table > tbody > tr > td > input {
     padding: 5px !important;
     border: 0 !important;
     box-shadow: none !important;
+    font-size: 11px !important;
 }
 table > tbody > tr > td > input:focus {
     border: 0 !important;

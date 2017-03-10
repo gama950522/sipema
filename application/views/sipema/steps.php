@@ -386,23 +386,7 @@
 //        });
 //    });
 </script>
-<script type="text/javascript">
-    $(document).ready(function ()
-    {
-        $('.form-group .form-control').on('blur', function ()
-        {
-            $(this).closest('.form-group').removeClass('has-error').removeClass('has-feedback');
-            $(this).closest('.form-group').find('span').remove();
-            if ($(this).val().trim() === "")
-            {
-                $(this).closest('.form-group')
-                        .addClass('has-error')
-                        .addClass('has-feedback');
-                $(this).after('<span class="fa fa-info-circle form-control-feedback" aria-hidden="true"></span>');
-            }
-        });
-    });
-</script>
+
 <script type="text/javascript">
 
     $(document).ready(function ()
