@@ -2,7 +2,7 @@
     <div class="login-form">
         <h1>Ingresa tus datos</h1>
         <div class="head">
-            <img src="<?php echo site_url('public/images/default.jpg') ?>" alt=""/>
+            <img src="<?php echo site_url('public/images/default.png') ?>" alt=""/>
         </div>
         <?php echo form_open('login/inicio_sesion/'); ?>
         <div id="error"></div>

@@ -1,11 +1,11 @@
 <div style="margin-top: 20px"></div>
-<div class="panel panel-default" style="margin: 0 -65px">
+<div class="panel panel-default">
     <div class="panel-heading">
         <div class="row">
             <div class="col-md-12">
 
                 <!-- <div style="padding: 0 10px; width: 20%" class="pull-left">
-                    <img src="<?php //echo site_url('public/images/hidalgocrececontigo.png')                   ?>" style="width: 100px">
+                    <img src="<?php //echo site_url('public/images/hidalgocrececontigo.png')                       ?>" style="width: 100px">
                 </div> -->
                 <div style="padding: 0 10px;" class="pull-left">
                     <!-- <div class="page-header"> -->
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="clearfix"></div>
-    </div>
+    </div> 
     <div class="panel-body">
         <div class="media-heading">
             <div class="stepwizard">
@@ -40,11 +40,15 @@
                         <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
                         <p>Programación de Metas <br> nivel Actividades (MIR)</p>
                     </div>
+                    <div class="stepwizard-step">
+                        <a href="#step-6" type="button" class="btn btn-default btn-circle" disabled="disabled">6</a>
+                        <p>VIATICOS</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <?php echo form_open('semarnat/form/') ?>
+        <?php echo form_open('semarnat/form/', array('autocomplete' => 'off')) ?>
         <div id="error"></div>
         <div class="col-md-12 setup-content" id="step-1">
             <div class="row">
@@ -58,7 +62,7 @@
                         <input type="text" name="str_programa_sectorial" id="str_programa_sectorial" class="form-control" required="required">
                     </div>
                     <div class="form-group">
-                        <label for="str_programa_presupuestario" class="control-label">Programa presupestario</label>
+                        <label for="str_programa_presupuestario" class="control-label">Programa presupuestario</label>
                         <input type="text" name="str_programa_presupuestario" id="str_programa_presupuestario" class="form-control" required="required">
                     </div>
                     <div class="form-group">
@@ -276,7 +280,7 @@
             </div>
             <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
         </div>
-<div class="col-md-12 setup-content" id="step-3">
+        <div class="col-md-12 setup-content" id="step-3">
             <div class="row">
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
@@ -300,21 +304,21 @@
                     </div>
                 </div>
             </div>
-            <div class="row" style="margin-left: -46px; margin-right: -46px">
+            <div class="row">
                 <div class="col-md-12">
-                    <div class="table-responsive">
-                        <table class="table thead-default table-bordered table-condensed" style="margin-bottom: 0" id="tbl-presupuesto">
+                    <div class="table-responsive table-lg">
+                        <table class="table thead-default table-bordered table-condensed" style="margin-bottom: 0; width: 2000px; border: 0" id="tbl-presupuesto">
                             <thead>
                                 <tr>
                                     <th colspan="2">
                                         Objeto de gasto (COG)
                                     </th>
-                                    <th rowspan="2">Monto total solicitado</th>
+                                    <th rowspan="2" style="width: 100px">Monto total solicitado</th>
                                     <th colspan="12">Meses</th>
                                 </tr>
                                 <tr>
-                                    <th style="width: 220px">Partida específica</th>
-                                    <th style="width: 220px">Nombre de la partida</th>
+                                    <th style="width: 300px">Partida específica</th>
+                                    <th style="width: 300px">Nombre de la partida</th>
 
                                     <th>Enero</th>
                                     <th>Febrero</th>
@@ -352,23 +356,18 @@
                             </tbody>
                         </table>
                         <div class="row">
-                            <div class="col-md-6 col-xs-6" style="padding-right: 0">
-                                <button type="button" id="btn-new-row" class="btn btn-primary btn-block">Nueva fila</button>
+                            <div class="col-md-6 col-xs-6 newbutton" style="padding-right: 0">
+                                <button type="button" onclick="newrow(this)" class="btn btn-primary btn-block">Nueva fila</button>
 
                             </div>
-                            <div class="col-md-6 col-xs-6" style="padding-left: 0">
-                                <button type="button" id="btn-delete-row" disabled="disabled" class="btn btn-danger btn-block">Eliminar ultima fila</button>
-
+                            <div class="col-md-6 col-xs-6 removebutton" style="padding-left: 0">
+                                <button type="button" onclick="deleterow(this)" disabled="disabled" class="btn btn-danger btn-block">Eliminar ultima fila</button>
                             </div>
                         </div>
-
-                        <div style="margin-bottom: 20px"></div>
                     </div>
                 </div>
             </div>
             <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-
-            <!-- <button type="submit" class="btn btn-success">Enviar información</button> -->
         </div>
         <div class="col-md-12 setup-content" id="step-4">
             <div class="row">
@@ -432,13 +431,13 @@
                     </div>
                 </div>
             </div>
+
+            <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+        </div>
+
+        <div class="col-md-12 setup-content" id="step-5">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="bg-primary" style="margin: 0 -30px 10px">
-                        <div style="padding: 10px 30px">
-                            <h3>Programación de actividades</h3>
-                        </div>
-                    </div>
                     <div class="form-group">
                         <label for="str_nombre_actividad" class="control-label">Nombre de la actividad</label>
                         <input type="text" name="str_nombre_actividad" id="str_nombre_actividad" class="form-control">
@@ -499,9 +498,105 @@
                 </div>
             </div>
             <button class="btn btn-primary nextBtn pull-right" type="button" >Siguiente <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+
         </div>
 
-        
+        <div class="col-md-12 setup-content" id="step-6">
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="str_dependencia" class="control-label">Dependencia</label>
+                        <input type="text" name="str_dependencia" id="str_dependencia" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <div class="form-group">
+                        <label for="str_unidad_presupestal_viat" class="control-label">Unidad presupuestal</label>
+                        <input type="text" name="str_unidad_presupestal_viaticos" id="str_unidad_presupestal_viaticos" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive table-lg">
+                        <table class="table thead-default table-bordered table-condensed" style="margin-bottom: 0; width: 2000px;" id="tbl-viaticos">
+
+                            <thead>
+                                <tr>
+                                    <th rowspan="2" style="width: 250px">Proyecto</th>
+                                    <th rowspan="2" style="width: 250px">Comisión</th>
+                                    <th rowspan="2" style="width: 250px">Objetivo</th>
+                                    <th rowspan="2" style="width: 50px">No. personas</th>
+                                    <th rowspan="2" style="width: 150px">Mes</th>
+                                    <th rowspan="2" style="width: 50px">Duracion (Días)</th>
+                                    <th rowspan="2" style="width: 100px">Lugar de comisión</th>
+                                    <th colspan="3" style="width: 150px">Monto por concepto</th>
+                                    <!-- <th rowspan="2">Monto Total</th> -->
+
+                                </tr>
+                                <tr>
+                                    <!-- <th style="width: 33px">Local</th>
+                                    <th style="width: 33px">Nacional</th>
+                                    <th style="width: 33px">Extranjero</th> -->
+                                    <th style="width: 50px">Alimentación</th>
+                                    <th style="width: 50px">Hospedaje</th>
+                                    <th style="width: 50px">Traslado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text"   name="str_viaticos_proyecto[]" id="str_viaticos_proyecto" class="form-control"></td>
+                                    <td><input type="text"   name="str_viaticos_comision[]" id="str_viaticos_comision" class="form-control"></td>
+                                    <td><input type="text"   name="str_viaticos_objetivo[]" id="str_viaticos_objetivo" class="form-control"></td>
+                                    <td><input type="number" name="int_num_personas[]" id="int_num_personas" class="form-control"></td>
+                                    <td>
+                                        <select name="ddl_mes[]" id="ddl_mes" class="form-control">
+                                            <option value="">Selecciona</option>
+                                            <option value="enero">Enero</option>
+                                            <option value="febrero">Febrero</option>
+                                            <option value="marzo">Marzo</option>
+                                            <option value="abril">Abril</option>
+                                            <option value="mayo">Mayo</option>
+                                            <option value="junio">Junio</option>
+                                            <option value="julio">Julio</option>
+                                            <option value="agosto">Agosto</option>
+                                            <option value="septiembre">Septiembre</option>
+                                            <option value="octubre">Octubre</option>
+                                            <option value="noviembre">Noviembre</option>
+                                            <option value="diciembre">Diciembre</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="number" name="int_duracion_dias[]" id="int_duracion_dias" class="form-control"></td>
+                                    <td>
+                                        <select name="ddl_lugar_comision[]" id="ddl_lugar_comision" class="form-control">
+                                            <option value="">Selecciona</option>
+                                            <option value="local">Local</option>
+                                            <option value="nacional">Nacional</option>
+                                            <option value="extanjro">Extanjro</option>
+                                        </select>
+                                    </td>
+                                    <td><span>$</span><input type="number" name="dbl_monto_alimentacion[]" id="dbl_monto_alimentacion" class="form-control"></td>
+                                    <td><span>$</span><input type="number" name="dbl_monto_hospedaje[]" id="dbl_monto_hospedaje" class="form-control"></td>
+                                    <td><span>$</span><input type="number" name="dbl_monto_traslado[]" id="dbl_monto_traslado" class="form-control"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-md-6 col-xs-6 newbutton" style="padding-right: 0">
+                                <button type="button" onclick="newrow(this)" class="btn btn-primary btn-block">Nueva fila</button>
+
+                            </div>
+                            <div class="col-md-6 col-xs-6 removebutton" style="padding-left: 0">
+                                <button type="button" onclick="deleterow(this)" disabled="disabled" class="btn btn-danger btn-block">Eliminar ultima fila</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Enviar información</button> 
+                </div>
+            </div>
+        </div>
+
         <?php echo form_close() ?>
     </div>
 </div>
@@ -644,70 +739,145 @@
 </script>
 
 <script type="text/javascript">
+    function newrow(e)
+    {
+        //alert($(e).parent().parent().parent().children('table').attr('id'));
+        var id_table = $(e).parent().parent().parent().children('table').attr('id');
+        $("#" + id_table + " tbody tr:eq(0)").clone(true).appendTo("#" + id_table + "");
+        var inputs = $("#" + id_table + " tbody tr:last td input");
+        for (var i = 0; i < inputs.length; i++)
+        {
+            inputs[i].value = '';
+        }
+        //$(e).parent().parent().find('.removebutton').find('button');
+        //console.log($(e).parent().children());
+        $(e).parent().parent().children('.removebutton').children('button').removeAttr('disabled');
+        //console.log($(e).parent().parent().parent().children());
+    }
+    function deleterow(e)
+    {
+        //alert($("#tbl-presupuesto tbody tr").length);
+        var id_table = $(e).parent().parent().parent().children('table').attr('id');
+
+        if ($("#" + id_table + " tbody tr").length > 1)
+        {
+            $("#" + id_table + " tbody tr:last").remove();
+            if ($("#" + id_table + " tbody tr").length === 1)
+            {
+                $(e).parent().parent().children('.removebutton').children('button').attr('disabled', 'disabled');
+            }
+        }
+    }
+    function format(input)
+    {
+        var num = input.value.replace(/\./g, '');
+        if (!isNaN(num))
+        {
+            num = num.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+            num = num.split('').reverse().join('').replace(/^[\.]/, '');
+            input.value = "$ "+num;
+        }
+        else
+        {
+            //alert('Solo se permiten numeros');
+            input.value = input.value.replace(/[^\d\.]*/g, '');
+        }
+    }
+        /*var format = 
+        {
+            separador: ",", // separador para los miles
+            sepDecimal: '.', // separador para los decimales
+            formatear: function (num)
+            {
+                num += '';
+                var splitStr = num.split(',');
+                var splitLeft = splitStr[0];
+                var splitRight = splitStr.length > 1 ? this.sepDecimal + splitStr[1] : '';
+                var regx = /(\d+)(\d{3})/;
+                while (regx.test(splitLeft))
+                {
+                    splitLeft = splitLeft.replace(regx, '$1' + this.separador + '$2');
+                }
+                return '$' + splitLeft + splitRight;
+            },
+            new : function (input)
+            {
+                var num = input.value;
+                //this.simbol = simbol || '';
+                input.value = this.formatear(num);
+            }
+        }*/
     $(document).on('ready', function ()
     {
-        $('#btn-new-row').on('click', function ()
-        {
-            $("#tbl-presupuesto tbody tr:eq(0)").clone(true).appendTo("#tbl-presupuesto");
-            var inputs = $("#tbl-presupuesto tbody tr:last td input");
-            for (var i = 0; i < inputs.length; i++)
-            {
-                inputs[i].value = '';
-            }
-            $('#btn-delete-row').removeAttr('disabled');
-        });
-        $('#btn-delete-row').on('click', function ()
-        {
-            if ($("#tbl-presupuesto tbody tr").length > 1)
-            {
-                $("#tbl-presupuesto tbody tr:last").remove();
-                if ($("#tbl-presupuesto tbody tr").length === 1)
-                {
-                    $('#btn-delete-row').attr('disabled', 'disabled');
-                }
-            }
-        });
+
+
+        // $('#btn-new-row').on('click', function ()
+        // {
+        //     //var id_table = $(this).parent().parent().parent().children('table').attr('id');
+        //     $("#tbl-presupuesto tbody tr:eq(0)").clone(true).appendTo("#tbl-presupuesto");
+        //     var inputs = $("#tbl-presupuesto tbody tr:last td input");
+        //     for (var i = 0; i < inputs.length; i++)
+        //     {
+        //         inputs[i].value = '';
+        //     }
+        //     $('#btn-delete-row').removeAttr('disabled');
+        // });
+        // $('#btn-delete-row').on('click', function ()
+        // {
+        //     alert($("#tbl-presupuesto tbody tr").length);
+        //     if ($("#tbl-presupuesto tbody tr").length > 1)
+        //     {
+        //         $("#tbl-presupuesto tbody tr:last").remove();
+        //         if ($("#tbl-presupuesto tbody tr").length === 1)
+        //         {
+        //             $('#btn-delete-row').attr('disabled', 'disabled');
+        //         }
+        //     }
+        // });
     });
 </script>
+<script type="text/javascript">
 
-            <!-- <div class="row">
-                <div class="col-md-12">
-                    <div class="table-responsive">
-                        <table class="table thead-default table-bordered table-condensed">
-                            <thead>
-                                <tr>
-                                    <th>Enero</th>
-                                    <th>Febrero</th>
-                                    <th>Marzo</th>
-                                    <th>Abril</th>
-                                    <th>Mayo</th>
-                                    <th>Junio</th>
-                                    <th>Julio</th>
-                                    <th>Agosto</th>
-                                    <th>Septiembre</th>
-                                    <th>Octubre</th>
-                                    <th>Noviembre</th>
-                                    <th>Diciembre</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="number" name="int_ene" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_feb" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_mar" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_abr" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_may" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_jun" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_jul" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_ago" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_sep" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_oct" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_nov" min="0" max="1000000" class="form-control"></td>
-                                    <td><input type="number" name="int_dic" min="0" max="1000000" class="form-control"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+</script>
 
-                    </div>
-                </div>
-            </div> -->
+<!-- <div class="row">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table thead-default table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th>Enero</th>
+                        <th>Febrero</th>
+                        <th>Marzo</th>
+                        <th>Abril</th>
+                        <th>Mayo</th>
+                        <th>Junio</th>
+                        <th>Julio</th>
+                        <th>Agosto</th>
+                        <th>Septiembre</th>
+                        <th>Octubre</th>
+                        <th>Noviembre</th>
+                        <th>Diciembre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="number" name="int_ene" min="0" max="1000000" class="form-control"></td>
+                        <td><input type="number" name="int_feb" min="0" max="1000000" class="form-control"></td>
+                        <td><input type="number" name="int_mar" min="0" max="1000000" class="form-control"></td>
+                        <td><input type="number" name="int_abr" min="0" max="1000000" class="form-control"></td>
+                        <td><input type="number" name="int_may" min="0" max="1000000" class="form-control"></td>
+                        <td><input type="number" name="int_jun" min="0" max="1000000" class="form-control"></td>
+                        <td><input type="number" name="int_jul" min="0" max="1000000" class="form-control"></td>
+                        <td><input type="number" name="int_ago" min="0" max="1000000" class="form-control"></td>
+                        <td><input type="number" name="int_sep" min="0" max="1000000" class="form-control"></td>
+                        <td><input type="number" name="int_oct" min="0" max="1000000" class="form-control"></td>
+                        <td><input type="number" name="int_nov" min="0" max="1000000" class="form-control"></td>
+                        <td><input type="number" name="int_dic" min="0" max="1000000" class="form-control"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div> -->

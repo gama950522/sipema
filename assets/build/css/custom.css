@@ -16,10 +16,12 @@ table > tbody > tr > td > input[type=text] {
 }
 table > tbody > tr > td > input[type=number] {
     text-align: center;
+    display: inline-block;
+    width: 90%;
 }
-table{
+/*table{
     font-size: 11px !important;
-}
+}*/
 table > tbody > tr > td > input {
     padding: 5px !important;
     border: 0 !important;
@@ -35,6 +37,7 @@ table > tbody > tr > td > textarea {
     padding: 5px !important;
     border: 0 !important;
     box-shadow: none !important;
+    font-size: 11px !important;
 }
 table > tbody > tr > td > textarea:focus {
     border: 0 !important;
@@ -231,3 +234,19 @@ textarea{
     background-color: #0f243e !important;
     color: #fff !important;
 }
+@media (max-width: 767px){
+.table-responsive>.table-bordered {
+    border: 0;
+    border-bottom: 1px solid #ddd; 
+}
+}
+
+    .table-lg {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+        -webkit-overflow-scrolling: touch;
+    }

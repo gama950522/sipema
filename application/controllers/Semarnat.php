@@ -18,11 +18,11 @@ class Semarnat extends CI_Controller {
 
 	public function form()
 	{
-		//$this->load->model('registros_model');
+		$this->load->model('registros_model');
 
-		//$this->registros_model->add_data($this->input->post());
+		$this->registros_model->add_data($this->input->post());
 		
-
+		echo "-------------------------------------------------";
 		echo '<pre>';
 		print_r($this->input->post());
 		echo '</pre>';
