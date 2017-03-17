@@ -22,10 +22,10 @@ class Semarnat extends CI_Controller {
 
 		$this->registros_model->add_data($this->input->post());
 		
-		echo "-------------------------------------------------";
-		echo '<pre>';
-		print_r($this->input->post());
-		echo '</pre>';
+		// echo "-------------------------------------------------";
+		// echo '<pre>';
+		// print_r($this->input->post());
+		// echo '</pre>';
 		echo count($this->input->post());
 
 	}

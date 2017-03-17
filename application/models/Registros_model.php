@@ -45,11 +45,11 @@ class Registros_model extends CI_Model
             'justificacion_recursos'    => $data['txt_justificacion_recursos'],
             'observaciones'             => $data['txt_observaciones'] 
         );
-        echo "/////////////////////////////////////////////////////////////////////////////////";
-        echo '<pre>';
-        print_r($carta_descriptiva);
-        echo '</pre>';
-        echo "/////////////////////////////////////////////////////////////////////////////////";
+        // echo "/////////////////////////////////////////////////////////////////////////////////";
+        // echo '<pre>';
+        // print_r($carta_descriptiva);
+        // echo '</pre>';
+        // echo "/////////////////////////////////////////////////////////////////////////////////";
 
         /*$this->db->insert('carta_descriptiva', $carta_descriptiva);
         $this->db->select_max('id');
@@ -70,10 +70,10 @@ class Registros_model extends CI_Model
             'adulto_m'      => $data['int_adulto_m'],
             'mayor_m'       => $data['int_mayor_m']
         );
-        echo '<pre>';
-        print_r($beneficio_social);
-        echo '</pre>';
-        echo "/////////////////////////////////////////////////////////////////////////////////";
+        // echo '<pre>';
+        // print_r($beneficio_social);
+        // echo '</pre>';
+        // echo "/////////////////////////////////////////////////////////////////////////////////";
 
         /*$this->db->insert('beneficio_social', $beneficio_social);
         $this->db->select_max('id');
@@ -84,25 +84,100 @@ class Registros_model extends CI_Model
             'nombre_proyecto'             => $data['str_nombre_proyecto'],
             'unidad_presupestal'          => $data['str_unidad_presupestal'],
             'descripcion_proyecto'        => $data['txt_descripcion_proyecto'],
-            'str_partida_especifica'      => $data['str_partida_especifica'],
-            'str_nombre_partida'          => $data['str_nombre_partida'],
-            'int_monto_total_solicitado'  => $data['int_monto_total_solicitado'],
-            'int_mto_ene' => $data['int_mto_ene'],
-            'int_mto_feb' => $data['int_mto_feb'],
-            'int_mto_mar' => $data['int_mto_mar'],
-            'int_mto_abr' => $data['int_mto_abr'],
-            'int_mto_may' => $data['int_mto_may'],
-            'int_mto_jun' => $data['int_mto_jun'],
-            'int_mto_jul' => $data['int_mto_jul'],
-            'int_mto_ago' => $data['int_mto_ago'],
-            'int_mto_sep' => $data['int_mto_sep'],
-            'int_mto_oct' => $data['int_mto_oct'],
-            'int_mto_nov' => $data['int_mto_nov'],
-            'int_mto_dic' => $data['int_mto_dic']
+            'partida_especifica'          => $data['str_partida_especifica'],
+            'nombre_partida'              => $data['str_nombre_partida'],
+            'monto_total_solicitado'      => $data['int_monto_total_solicitado'],
+            'mto_ene'   => $data['int_mto_ene'],
+            'mto_feb'   => $data['int_mto_feb'],
+            'mto_mar'   => $data['int_mto_mar'],
+            'mto_abr'   => $data['int_mto_abr'],
+            'mto_may'   => $data['int_mto_may'],
+            'mto_jun'   => $data['int_mto_jun'],
+            'mto_jul'   => $data['int_mto_jul'],
+            'mto_ago'   => $data['int_mto_ago'],
+            'mto_sep'   => $data['int_mto_sep'],
+            'mto_oct'   => $data['int_mto_oct'],
+            'mto_nov'   => $data['int_mto_nov'],
+            'mto_dic'   => $data['int_mto_dic']
         );
+        $array = array();
+        $insert = array();
+        foreach ($presupesto_desag as $key => $value) 
+        {
+            if (is_array($value)) 
+            {
+                for ($i = 0; $i < count($value); $i++) 
+                {
+                    $array[$key] = $value;
+                }
+               
+                /*
+                    
+
+                    $item = [];
+                    for ($i = 0; $i < count($items); $i++) 
+                    {
+                        $item[$i] = current($items);
+                    }
+                    echo '<pre>';
+                    echo '<h1>$item</h1>';
+                    print_r($item);
+                    echo '</pre>';
+                    echo '<hr>';
+
+                    $datos = [];
+                    for ($i = 0; $i < count($item); $i++) {
+                        $datos[$i] = $item[$i];
+                        // $id=(( $item1 !== false) ? $item1 : ", &nbsp;");
+                        // $nom=(( $item2 !== false) ? $item2 : ", &nbsp;");
+                        // $carr=(( $item3 !== false) ? $item3 : ", &nbsp;");
+                        // $gru=(( $item4 !== false) ? $item4 : ", &nbsp;");
+                    }
+                    for ($i = 0; $i < count($items); $i++) 
+                    {
+                        $item[$i] = next($items);
+                    }
+                    for ($i = 0; $i < count($items); $i++) 
+                    {
+                        $item[] = next($items[$i]);
+                    }
+
+                    echo 'entro';
+                    echo '<pre>';
+                    print_r($datos);
+                    echo '</pre>';
+                    echo "/////////////////////////////////////////////////////////////////////////////////";
+                */
+            }
+            /*
+                else
+                {
+                    echo $key .' => '. $value .'<br>';
+                }
+                echo '<hr>';
+            */
+        }
         echo '<pre>';
-        print_r($presupesto_desag);
+        echo '<h1>$array</h1>';
+        print_r($array);
         echo '</pre>';
+        echo '<hr>';
+        $items = array();
+        for ($i = 0; $i < count($array); $i++) 
+        {
+            $items[] = $array[$i];
+        }
+        echo '<pre>';
+        echo '<h1>$items</h1>';
+        print_r($items);
+        echo '</pre>';
+        echo '<hr>';
+        //echo 'count($array) = '. count($array);
+        echo '<hr>';
+        //echo '<pre>';
+        //print_r($items);
+        // print_r($presupesto_desag);
+        //echo '</pre>';
         echo "/////////////////////////////////////////////////////////////////////////////////";
 
 
@@ -122,10 +197,10 @@ class Registros_model extends CI_Model
             'comp_dic'           => $data['txt_comp_dic'],
             'comp_meta_final'    => $data['txt_comp_meta_final']
         );
-        echo '<pre>';
-        print_r($programacion_metas);
-        echo '</pre>';
-        echo "/////////////////////////////////////////////////////////////////////////////////";
+        // echo '<pre>';
+        // print_r($programacion_metas);
+        // echo '</pre>';
+        // echo "/////////////////////////////////////////////////////////////////////////////////";
 
         /*$this->db->insert('programacion_metas', $programacion_metas);
         $this->db->select_max('id');
@@ -147,10 +222,10 @@ class Registros_model extends CI_Model
             'acti_dic'         => $data['txt_acti_dic'],
             'acti_meta_final'  =>  $data['txt_acti_meta_final']
         );
-        echo '<pre>';
-        print_r($programacion_acti);
-        echo '</pre>';
-        echo "/////////////////////////////////////////////////////////////////////////////////";
+        // echo '<pre>';
+        // print_r($programacion_acti);
+        // echo '</pre>';
+        // echo "/////////////////////////////////////////////////////////////////////////////////";
 
         /*$this->db->insert('programacion_actividades', $programacion_acti);
         $this->db->select_max('id');
@@ -170,10 +245,24 @@ class Registros_model extends CI_Model
             'monto_hospedaje'               => $data['dbl_monto_hospedaje'],
             'monto_traslado'                => $data['dbl_monto_traslado']
         );
-        echo '<pre>';
-        print_r($viaticos);
-        echo '</pre>';
-        echo "/////////////////////////////////////////////////////////////////////////////////";
+        // foreach ($viaticos as $key) 
+        // {
+        //     if (is_array($key)) 
+        //     {
+        //         echo '<pre>';
+        //         print_r($key);
+        //         echo '</pre>';
+        //         echo "/////////////////////////////////////////////////////////////////////////////////";
+        //         foreach ($key as $item) 
+        //         {
+        //             # code...
+        //         }
+        //     }
+        // }
+        // echo '<pre>';
+        // print_r($viaticos);
+        // echo '</pre>';
+        // echo "/////////////////////////////////////////////////////////////////////////////////";
 
         
 
