@@ -102,15 +102,17 @@ class Registros_model extends CI_Model
         );
         $array = array();
         $insert = array();
+        $filas = 0;
         foreach ($presupesto_desag as $key => $value) 
         {
             if (is_array($value)) 
             {
-                for ($i = 0; $i < count($value); $i++) 
+                $filas = count($value);
+                for ($i = 0; $i < $filas; $i++) 
                 {
                     $array[$key] = $value;
                 }
-               
+                
                 /*
                     
 
@@ -157,29 +159,84 @@ class Registros_model extends CI_Model
                 echo '<hr>';
             */
         }
-        echo '<pre>';
-        echo '<h1>$array</h1>';
-        print_r($array);
-        echo '</pre>';
-        echo '<hr>';
+//        echo '<pre>';
+//        echo '<h1>$array</h1>';
+//        print_r($array);
+//        echo '</pre>';
+//        echo '<hr>';
 
         $item = array();
-        for ($i = 0; $i < count($array); $i++) 
+        echo 'filas: '.$filas.'<br>';
+        for ($i=0; $i < $filas; $i++) 
         {
-            $item[] = current($array[$i]);
+            foreach ($array as $key => $value) 
+            {
+                $item[$key] = current($value);
+                //echo $key . '-->' . current($value). '<br>';
+//                echo '<h1>$insert current</h1>';
+//                print_r($item);
+//                echo '</pre>';
+//                echo '<hr>';
+            }
+            foreach ($item as $key => $value)
+            {
+                $insert[$i][$key] = $value;
+            }
+//            for($j =0; $j<15; $j++)
+//            {
+//                $insert[$i][$j] = $item[];
+//            }
+//                echo '<pre>';
+//                echo '<h1>$insert netx</h1>';
+//                print_r($item);
+//                echo '</pre>';
+//                echo '<hr>';
+            
+            //echo count($array[$i]);
+            //echo 'count($item)'.count($item);
+//            foreach ($item as $key => $value)
+//            {
+////                for ($j = 0; $j < count($item); $j++)
+////                {
+////                    $insert[][] = $item[$j];
+////                }
+//            }
+            
+            foreach ($array as $key => $value) 
+            {
+                $item[$key] = next($value);
+                //echo $item[$key] . '<br>';
+
+//                echo '<pre>';
+//                echo '<h1>$insert netx</h1>';
+//                print_r($item);
+//                echo '</pre>';
+//                echo '<hr>';
+            }
+            //echo '<hr>';
+            //$exit = FALSE;
+//            foreach ($item as $value)
+//            {
+//                ///echo $value . '<br>';
+//                if($value === FALSE)
+//                {
+//                    $exit = TRUE;
+//                }
+//            }
+//            if ($exit)
+//            {
+//                echo 'salio';
+//                break;
+//            }
+            
+            
         }
         echo '<pre>';
-        echo '<h1>$item</h1>';
+        echo '<h1>$insert</h1>';
         print_r($item);
         echo '</pre>';
         echo '<hr>';
-        //echo 'count($array) = '. count($array);
-        echo '<hr>';
-        //echo '<pre>';
-        //print_r($items);
-        // print_r($presupesto_desag);
-        //echo '</pre>';
-        echo "/////////////////////////////////////////////////////////////////////////////////";
+        
 
 
         $programacion_metas = array(
