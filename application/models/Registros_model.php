@@ -162,14 +162,15 @@ class Registros_model extends CI_Model
         print_r($array);
         echo '</pre>';
         echo '<hr>';
-        $items = array();
+
+        $item = array();
         for ($i = 0; $i < count($array); $i++) 
         {
-            $items[] = $array[$i];
+            $item[] = current($array[$i]);
         }
         echo '<pre>';
-        echo '<h1>$items</h1>';
-        print_r($items);
+        echo '<h1>$item</h1>';
+        print_r($item);
         echo '</pre>';
         echo '<hr>';
         //echo 'count($array) = '. count($array);
