@@ -34,16 +34,10 @@
         <div class="container">
             <div class="masthead">
                 <div class="row">
-                    <div class="col-md-4 col-xs-4">
-                        <img src="<?php echo site_url('public/images/hidalgocrececontigo.png') ?>">
-                    </div>                    
-                    <div class="col-md-4 col-xs-4">
-                        <img src="<?php echo site_url('public/images/hidalgo_logo.png') ?>">
+                    <div class="col-md-12">
+                        <img src="<?php echo site_url('public/images/secretaria1.png') ?>" style="margin-right: auto;margin-left: auto; display: block;">                   
+                            
                     </div>
-                    <div class="col-md-4 col-xs-4">
-                        <!-- <img src="<?php echo site_url('public/images/hidalgo_logo.png') ?>"> -->
-                    </div>
-                    <!-- <img src="<?php echo site_url('public/images/secretaria.png'); ?>" class="center-block"> -->
                 </div>
                 <div style="margin-top: 15px"></div>
                 <nav>

@@ -5,7 +5,7 @@
             <div class="col-md-12">
 
                 <!-- <div style="padding: 0 10px; width: 20%" class="pull-left">
-                    <img src="<?php //echo site_url('public/images/hidalgocrececontigo.png')                       ?>" style="width: 100px">
+                    <img src="<?php //echo site_url('public/images/hidalgocrececontigo.png')                         ?>" style="width: 100px">
                 </div> -->
                 <div style="padding: 0 10px;" class="pull-left">
                     <!-- <div class="page-header"> -->
@@ -52,82 +52,82 @@
         <div id="error"></div>
         <div class="col-md-12 setup-content" id="step-1">
             <div class="row">
-                <div class="col-md-6 col-xs-6">
+                <div class="col-md-6 col-xs-12">
                     <div class="form-group">
                         <label for="str_eje_tematico" class="control-label" >Eje temático (Eje DEP)</label>
-                        <input type="text" name="str_eje_tematico" id="str_eje_tematico" class="form-control"  >
+                        <input type="text" name="str_eje_tematico" id="str_eje_tematico" class="form-control" required="required">
                     </div>
                     <div class="form-group">
                         <label for="str_programa_sectorial" class="control-label">Programa sectorial</label>
-                        <input type="text" name="str_programa_sectorial" id="str_programa_sectorial" class="form-control"  >
+                        <input type="text" name="str_programa_sectorial" id="str_programa_sectorial" class="form-control" required="required">
                     </div>
                     <div class="form-group">
                         <label for="str_programa_presupuestario" class="control-label">Programa presupuestario</label>
-                        <input type="text" name="str_programa_presupuestario" id="str_programa_presupuestario" class="form-control"  >
+                        <input type="text" name="str_programa_presupuestario" id="str_programa_presupuestario" class="form-control" required="required">
                     </div>
                     <div class="form-group">
                         <label for="str_nombre_proyecto_componente" class="control-label">Nombre del proyecto (Componente)</label>
-                        <input type="text" name="str_nombre_proyecto_componente" id="str_nombre_proyecto_componente" class="form-control"  >
+                        <input type="text" name="str_nombre_proyecto_componente" id="str_nombre_proyecto_componente" class="form-control" required="required">
                     </div>
                     <div class="form-group">
                         <label for="dte_periodo_ejec_inicio" class="control-label">Periodo de ejecución (Inicio)</label>
                         <div id="datepicker">
-                            <input type="text" name="dte_periodo_ejec_inicio" id="dte_periodo_ejec_inicio" class="form-control"  >
+                            <input type="text" name="dte_periodo_ejec_inicio" id="dte_periodo_ejec_inicio" class="form-control" required="required">
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-6">
+                <div class="col-md-6 col-xs-12">
                     <div class="form-group">
                         <label for="str_subeje" class="control-label">Subeje</label>
-                        <input type="text" name="str_subeje" id="str_subeje" class="form-control"  >
+                        <input type="text" name="str_subeje" id="str_subeje" class="form-control" required="required" >
                     </div>
                     <div class="form-group">
                         <label for="str_area_responsable" class="control-label">Área responsable</label>
-                        <input type="text" name="str_area_responsable" id="str_area_responsable" class="form-control"  >
+                        <input type="text" name="str_area_responsable" id="str_area_responsable" class="form-control" required="required" >
                     </div>
                     <div class="form-group">
                         <label for="str_titular" class="control-label">Titular</label>
-                        <input type="text" name="str_titular" id="str_titular" class="form-control"  >
+                        <input type="text" name="str_titular" id="str_titular" class="form-control" required="required" >
                     </div>
                     <div class="form-group">
                         <label for="str_responsable" class="control-label">Responsable</label>
-                        <input type="text" name="str_responsable" id="str_responsable" class="form-control"  >
+                        <input type="text" name="str_responsable" id="str_responsable" class="form-control" required="required" >
                     </div>
                     <div class="form-group">
                         <label for="dte_priodo_ejec_fin" class="control-label">Periodo de ejecución (Termino)</label>
                         <div id="datepicker">
-                            <input type="text" name="dte_priodo_ejec_fin" id="dte_priodo_ejec_fin" class="form-control"  >
+                            <input type="text" name="dte_priodo_ejec_fin" id="dte_priodo_ejec_fin" class="form-control" required="required" >
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-6 col-xs-6">
+                <div class="col-md-6 col-xs-12">
                     <div class="form-group">
                         <label for="txt_fundamento_legal" class="control-label">Fundamento legal</label>
-                        <textarea name="txt_fundamento_legal" id="txt_fundamento_legal" rows="5" class="form-control"  ></textarea>
+                        <textarea name="txt_fundamento_legal" id="txt_fundamento_legal" rows="5" class="form-control" required="required"></textarea>
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-6">
+                <div class="col-md-6 col-xs-12">
                     <div class="form-group">
                         <label for="txt_situacion_actual" class="control-label">Sitación actual</label>
-                        <textarea name="txt_situacion_actual" id="txt_situacion_actual" rows="5" class="form-control"  ></textarea>
+                        <textarea name="txt_situacion_actual" id="txt_situacion_actual" rows="5" class="form-control" required="required"></textarea>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-6 col-xs-6">
+                <div class="col-md-6 col-xs-12">
                     <div class="form-group">
                         <label for="txt_justificacion_proyecto" class="control-label">Justificación del proyecto</label>
-                        <textarea name="txt_justificacion_proyecto" id="txt_justificacion_proyecto" rows="5" class="form-control"  ></textarea>
+                        <textarea name="txt_justificacion_proyecto" id="txt_justificacion_proyecto" rows="5" class="form-control" required="required"></textarea>
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-6">
+                <div class="col-md-6 col-xs-12">
                     <div class="form-group">
                         <label for="txt_objetivo_proyecto" class="control-label">Objetivo del proyecto</label>
-                        <textarea name="txt_objetivo_proyecto" id="txt_objetivo_proyecto" rows="5" class="form-control"  ></textarea>
+                        <textarea name="txt_objetivo_proyecto" id="txt_objetivo_proyecto" rows="5" class="form-control" required="required"></textarea>
                     </div>
                 </div>
             </div>
@@ -136,11 +136,11 @@
                 <div class="col-md-12 col-xs-12">
                     <div class="form-group">
                         <label for="txt_estategias" class="control-label">Estrategias (Alineadas al PED y plan sectorial 2016 - 2022)</label>
-                        <textarea name="txt_estategias" id="txt_estategias" rows="4" class="form-control"  ></textarea>
+                        <textarea name="txt_estategias" id="txt_estategias" rows="4" class="form-control" required="required"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="txt_lineas_accion" class="control-label">Lineas de acción (Alineadas al PED y plan sectorial 2016 - 2022)</label>
-                        <textarea name="txt_lineas_accion" id="txt_lineas_accion" rows="4" class="form-control"  ></textarea>
+                        <textarea name="txt_lineas_accion" id="txt_lineas_accion" rows="4" class="form-control" required="required"></textarea>
                     </div>
                 </div>
             </div>
@@ -149,22 +149,22 @@
                 <div class="col-md-12 col-xs-12">
                     <div class="form-group">
                         <label for="txt_situacion_esperada" class="control-label">Situación esperada 2017 (En función de la metas programadas en los indicadores estratégicos)</label>
-                        <textarea name="txt_situacion_esperada" id="txt_situacion_esperada" rows="4" class="form-control"  ></textarea>
+                        <textarea name="txt_situacion_esperada" id="txt_situacion_esperada" rows="4" class="form-control" required="required"></textarea>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-6 col-xs-6">
+                <div class="col-md-6 col-xs-12">
                     <div class="form-group">
                         <label for="txt_justificacion_recursos" class="control-label">Justificación de recursos</label>
-                        <textarea name="txt_justificacion_recursos" id="txt_justificacion_recursos" rows="5" class="form-control"  ></textarea>
+                        <textarea name="txt_justificacion_recursos" id="txt_justificacion_recursos" rows="5" class="form-control" required="required"></textarea>
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-6">
+                <div class="col-md-6 col-xs-12">
                     <div class="form-group">
                         <label for="txt_observaciones" class="control-label">Observaciones 2017</label>
-                        <textarea name="txt_observaciones" id="txt_observaciones" rows="5" class="form-control"  ></textarea>
+                        <textarea name="txt_observaciones" id="txt_observaciones" rows="5" class="form-control" required="required"></textarea>
                     </div>
                 </div>
             </div>
@@ -295,8 +295,8 @@
                 </div>
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
-                        <label for="str_unidad_presupestal" class="control-label">Unidad presupuestal</label>
-                        <input type="text" name="str_unidad_presupestal" id="str_unidad_presupestal" class="form-control">
+                        <label for="str_unidad_presupuestal" class="control-label">Unidad presupuestal</label>
+                        <input type="text" name="str_unidad_presupuestal" id="str_unidad_presupuestal" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="txt_descripcion_proyecto" class="control-label">Descripción del proyecto</label>
@@ -511,8 +511,8 @@
                 </div>
                 <div class="col-md-6 col-xs-6">
                     <div class="form-group">
-                        <label for="str_unidad_presupestal_viat" class="control-label">Unidad presupuestal</label>
-                        <input type="text" name="str_unidad_presupestal_viaticos" id="str_unidad_presupestal_viaticos" class="form-control">
+                        <label for="str_unidad_presupuestal_viaticos" class="control-label">Unidad presupuestal</label>
+                        <input type="text" name="str_unidad_presupuestal_viaticos" id="str_unidad_presupuestal_viaticos" class="form-control">
                     </div>
                 </div>
             </div>
@@ -629,7 +629,7 @@
             var curStep = $(this).closest(".setup-content"),
                     curStepBtn = curStep.attr("id"),
                     nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-                    curInputs = curStep.find(/*"input[type='text'], textarea"*/),
+                    curInputs = curStep.find("input[type='text'], textarea"),
                     isValid = true;
             $(".form-group").removeClass('has-error').removeClass('has-feedback');
             $('.form-group').find('span').remove();
@@ -741,7 +741,6 @@
 <script type="text/javascript">
     function newrow(e)
     {
-        //alert($(e).parent().parent().parent().children('table').attr('id'));
         var id_table = $(e).parent().parent().parent().children('table').attr('id');
         $("#" + id_table + " tbody tr:eq(0)").clone(true).appendTo("#" + id_table + "");
         var inputs = $("#" + id_table + " tbody tr:last td input");
@@ -749,16 +748,11 @@
         {
             inputs[i].value = '';
         }
-        //$(e).parent().parent().find('.removebutton').find('button');
-        //console.log($(e).parent().children());
         $(e).parent().parent().children('.removebutton').children('button').removeAttr('disabled');
-        //console.log($(e).parent().parent().parent().children());
     }
     function deleterow(e)
     {
-        //alert($("#tbl-presupuesto tbody tr").length);
         var id_table = $(e).parent().parent().parent().children('table').attr('id');
-
         if ($("#" + id_table + " tbody tr").length > 1)
         {
             $("#" + id_table + " tbody tr:last").remove();
@@ -775,7 +769,7 @@
         {
             num = num.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
             num = num.split('').reverse().join('').replace(/^[\.]/, '');
-            input.value = "$ "+num;
+            input.value = "$ " + num;
         }
         else
         {
@@ -783,57 +777,15 @@
             input.value = input.value.replace(/[^\d\.]*/g, '');
         }
     }
-        /*var format = 
-        {
-            separador: ",", // separador para los miles
-            sepDecimal: '.', // separador para los decimales
-            formatear: function (num)
-            {
-                num += '';
-                var splitStr = num.split(',');
-                var splitLeft = splitStr[0];
-                var splitRight = splitStr.length > 1 ? this.sepDecimal + splitStr[1] : '';
-                var regx = /(\d+)(\d{3})/;
-                while (regx.test(splitLeft))
-                {
-                    splitLeft = splitLeft.replace(regx, '$1' + this.separador + '$2');
-                }
-                return '$' + splitLeft + splitRight;
-            },
-            new : function (input)
-            {
-                var num = input.value;
-                //this.simbol = simbol || '';
-                input.value = this.formatear(num);
-            }
-        }*/
+
     $(document).on('ready', function ()
     {
+        $('.form-group .form-control').on('focus', function ()
+        {
+            $(this).closest('.form-group').removeClass('has-error').removeClass('has-feedback');
+            $(this).closest('.form-group').find('span').remove();
+        });
 
-
-        // $('#btn-new-row').on('click', function ()
-        // {
-        //     //var id_table = $(this).parent().parent().parent().children('table').attr('id');
-        //     $("#tbl-presupuesto tbody tr:eq(0)").clone(true).appendTo("#tbl-presupuesto");
-        //     var inputs = $("#tbl-presupuesto tbody tr:last td input");
-        //     for (var i = 0; i < inputs.length; i++)
-        //     {
-        //         inputs[i].value = '';
-        //     }
-        //     $('#btn-delete-row').removeAttr('disabled');
-        // });
-        // $('#btn-delete-row').on('click', function ()
-        // {
-        //     alert($("#tbl-presupuesto tbody tr").length);
-        //     if ($("#tbl-presupuesto tbody tr").length > 1)
-        //     {
-        //         $("#tbl-presupuesto tbody tr:last").remove();
-        //         if ($("#tbl-presupuesto tbody tr").length === 1)
-        //         {
-        //             $('#btn-delete-row').attr('disabled', 'disabled');
-        //         }
-        //     }
-        // });
     });
 </script>
 <script type="text/javascript">

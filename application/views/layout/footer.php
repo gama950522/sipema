@@ -34,9 +34,11 @@
     });
 </script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('form').on('submit', function (evt) {
-            if ($(this).attr('id') === 'form-reg') 
+    $(document).ready(function ()
+    {
+        $('form').on('submit', function (evt)
+        {
+            if ($(this).attr('id') === 'form-reg')
             {
                 evt.preventDefault();
                 $.ajax({
@@ -46,12 +48,15 @@
                     dataType: 'json',
                     async: true,
                     timeout: 4000,
-                    beforeSend: function (xhr) {
+                    beforeSend: function (xhr)
+                    {
                         run_waitMe('roundBounce');
                     },
-                    success: function (data, textStatus, jqXHR) {
-                        setTimeout(function () {
-                            if (data.success) 
+                    success: function (data, textStatus, jqXHR)
+                    {
+                        setTimeout(function ()
+                        {
+                            if (data.success)
                             {
                                 window.location = data.url;
                             }
@@ -64,10 +69,11 @@
                             //console.log(data.values);
                         }, 4000);
                     },
-                    error: function (jqXHR, textStatus, errorThrown) {
-                         console.log(jqXHR);
-                         console.log(textStatus);
-                         console.log(errorThrown);
+                    error: function (jqXHR, textStatus, errorThrown)
+                    {
+                        console.log(jqXHR);
+                        console.log(textStatus);
+                        console.log(errorThrown);
                         $('body').waitMe('hide');
                     }
                 });
@@ -82,22 +88,25 @@
     });
 
 
-     function run_waitMe(effect) {
-            $('body').waitMe({
-                effect: effect,
-                text: 'Espere un momento por favor',
-                bg: 'rgba(0,0,0,0.7)',
-                color: '#fff',
-                sizeW: '',
-                sizeH: '',
-                source: '',
-                onClose: function () {}
-            });
-        }
+    function run_waitMe(effect)
+    {
+        $('body').waitMe({
+            effect: effect,
+            text: 'Espere un momento por favor',
+            bg: 'rgba(0,0,0,0.7)',
+            color: '#fff',
+            sizeW: '',
+            sizeH: '',
+            source: '',
+            onClose: function ()
+            {}
+        });
+    }
 </script>
 <script>
     //$('#waitMe_ex3').waitMe('hide');
-    $(document).ready(function () {
+    $(document).ready(function ()
+    {
 
         // $('input').on('focus', function () {
         //     $('.form-group').removeClass('has-error').removeClass('has-feedback');

@@ -26,7 +26,7 @@ class Semarnat extends CI_Controller {
 		// echo '<pre>';
 		// print_r($this->input->post());
 		// echo '</pre>';
-		echo count($this->input->post());
+		//echo count($this->input->post());
 
 	}
 
