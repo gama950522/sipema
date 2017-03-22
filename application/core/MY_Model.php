@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+class MY_Model extends CI_Model
+{
 
-class MY_Model extends CI_Model {
-
-	protected function get_current_data($array, $id, $index_id)
+    protected function get_current_data($array, $id, $index_id)
     {
         $insert = array();
         while (TRUE)
@@ -15,9 +15,8 @@ class MY_Model extends CI_Model {
                     break 2;
                 }
             }
-
             $datos[$index_id] = $id;
-            $insert[]    = $datos;
+            $insert[]         = $datos;
             foreach ($array as $key => &$value)
             {
                 next($value);
@@ -28,32 +27,31 @@ class MY_Model extends CI_Model {
 
     protected function insert_multiple_data($table, $data)
     {
-        foreach ($data as $value) 
+        foreach ($data as $value)
         {
             $this->db->insert($table, $value);
         }
     }
 
-    protected function get_values(array $array, $key='')
+    protected function get_values(array $array, $key = '')
     {
-        foreach ($array as $clave => $valor) 
+        foreach ($array as $clave => $valor)
         {
-        	if (is_array($valor)) 
-        	{
-        		$array[$clave] = $this->get_values($valor, $clave);
-        		continue;
-        	}
-        	if ((substr($clave, 0, 3) === 'int' OR substr($clave, 0, 3) === 'dbl') 
-        		OR (substr($key, 0, 3) === 'int' OR substr($key, 0, 3) === 'dbl')) 
-        	{
-	        	$array[$clave] = empty($valor) ? 0 : htmlentities($valor, ENT_QUOTES);
-        	}
-        	else 
-        	{
-          		$array[$clave] = empty($valor) ? NULL :  htmlentities(mb_strtoupper($valor), ENT_QUOTES);
-        	}
+            if (is_array($valor))
+            {
+                $array[$clave] = $this->get_values($valor, $clave);
+                continue;
+            }
+            if ((substr($clave, 0, 3) === 'int' OR substr($clave, 0, 3) === 'dbl')
+                    OR ( substr($key, 0, 3) === 'int' OR substr($key, 0, 3) === 'dbl'))
+            {
+                $array[$clave] = empty($valor) ? 0 : htmlentities($valor, ENT_QUOTES);
+            }
+            else
+            {
+                $array[$clave] = empty($valor) ? NULL : htmlentities(mb_strtoupper($valor), ENT_QUOTES);
+            }
         }
-
         return $array;
     }
 

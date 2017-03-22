@@ -46,7 +46,7 @@
                         <li><a href="<?php echo site_url('welcome/get/') ?>" type="button" disabled="disabled">Pases de salida</a></li>
                         <li><a href="<?php echo site_url() ?>" type="button" disabled="disabled">Contrarecibos</a></li>
                         <li><a href="<?php echo site_url() ?>" type="button" disabled="disabled">Inventarios</a></li>
-                        <li><a href="<?php echo site_url() ?>" type="button" disabled="disabled">Correspondencia</a></li>
+                        <li><a href="<?php echo site_url('semarnat/') ?>" type="button" disabled="disabled">Correspondencia</a></li>
                         <li><a href="<?php echo site_url('login/') ?>">SIMEPA</a></li>
                     </ul>
                 </nav>
