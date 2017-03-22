@@ -50,7 +50,7 @@ class MY_Model extends CI_Model {
         	}
         	else 
         	{
-          		$array[$clave] = empty($valor) ? NULL :  htmlentities($valor, ENT_QUOTES);
+          		$array[$clave] = empty($valor) ? NULL :  htmlentities(mb_strtoupper($valor), ENT_QUOTES);
         	}
         }
 

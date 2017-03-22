@@ -2,13 +2,14 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Usuarios_model extends CI_Model
+class Usuarios_model extends MY_Model
 {
 
     public function authenticate($data)
     {
         if (is_array($data))
         {
+            $data = $this->get_values($data);
             $this->db->from('usuarios');
             $this->db->where('username', $data['username']);
             $this->db->where('password', $data['password']);
@@ -24,6 +25,7 @@ class Usuarios_model extends CI_Model
                 'check_after'=> FALSE
             );
             $this->session->set_userdata($new_session);
+            //print_r($data);
             return TRUE;
         }
     }

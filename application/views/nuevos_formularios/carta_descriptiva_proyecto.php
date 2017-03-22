@@ -142,6 +142,7 @@
                         <label for="txt_lineas_accion" class="control-label">Lineas de acción (Alineadas al PED y plan sectorial 2016 - 2022)</label>
                         <textarea name="txt_lineas_accion" id="txt_lineas_accion" rows="4" class="form-control" required="required"></textarea>
                     </div>
+                    
                 </div>
             </div>
 
@@ -550,7 +551,7 @@
                                     <td><input type="text"   name="str_viaticos_objetivo[]" id="str_viaticos_objetivo" class="form-control"></td>
                                     <td><input type="number" name="int_num_personas[]" id="int_num_personas" class="form-control" min="1" max="20"></td>
                                     <td>
-                                        <select name="ddl_mes[]" id="ddl_mes" class="form-control">
+                                        <select name="ddl_mes[]" id="ddl_mes" class="form-control" required="required">
                                             <option value="">Selecciona</option>
                                             <option value="enero">Enero</option>
                                             <option value="febrero">Febrero</option>
@@ -629,7 +630,7 @@
             var curStep = $(this).closest(".setup-content"),
                     curStepBtn = curStep.attr("id"),
                     nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-                    curInputs = curStep.find("input[type='text'], textarea"),
+                    curInputs = curStep.find("input[type='text'], textarea, select"),
                     isValid = true;
             $(".form-group").removeClass('has-error').removeClass('has-feedback');
             $('.form-group').find('span').remove();
@@ -791,45 +792,3 @@
 <script type="text/javascript">
 
 </script>
-
-<!-- <div class="row">
-    <div class="col-md-12">
-        <div class="table-responsive">
-            <table class="table thead-default table-bordered table-condensed">
-                <thead>
-                    <tr>
-                        <th>Enero</th>
-                        <th>Febrero</th>
-                        <th>Marzo</th>
-                        <th>Abril</th>
-                        <th>Mayo</th>
-                        <th>Junio</th>
-                        <th>Julio</th>
-                        <th>Agosto</th>
-                        <th>Septiembre</th>
-                        <th>Octubre</th>
-                        <th>Noviembre</th>
-                        <th>Diciembre</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="number" name="int_ene" min="0" max="1000000" class="form-control"></td>
-                        <td><input type="number" name="int_feb" min="0" max="1000000" class="form-control"></td>
-                        <td><input type="number" name="int_mar" min="0" max="1000000" class="form-control"></td>
-                        <td><input type="number" name="int_abr" min="0" max="1000000" class="form-control"></td>
-                        <td><input type="number" name="int_may" min="0" max="1000000" class="form-control"></td>
-                        <td><input type="number" name="int_jun" min="0" max="1000000" class="form-control"></td>
-                        <td><input type="number" name="int_jul" min="0" max="1000000" class="form-control"></td>
-                        <td><input type="number" name="int_ago" min="0" max="1000000" class="form-control"></td>
-                        <td><input type="number" name="int_sep" min="0" max="1000000" class="form-control"></td>
-                        <td><input type="number" name="int_oct" min="0" max="1000000" class="form-control"></td>
-                        <td><input type="number" name="int_nov" min="0" max="1000000" class="form-control"></td>
-                        <td><input type="number" name="int_dic" min="0" max="1000000" class="form-control"></td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </div>
-    </div>
-</div> -->
