@@ -10,8 +10,8 @@ class MY_Controller extends CI_Controller
         parent::__construct();
     }
     /**
-     * falata agregara mas tipos de validaciones
-     * @return type
+     * Hace diferentes tipos de validaciones para cada tipo de dato
+     * @return array
      */
     public function validacion_campos()
     {
@@ -50,7 +50,7 @@ class MY_Controller extends CI_Controller
         $data = array();
         foreach ($this->input->post() as $key => $value) 
         {
-            $data[substr($key, 3)] = htmlentities($value);
+            $data[substr($key, 3)] = htmlentities(mb_strtoupper($value), ENT_QUOTES);
         }
         return $data;
     }

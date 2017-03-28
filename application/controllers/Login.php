@@ -11,7 +11,10 @@ class Login extends CI_Controller
         $this->load->model('usuarios_model');
         $this->session->set_userdata('check_after', FALSE);
     }
-
+    /**
+     * Muestra la vista del inicio de sesión si es que no hay una sesión activa, de lo contario 
+     * redirige a la vista principal del sistema con la sesión iniciada
+     */
     public function index()
     {
         if ($this->session->userdata('logged_in') === TRUE)
@@ -25,21 +28,22 @@ class Login extends CI_Controller
             $this->load->view('layout/footer');
         }
     }
-
+    /**
+     * Valida el inicio de sesión con los datos que se ingresaron en el login
+     */
     public function inicio_sesion()
     {
         $data_user['username'] = $this->input->post('inp_username');
         $data_user['password'] = hash('sha256', $this->input->post('psw_password'));
         $res['action'] = $this->usuarios_model->authenticate($data_user);
-        if ($res['action'] === FALSE)
-        {
-            # code...
-        }
         $res['href']  = site_url('sipema/');
         $res['items'] = $data_user;
         echo json_encode($res);
     }
-
+    
+    /**
+     * Finaliza la sesión activa y redirige a la vista de inicio de sesión (login)
+     */
     public function destruir()
     {
         $item_session = array('id', 'user');

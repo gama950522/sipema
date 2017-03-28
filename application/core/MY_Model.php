@@ -1,9 +1,17 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 class MY_Model extends CI_Model
 {
-
-    protected function get_current_data($array, $id, $index_id)
+    /**
+     * Permite retornar los valores correspondientes a los registros de inserción múltiple
+     * @param array $array entrada de los registros desordenados
+     * @param int $id valor de la llave foránea de la tabla relacionada
+     * @param string $name_id Nombre de la columna que contendrá el valor id
+     * @return array
+     */
+    protected function get_current_data($array, $id, $name_id)
     {
         $insert = array();
         while (TRUE)
@@ -15,7 +23,7 @@ class MY_Model extends CI_Model
                     break 2;
                 }
             }
-            $datos[$index_id] = $id;
+            $datos[$name_id] = $id;
             $insert[]         = $datos;
             foreach ($array as $key => &$value)
             {
@@ -25,6 +33,12 @@ class MY_Model extends CI_Model
         return $insert;
     }
 
+    /**
+     * Método que hace incisiones simultáneas a la base de datos 
+     * sobre una misma tabla.
+     * @param string $table  Nombre de la tabla a la cual se va a hecer la inserción
+     * @param array  $data   Datos que se van a insertar
+     */
     protected function insert_multiple_data($table, $data)
     {
         foreach ($data as $value)
@@ -32,7 +46,13 @@ class MY_Model extends CI_Model
             $this->db->insert($table, $value);
         }
     }
-
+    /**
+     * Función que permite remplazar los caracteres especiales en la entrada 
+     * de datos dentro del formulario.
+     * @param array $array 
+     * @param string $key
+     * @return array
+     */
     protected function get_values(array $array, $key = '')
     {
         foreach ($array as $clave => $valor)
