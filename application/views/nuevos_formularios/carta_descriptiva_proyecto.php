@@ -1,11 +1,11 @@
 <div style="margin-top: 20px"></div>
-<div class="panel panel-default">
+<div class="panel panel-default" style="display: none;">
     <div class="panel-heading">
         <div class="row">
             <div class="col-md-12">
 
                 <!-- <div style="padding: 0 10px; width: 20%" class="pull-left">
-                    <img src="<?php //echo site_url('public/images/hidalgocrececontigo.png')                         ?>" style="width: 100px">
+                    <img src="<?php //echo site_url('public/images/hidalgocrececontigo.png')                          ?>" style="width: 100px">
                 </div> -->
                 <div style="padding: 0 10px;" class="pull-left">
                     <!-- <div class="page-header"> -->
@@ -69,11 +69,11 @@
                         <label for="str_nombre_proyecto_componente" class="control-label">Nombre del proyecto (Componente)</label>
                         <input type="text" name="str_nombre_proyecto_componente" id="str_nombre_proyecto_componente" class="form-control" required="required">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="datepicker">
                         <label for="dte_periodo_ejec_inicio" class="control-label">Periodo de ejecución (Inicio)</label>
-                        <div id="datepicker">
-                            <input type="text" name="dte_periodo_ejec_inicio" id="dte_periodo_ejec_inicio" class="form-control" required="required">
-                        </div>
+                        <!-- <div > -->
+                        <input type="text" name="dte_periodo_ejec_inicio" id="dte_periodo_ejec_inicio" class="form-control" required="required">
+                        <!-- </div> -->
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-12">
@@ -93,11 +93,11 @@
                         <label for="str_responsable" class="control-label">Responsable</label>
                         <input type="text" name="str_responsable" id="str_responsable" class="form-control" required="required" >
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="datepicker">
                         <label for="dte_priodo_ejec_fin" class="control-label">Periodo de ejecución (Termino)</label>
-                        <div id="datepicker">
-                            <input type="text" name="dte_priodo_ejec_fin" id="dte_priodo_ejec_fin" class="form-control" required="required" >
-                        </div>
+                        <!-- <div > -->
+                        <input type="text" name="dte_priodo_ejec_fin" id="dte_priodo_ejec_fin" class="form-control" required="required" >
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
@@ -142,7 +142,7 @@
                         <label for="txt_lineas_accion" class="control-label">Lineas de acción (Alineadas al PED y plan sectorial 2016 - 2022)</label>
                         <textarea name="txt_lineas_accion" id="txt_lineas_accion" rows="4" class="form-control" required="required"></textarea>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -290,7 +290,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="str_nombre_proyecto" class="control-label">Nombre del proyecto</label> <i>aqui que pedo!</i>
+                        <label for="str_nombre_proyecto" class="control-label">Nombre del proyecto</label>
                         <input type="text" name="str_nombre_proyecto" id="str_nombre_proyecto" class="form-control">
                     </div>
                 </div>
@@ -601,6 +601,336 @@
         <?php echo form_close() ?>
     </div>
 </div>
+
+
+
+
+<div class="container-fluid">
+
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1 class="text-uppercase text-center">Seceretaría del medio ambiente y recursos naturales
+                <br><small>cuadro de control interno de indicadores</small>
+            </h1>
+            <div class="clearfix"></div>
+        </div> 
+        <div class="panel-body">
+            <form action="" class="form-horizontal" >
+                <!-- <div class="row"> -->
+                <div class="col-md-12">
+                    <label for="" class="control-label col-md-4">Control de Indicadores</label>
+                    <div class="form-group col-md-8   ">
+                        <select name="" id="" class="form-control">
+                            <option value="">-- Selecciona una Categoría --</option>
+                            <option value="1">DIRECCIÓN DE NORMATIVIDAD AMBIENTAL </option>
+                        </select>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <table class="table table-condensed table-bordered" style="font-size: 11px !important">
+                    <tbody>
+
+                        <tr>
+                            <th class="table-title-left">Nombre del Indicador</th>
+                            <td colspan="9" class="table-description-left">
+                                Porcentaje de regulación a tráves de dictaminaciones ambientales a unidades económicas de competencia estatal
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="table-title-left">Método de cálculo del indicador</th>
+                            <td colspan="9" class="table-description-left">
+                                Número de dictaminaciones ambientales a unidades económicas realizadas/Número total de unidades económicas de competencia estatal, registradas en el Sistema de Información Empresarial Mexicano (4428, noviembre 2016)*100
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="table-title-left">Algoritmo del indicador</th>
+                            <td colspan="9" class="table-description-left">
+                                PRDAUECE=(NTDAUER/NTUERSIEMCE)*100
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="table-title-left">Unidad de medida del indicador</th>
+                            <td colspan="9" class="table-description-left">
+                                Porcentaje
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="table-title-left">Línea base</th>
+                            <td colspan="9" class="table-description-left">
+                                Dato más reciente: 26.3% <br>
+                                Año de referencia: 2016
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="table-title-left">Resultados de los tres últimos años o datos más recientes  </th>
+                            <td colspan="3" class="table-description-left">Año: 2014 <br>
+                                Dato: 23.5%
+                            </td>
+                            <td colspan="3" class="table-description-left">Año: 2014 <br>
+                                Dato: 23.5%
+                            </td>
+                            <td colspan="3" class="table-description-left">Año: 2014 <br>
+                                Dato: 23.5%
+                            </td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="table-title-left">Meta factible del indicador por año</th>
+                            <th class="table-title-center">2017</th>
+                            <th class="table-title-center">2018</th>
+                            <th class="table-title-center">2019</th>
+                            <th class="table-title-center">2020</th>
+                            <th class="table-title-center">2021</th>
+                            <th class="table-title-center">2022</th>
+                            <th colspan="3" class="table-title-center">2030</th>
+
+                        </tr>
+                        <tr>
+                            <td class="table-description-center">1</td>
+                            <td class="table-description-center">1</td>
+                            <td class="table-description-center">1</td>
+                            <td class="table-description-center">1</td>
+                            <td class="table-description-center">1</td>
+                            <td class="table-description-center">1</td>
+                            <td colspan="3" class="table-description-center">1</td>
+                        </tr>
+                        <tr>
+                            <th class="table-title-left">Meta anual respecto de la línea base (ejercicio anterior)</th>
+                            <td class="table-description-center">8465</td>
+                            <td class="table-description-center">8465</td>
+                            <td class="table-description-center">8465</td>
+                            <td class="table-description-center">8465</td>
+                            <td class="table-description-center">8465</td>
+                            <td class="table-description-center">8465</td>
+                            <td colspan="3" class="table-description-center">545</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered" style="font-size: 11px !important">
+                    <tbody>
+                        <tr>
+                            <th class="table-title-left">EJERCICIO 2017</th>
+                            <th class="table-title-center">ENERO</th>
+                            <th class="table-title-center">FEBRERO</th>
+                            <th class="table-title-center">MARZO</th>
+                            <th class="table-title-center">ABRIL</th>
+                            <th class="table-title-center">MAYO</th>
+                            <th class="table-title-center">JUNIO</th>
+                            <th class="table-title-center">TOTAL PRIMER PERIODO</th>
+                            <th class="table-title-center">JULIO</th>
+                            <th class="table-title-center">AGOSTO</th>
+                            <th class="table-title-center">SEPTIEMBRE</th>
+                            <th class="table-title-center">OCTUBRE</th>
+                            <th class="table-title-center">NOVIEMBRE</th>
+                            <th class="table-title-center">DICIEMBRE</th>
+                            <th class="table-title-center">TOTAL SEGUNDO PERIODO</th>
+                            <th class="table-title-center">META ANUAL</th>
+                        </tr>
+                        <tr>
+                            <th class="table-title-left" rowspan="2">Número de Vehiculos Verificados</th>
+                            <th class="table-title-center" colspan="6">PRIMER PERIODO</th>
+                            <td class="table-description-center" rowspan="2">85413</td>
+                            <th class="table-title-center" colspan="6">SEGUNDO PERIODO</th>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="table-title-left">Porcentaje de avance del inidicador valor %</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="4"></td>
+                        </tr>
+                        <tr>
+                            <th class="table-title-left" rowspan="2">Semáforo de control Periodicidad: cortes trimestrales </th>
+                            <th class="table-title-center" colspan="3">PRIMER TRIMESTRE</th>
+                            <th class="table-title-center" colspan="3">SEGUNDO TRIMESTRE</th>
+                            <td>null</td>
+                            <th class="table-title-center" colspan="3">TERCER TRIMESTRE</th>
+                            <th class="table-title-center" colspan="3">CUARTO TRIMESTRE</th>
+                            <td>null</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td colspan="3"></td>
+                            <td>0</td>
+                            <td colspan="3"></td>
+                            <td colspan="3"></td>
+                            <td>null</td>
+                        </tr>
+                        <tr>
+                            <th class="table-title-left">Tendencia del indicador (corte al trimestre)</th>
+                            <td colspan="3"></td>
+                            <td colspan="3"></td>
+                            <td>0</td>
+                            <td colspan="3"></td>
+                            <td colspan="3"></td>
+                            <td>0</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="16">-</td>
+                        </tr>
+
+                        <tr>
+                            <th class="table-title-left">Evaluación de la eficiencia presupuestal</th>
+                            <th class="table-title-center">ENERO</th>
+                            <th class="table-title-center">FEBRERO</th>
+                            <th class="table-title-center">MARZO</th>
+                            <th class="table-title-center">ABRIL</th>
+                            <th class="table-title-center">MAYO</th>
+                            <th class="table-title-center">JUNIO</th>
+                            <th class="table-title-center">TOTAL PRIMER PERIODO</th>
+                            <th class="table-title-center">JULIO</th>
+                            <th class="table-title-center">AGOSTO</th>
+                            <th class="table-title-center">SEPTIEMBRE</th>
+                            <th class="table-title-center">OCTUBRE</th>
+                            <th class="table-title-center">NOVIEMBRE</th>
+                            <th class="table-title-center">DICIEMBRE</th>
+                            <th class="table-title-center">TOTAL SEGUNDO PERIODO</th>
+                            <th class="table-title-center">META ANUAL</th>
+                        </tr>
+                        <tr> 
+                            <th class="table-title-left">Presupuesto mensual autorizado</th>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>m</td>
+                            <td>a</td>
+                            <td>m</td>
+                            <td>j</td>
+
+                            <td>t1</td>
+
+                            <td>j</td>
+                            <td>a</td>
+                            <td>s</td>
+                            <td>o</td>
+                            <td>n</td>
+                            <td>d</td>
+
+                            <td>t2</td>
+                            <td>ma</td>
+                        </tr>
+                        <tr> 
+                            <th class="table-title-left">Porcentaje mensual autorizado</th>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>m</td>
+                            <td>a</td>
+                            <td>m</td>
+                            <td>j</td>
+
+                            <td>t1</td>
+
+                            <td>j</td>
+                            <td>a</td>
+                            <td>s</td>
+                            <td>o</td>
+                            <td>n</td>
+                            <td>d</td>
+
+                            <td>t2</td>
+                            <td>ma</td>
+                        </tr>
+                        <tr> 
+                            <th class="table-title-left">Presupuesto mensual erogado</th>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>m</td>
+                            <td>a</td>
+                            <td>m</td>
+                            <td>j</td>
+
+                            <td>t1</td>
+
+                            <td>j</td>
+                            <td>a</td>
+                            <td>s</td>
+                            <td>o</td>
+                            <td>n</td>
+                            <td>d</td>
+
+                            <td>t2</td>
+                            <td>ma</td>
+                        </tr>
+                        <tr> 
+                            <th class="table-title-left">Porcentaje mensual ejercido</th>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>m</td>
+                            <td>a</td>
+                            <td>m</td>
+                            <td>j</td>
+
+                            <td>t1</td>
+
+                            <td>j</td>
+                            <td>a</td>
+                            <td>s</td>
+                            <td>o</td>
+                            <td>n</td>
+                            <td>d</td>
+
+                            <td>t2</td>
+                            <td>ma</td>
+                        </tr>
+                        <tr>
+                            <th class="table-title-left" rowspan="2">
+                                Semáforo de control Periodicidad: cortes trimestrales acumulativos
+                            </th>
+
+
+                            <th class="table-title-center" colspan="3">PRIMER TRIMESTRE</th>
+                            <th class="table-title-center" colspan="3">SEGUNDO TRIMESTRE</th>
+                            <td rowspan="2">null</td>
+                            <th class="table-title-center" colspan="3">TERCER TRIMESTRE</th>
+                            <th class="table-title-center" colspan="3">CUARTO TRIMESTRE</th>
+                            <td rowspan="2">null</td>
+                            <td rowspan="2">null</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td colspan="3"></td>
+                            <td colspan="3"></td>
+                            <td colspan="3">0</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
 
     $(document).ready(function ()
@@ -630,7 +960,7 @@
             var curStep = $(this).closest(".setup-content"),
                     curStepBtn = curStep.attr("id"),
                     nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-                    curInputs = curStep.find(""),//input[type='text'], textarea, select
+                    curInputs = curStep.find(""), //input[type='text'], textarea, select
                     isValid = true;
             $(".form-group").removeClass('has-error').removeClass('has-feedback');
             $('.form-group').find('span').remove();
@@ -789,6 +1119,22 @@
 
     });
 </script>
-<script type="text/javascript">
 
+<script type="text/javascript">
+    $(document).on('ready', function ()
+    {
+        var nextInput = null;
+        var parent = null;
+        $("form :input").on("keydown", function (event)
+        {
+            if (event.which === 13 && !$(this).is("textarea, :button, :submit"))
+            {
+                event.stopPropagation();
+                event.preventDefault();
+
+                nextInput = $(":input:eq(" + ($(":input").index(this) + 1) + ")");
+                nextInput.focus();
+            }
+        });
+    });
 </script>

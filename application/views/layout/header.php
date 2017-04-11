@@ -31,25 +31,28 @@
         <![endif]-->
     </head>
     <body>
-        <div class="container">
-            <div class="masthead">
-                <div class="row">
-                    <div class="col-md-12">
-                        <img src="<?php echo site_url('public/images/secretaria1.png') ?>" style="margin-right: auto;margin-left: auto; display: block;">                   
-                            
+        <div class="container-fluid">
+            <div class="container-fluid">
+                
+                <div class="masthead">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="<?php echo site_url('public/images/secretaria1.png') ?>" style="margin-right: auto;margin-left: auto; display: block;">                   
+                                
+                        </div>
                     </div>
+                    <div style="margin-top: 15px"></div>
+                    <nav>
+                        <ul class="nav nav-justified">
+                            <li><a href="<?php echo site_url() ?>">Inicio</a></li>
+                            <li><a href="<?php echo site_url('welcome/get/') ?>" type="button" disabled="disabled">Pases de salida</a></li>
+                            <li><a href="<?php echo site_url() ?>" type="button" disabled="disabled">Contrarecibos</a></li>
+                            <li><a href="<?php echo site_url() ?>" type="button" disabled="disabled">Inventarios</a></li>
+                            <li><a href="<?php echo site_url('semarnat/') ?>" type="button" disabled="disabled">Correspondencia</a></li>
+                            <li><a href="<?php echo site_url('login/') ?>">SIMEPA</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <div style="margin-top: 15px"></div>
-                <nav>
-                    <ul class="nav nav-justified">
-                        <li><a href="<?php echo site_url() ?>">Inicio</a></li>
-                        <li><a href="<?php echo site_url('welcome/get/') ?>" type="button" disabled="disabled">Pases de salida</a></li>
-                        <li><a href="<?php echo site_url() ?>" type="button" disabled="disabled">Contrarecibos</a></li>
-                        <li><a href="<?php echo site_url() ?>" type="button" disabled="disabled">Inventarios</a></li>
-                        <li><a href="<?php echo site_url('semarnat/') ?>" type="button" disabled="disabled">Correspondencia</a></li>
-                        <li><a href="<?php echo site_url('login/') ?>">SIMEPA</a></li>
-                    </ul>
-                </nav>
             </div>
 
 

@@ -9,14 +9,6 @@
                 <p class="list-group-item-text">...</p>
             </a>
             <?php endforeach; ?>
-            <!-- <a href="#" class="list-group-item">
-                <h4 class="list-group-item-heading">Seguimiento a la evaluación del desempeño operativo</h4>
-                <p class="list-group-item-text">...</p>
-            </a>
-            <a href="<?php //echo site_url('sipema/subprograma/3/') ?>" class="list-group-item active">
-                <h4 class="list-group-item-heading">Programas operativos anueles POA's</h4>
-                <p class="list-group-item-text">...</p>
-            </a> -->
         </div>
     </div>
     

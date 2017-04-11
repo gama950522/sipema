@@ -70,11 +70,6 @@
                 }
             });
             return false;
-
         });
     });
-
-    function validator(argument) {
-
-    }
 </script>

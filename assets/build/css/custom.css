@@ -19,6 +19,41 @@ table > tbody > tr > td > input[type=number] {
     display: inline-block;
     width: 90%;
 }
+
+.table-title-left {
+    text-align: left !important;
+    background-color: #f1f1f1;
+}
+
+.table-title-center {
+    text-align: center !important;
+    background-color: #f1f1f1;
+}
+
+.table-description-left{
+    text-align: left !important;
+}
+.table-description-center{
+    text-align: center !important;
+}
+
+
+.border{
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 0;
+}
+
+.border-left{
+    border-left: 1px solid #ddd;
+}
+.background-white{
+    padding-top: 15px;
+    background-color: #fff !important;
+}
+.middle{
+    
+}
 /*table{
     font-size: 11px !important;
 }*/

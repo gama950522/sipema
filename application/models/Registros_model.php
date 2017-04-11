@@ -18,7 +18,7 @@ class Registros_model extends MY_Model
         $result = $this->db->query($sql, $data);
         return $result->row();
     }
-
+ 
     public function add_data($data_form)
     {
         $data = $this->get_values($data_form);

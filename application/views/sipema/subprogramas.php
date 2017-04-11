@@ -19,22 +19,6 @@
                                 <p class="list-group-item-text"><?php echo $item['descripcion'] . '.'; ?></p>
                             </a>
                         <?php endforeach; ?>
-                        <!-- <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
-                            <h4 class="list-group-item-heading">Programa estatal de acción ante el cambio climático</h4>
-                            <p class="list-group-item-text">Descripción</p>
-                        </a>
-                        <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
-                            <h4 class="list-group-item-heading">Agenda esatatal e internacional para la gestión ambiental implemantada</h4>
-                            <p class="list-group-item-text">Descripción</p>
-                        </a>
-                        <a href="#" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
-                            <h4 class="list-group-item-heading">Mitigación ante el cambio climático</h4>
-                            <p class="list-group-item-text">Descripción</p>
-                        </a>
-                        <a href="#" class="list-group-item active" data-toggle="modal" data-target=".bs-example-modal-sm">
-                            <h4 class="list-group-item-heading">Programas municipales de acción ante el cambio climático</h4>
-                            <p class="list-group-item-text">Descripción</p>
-                        </a> -->
                     </div>
                 </div>
                 </td>
@@ -93,7 +77,6 @@
                 dataType: 'json',
                 data: $(this).serialize(),
                 success: function (data, textStatus, jqXHR) {
-                    //setTimeout(function () {
                         if (!data.success) 
                         {
                             alert('Tus datos no son correctos, intentalo nuevamente');
@@ -105,7 +88,6 @@
                      console.log(jqXHR);
                      console.log(textStatus);
                      console.log(errorThrown);
-                    //$('body').waitMe('hide');
                 }
             });
         });
@@ -114,7 +96,6 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('.list-group-item').on('click', function(){
-            //alert($(this).attr('id'));
             $('#hid_idprograma').val($(this).attr('id'));
         });
     });

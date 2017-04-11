@@ -29,6 +29,11 @@ class Semarnat extends CI_Controller
         //echo count($this->input->post());
     }
 
+    public function indicadores()
+    {
+    	$this->load->view('nuevos_formularios/control_indicadores');
+    }
+
 }
 
 /* End of file Semarnat.php */
