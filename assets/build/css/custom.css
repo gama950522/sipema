@@ -19,7 +19,9 @@ table > tbody > tr > td > input[type=number] {
     display: inline-block;
     width: 90%;
 }
-
+.carousel-caption{
+    bottom: 100px;
+}
 .table-title-left {
     text-align: left !important;
     background-color: #f1f1f1;

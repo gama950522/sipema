@@ -160,7 +160,7 @@
                             <div class="col-md-6 col-xs-12">
                                 <div class="form-group">
                                     <label for="txt_observaciones" class="control-label">Observaciones 2017</label>
-                                    <textarea name="txt_observaciones" id="txt_observaciones" rows="5" class="form-control" required="required"></textarea>
+                                    <textarea name="txt_observaciones" id="txt_observaciones" rows="5" class="form-control"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -297,7 +297,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="txt_descripcion_proyecto" class="control-label">Descripción del proyecto</label>
-                                    <textarea name="txt_descripcion_proyecto" id="txt_descripcion_proyecto" rows="4" class="form-control" required="required"></textarea>
+                                    <textarea name="txt_descripcion_proyecto" id="txt_descripcion_proyecto" rows="4" class="form-control" ></textarea>
                                 </div>
                             </div>
                         </div>
@@ -426,7 +426,9 @@
                                                     <th colspan="3">Meta final</th>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="3"><textarea name="txt_comp_meta_final" id="txt_comp_meta_final" rows="5" class="form-control" required="required"></textarea></td>
+                                                    <td colspan="3" class="form-group">
+                                                        <textarea name="txt_comp_meta_final" id="txt_comp_meta_final" rows="5" class="form-control" required="required"></textarea>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -448,84 +450,7 @@
                                     </select>
                                 </div>
 
-                                <div style="    margin-left: -31px; margin-right: -31px;" id="tbl-control-indicadores">
-                                    <!-- <table class="table table-condensed table-bordered" style="font-size: 11px !important">
-                                        <tbody>
-                                            <tr>
-                                                <th class="table-title-left">Nombre del Indicador</th>
-                                                <td colspan="9" class="table-description-left">
-                                                    <span id="nom-ind"></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="table-title-left">Método de cálculo del indicador</th>
-                                                <td colspan="9" class="table-description-left">
-                                                    <span id="met-calc-ind"></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="table-title-left">Algoritmo del indicador</th>
-                                                <td colspan="9" class="table-description-left">
-                                                    <span id="algo-ind"></span> 
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="table-title-left">Unidad de medida del indicador</th>
-                                                <td colspan="9" class="table-description-left">
-                                                    <span id="uni-med-ind"></span> 
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="table-title-left">Línea base</th>
-                                                <td colspan="9" class="table-description-left">
-                                                    <span id="lin-base"></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="table-title-left">Resultados de los tres últimos años o datos más recientes  </th>
-                                                <td colspan="3" class="table-description-left">Año: 2014 <br>
-                                                    Dato: 42%
-                                                </td>
-                                                <td colspan="3" class="table-description-left">Año: 2015 <br>
-                                                    Dato: 47%
-                                                </td>
-                                                <td colspan="3" class="table-description-left">Año: 2016 <br>
-                                                    Dato: 50%
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th rowspan="2" class="table-title-left">Meta factible del indicador por año</th>
-                                                <th class="table-title-center">2017</th>
-                                                <th class="table-title-center">2018</th>
-                                                <th class="table-title-center">2019</th>
-                                                <th class="table-title-center">2020</th>
-                                                <th class="table-title-center">2021</th>
-                                                <th class="table-title-center">2022</th>
-                                                <th colspan="3" class="table-title-center">2030</th>
-
-                                            </tr>
-                                            <tr>
-                                                <td class="table-description-center">55%</td>
-                                                <td class="table-description-center">68%</td>
-                                                <td class="table-description-center">75%</td>
-                                                <td class="table-description-center">84%</td>
-                                                <td class="table-description-center">84%</td>
-                                                <td class="table-description-center">88%</td>
-                                                <td colspan="3" class="table-description-center">100%</td>
-                                            </tr>
-                                            <tr>
-                                                <th class="table-title-left">Meta anual respecto de la línea base (ejercicio anterior)</th>
-                                                <td class="table-description-center">5%</td>
-                                                <td class="table-description-center">12%</td>
-                                                <td class="table-description-center">7%</td>
-                                                <td class="table-description-center">9%</td>
-                                                <td class="table-description-center">0%</td>
-                                                <td class="table-description-center">2%</td>
-                                                <td colspan="3" class="table-description-center">12%</td>
-                                            </tr>
-                                        </tbody>
-                                    </table> -->
-
+                                <div style="margin-left: -31px; margin-right: -31px;" id="tbl-control-indicadores">
                                 </div>
                             </div>
                         </div>
@@ -590,7 +515,9 @@
                                                     <th colspan="3">Meta final</th>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="3"><textarea name="txt_acti_meta_final" id="txt_acti_meta_final" rows="5" class="form-control" required="required"></textarea></td>
+                                                    <td colspan="3" class="form-group">
+                                                        <textarea name="txt_acti_meta_final" id="txt_acti_meta_final" rows="5" class="form-control" required="required"></textarea>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -606,13 +533,13 @@
                             <div class="col-md-6 col-xs-6">
                                 <div class="form-group">
                                     <label for="str_dependencia" class="control-label">Dependencia</label>
-                                    <input type="text" name="str_dependencia" id="str_dependencia" class="form-control">
+                                    <input type="text" name="str_dependencia" id="str_dependencia" class="form-control" required="required">
                                 </div>
                             </div>
                             <div class="col-md-6 col-xs-6">
                                 <div class="form-group">
                                     <label for="str_unidad_presupuestal_viaticos" class="control-label">Unidad presupuestal</label>
-                                    <input type="text" name="str_unidad_presupuestal_viaticos" id="str_unidad_presupuestal_viaticos" class="form-control">
+                                    <input type="text" name="str_unidad_presupuestal_viaticos" id="str_unidad_presupuestal_viaticos" class="form-control" required="required">
                                 </div>
                             </div>
                         </div>
@@ -647,10 +574,10 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="form-group"><input type="text"   name="str_viaticos_proyecto[]" id="str_viaticos_proyecto" class="form-control"></td>
-                                                    <td class="form-group"><input type="text"   name="str_viaticos_comision[]" id="str_viaticos_comision" class="form-control"></td>
-                                                    <td class="form-group"><input type="text"   name="str_viaticos_objetivo[]" id="str_viaticos_objetivo" class="form-control"></td>
-                                                    <td class="form-group"><input type="number" name="int_num_personas[]" id="int_num_personas" class="form-control" min="1" max="20"></td>
+                                                    <td class="form-group"><input type="text"   name="str_viaticos_proyecto[]" id="str_viaticos_proyecto" class="form-control" required="required"></td>
+                                                    <td class="form-group"><input type="text"   name="str_viaticos_comision[]" id="str_viaticos_comision" class="form-control" required="required"></td>
+                                                    <td class="form-group"><input type="text"   name="str_viaticos_objetivo[]" id="str_viaticos_objetivo" class="form-control" required="required"></td>
+                                                    <td class="form-group"><input type="number" name="int_num_personas[]" id="int_num_personas" class="form-control" min="1" max="20" required="required"></td>
                                                     <td class="form-group">
                                                         <select name="ddl_mes[]" id="ddl_mes" class="form-control" required="required">
                                                             <option value="">Selecciona</option>
@@ -668,18 +595,18 @@
                                                             <option value="diciembre">Diciembre</option>
                                                         </select>
                                                     </td>
-                                                    <td class="form-group"><input type="number" name="int_duracion_dias[]" id="int_duracion_dias" class="form-control" min="1" max="20"></td>
+                                                    <td class="form-group"><input type="number" name="int_duracion_dias[]" id="int_duracion_dias" class="form-control" min="1" max="20" required="required"></td>
                                                     <td class="form-group">
-                                                        <select name="ddl_lugar_comision[]" id="ddl_lugar_comision" class="form-control">
+                                                        <select name="ddl_lugar_comision[]" id="ddl_lugar_comision" class="form-control" required="required">
                                                             <option value="">Selecciona</option>
                                                             <option value="local">Local</option>
                                                             <option value="nacional">Nacional</option>
                                                             <option value="extanjro">Extanjro</option>
                                                         </select>
                                                     </td>
-                                                    <td class="form-group"><span>$</span><input type="number" name="dbl_monto_alimentacion[]" id="dbl_monto_alimentacion" class="form-control" min="0" max="1000000"></td>
-                                                    <td class="form-group"><span>$</span><input type="number" name="dbl_monto_hospedaje[]" id="dbl_monto_hospedaje" class="form-control" min="0" max="1000000"></td>
-                                                    <td class="form-group"><span>$</span><input type="number" name="dbl_monto_traslado[]" id="dbl_monto_traslado" class="form-control" min="0" max="1000000"></td>
+                                                    <td class="form-group"><span>$</span><input type="number" name="dbl_monto_alimentacion[]" id="dbl_monto_alimentacion" class="form-control" min="0" max="1000000" required="required"></td>
+                                                    <td class="form-group"><span>$</span><input type="number" name="dbl_monto_hospedaje[]" id="dbl_monto_hospedaje" class="form-control" min="0" max="1000000" required="required"></td>
+                                                    <td class="form-group"><span>$</span><input type="number" name="dbl_monto_traslado[]" id="dbl_monto_traslado" class="form-control" min="0" max="1000000" required="required"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -695,7 +622,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-success ">Enviar información</button> 
+                                <button type="submit" class="btn btn-success nextBtn">Enviar información</button> 
                             </div>
                         </div>
                     </div>
