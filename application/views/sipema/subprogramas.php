@@ -1,4 +1,5 @@
 
+<div class="container-fluid">
 <section class="col-md-12" style="margin-top: 20px">
     <div class="row">
     <table class="table-normal">
@@ -11,7 +12,6 @@
                 </td>
                 <td class="col-md-8">
                 <div class="row">
-                    
                     <div class="list-group">
                         <?php foreach($info as $item): ?>
                             <a href="#" id="<?php echo $item['id']; ?>" class="list-group-item" data-toggle="modal" data-target=".bs-example-modal-sm">
@@ -27,6 +27,7 @@
     </table>
     </div>
 </section>
+</div>
 <div class="clearfix"></div>
 
 
@@ -69,8 +70,6 @@
     $(document).ready(function () {
         $('#frm-check-user').on('submit', function(event) {
             event.preventDefault();
-            //alert('hola');
-            
             $.ajax({
                 url: $(this).attr('action'),
                 type: $(this).attr('method'),
@@ -97,6 +96,8 @@
     $(document).ready(function () {
         $('.list-group-item').on('click', function(){
             $('#hid_idprograma').val($(this).attr('id'));
+            //$(this).addClass('active');
         });
     });
+
 </script>

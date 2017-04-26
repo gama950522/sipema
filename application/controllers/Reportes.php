@@ -12,8 +12,6 @@ class Reportes extends CI_Controller {
 
 	public function index()
 	{
-		//$this->load->view('reportes/lista_reportes');
-		//echo APPPATH;
 		$this->pdf->Output('I', 'reporte-'.'121', TRUE);
 	}
 
@@ -25,7 +23,6 @@ class Reportes extends CI_Controller {
 		}
 		else
 		{
-
 		}
 	}
 

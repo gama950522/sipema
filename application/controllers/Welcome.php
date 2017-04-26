@@ -8,7 +8,6 @@ class Welcome extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        //$this->session->set_userdata('check_after', FALSE);
     }
 
     /**
@@ -31,22 +30,12 @@ class Welcome extends CI_Controller
         $this->load->view('layout/header');
         $this->load->view('welcome_message');
         $this->load->view('layout/footer');
-
-        // $nombre = gethostname(); //puede imprimir: sandie
-        // echo $nombre; 
-        // $ip = gethostbyname($nombre); 
-        // echo $ip; 
     }
 
     
     public function get()
     {
         $this->load->model('usuarios_model');
-       // foreach($ as $row)
-       // {
-       //     echo $row->username . '<br>';
-       //     echo $row->password;
-       // }
         echo json_encode($this->usuarios_model->get_all());
     }
 }

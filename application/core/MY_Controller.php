@@ -10,16 +10,17 @@ class MY_Controller extends CI_Controller
         parent::__construct();
     }
     /**
-     * Hace diferentes tipos de validaciones para cada tipo de dato
+     * 
      * @return array
      */
     public function validacion_campos()
     {
-        foreach ($this->input->post() as $key)
+        
+        foreach ($this->input->post() as $key => $value)
         {
             if (substr($key, 0, 3) === 'txt')
             {
-                $this->form_validation->set_rules($key, '', 'trim|required');
+                $this->form_validation->set_rules($key, '', 'trim');
             }
             elseif (substr($key, 0, 3) === 'int')
             {
@@ -27,32 +28,25 @@ class MY_Controller extends CI_Controller
             }
             elseif (substr($key, 0, 3) === 'str')
             {
-                $this->form_validation->set_rules($key, '', 'trim|required');
+                $this->form_validation->set_rules($key, '', 'trim');
             }
             elseif (substr($key, 0, 3) === 'dte')
             {
-                $this->form_validation->set_rules($key, '', 'trim|required');
+                $this->form_validation->set_rules($key, '', 'trim');
             }
             elseif (substr($key, 0, 3) === 'dbl')
             {
-                $this->form_validation->set_rules($key, '', 'trim|required');
+                $this->form_validation->set_rules($key, '', 'trim');
             }
             else
             {
                 $this->form_validation->set_rules($key, '', 'trim');
             }
         }
+//        echo '<pre>';
+//        print_r(form_error());
+//        echo '</pre>';
         return $this->form_validation->run();
-    }
-
-    public function get_data()
-    {
-        $data = array();
-        foreach ($this->input->post() as $key => $value) 
-        {
-            $data[substr($key, 3)] = htmlentities(mb_strtoupper($value), ENT_QUOTES);
-        }
-        return $data;
     }
 
 }

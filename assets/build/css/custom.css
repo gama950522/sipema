@@ -1,6 +1,6 @@
 
 body{
-    background: #f9f9f9;
+    background: #fff;
     padding-bottom: 0;
     padding-top: 15px;
 }
@@ -23,6 +23,30 @@ table > tbody > tr > td > input[type=number] {
 .table-title-left {
     text-align: left !important;
     background-color: #f1f1f1;
+}
+
+td > .form-control-feedback {
+    top: 5px !important;
+}
+
+.table-bordered.table-indicadores>thead>tr>th, 
+.table-bordered.table-indicadores>tbody>tr>th, 
+.table-bordered.table-indicadores>tfoot>tr>th, 
+.table-bordered.table-indicadores>thead>tr>td, 
+.table-bordered.table-indicadores>tbody>tr>td, 
+.table-bordered.table-indicadores>tfoot>tr>td {
+    border: 1px solid #eaeaea;
+}
+
+.table-indicadores {
+    background: #fff;
+}
+.table-indicadores > tbody > tr > td {
+    padding: 5px 0 !important;
+}
+.table-indicadores > tbody > tr > td > input {
+    padding: 5px 0 !important;
+    background-color: transparent;
 }
 
 .table-title-center {
@@ -282,6 +306,7 @@ textarea{
         overflow-y: hidden;
         overflow-x: scroll;
         -ms-overflow-style: -ms-autohiding-scrollbar;
-        border: 1px solid #ddd;
+        
+        border-width: 0 1px;
         -webkit-overflow-scrolling: touch;
     }

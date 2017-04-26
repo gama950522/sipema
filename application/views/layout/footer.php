@@ -30,6 +30,10 @@
                         .addClass('has-feedback');
                 $(this).after('<span class="fa fa-info-circle form-control-feedback" aria-hidden="true"></span>');
             }
+        }).on('focus', function ()
+        {
+            $(this).closest('.form-group').removeClass('has-error').removeClass('has-feedback');
+            $(this).closest('.form-group').find('span').remove();
         });
     });
 </script>
@@ -65,6 +69,7 @@
                                 alert('Algo no salió bien intentalo mas tarde');
                                 $(this).reset();
                                 $('body').waitMe('hide');
+                                console.log(data);
                             }
                             //console.log(data.values);
                         }, 4000);

@@ -29,12 +29,12 @@ class Catalogos_model extends CI_Model {
 		return $result->result_array();
 	}
 
-	public function get_nombre_categoria($id='')
+	public function get_nombre_categoria($table, $id='')
 	{
 		$this->db->select('nombre');
 		//$this->db->from('cat_sipema');
 		$this->db->where('id', $id);
-		$ids = $this->db->get('cat_sipema', 1);
+		$ids = $this->db->get($table, 1);
 		return $ids->row();
 	}
 
@@ -45,6 +45,26 @@ class Catalogos_model extends CI_Model {
 
 		return $result->result_array();
 	}
+
+	public function get_current_view($id='')
+	{
+		$this->db->where('id', $id);
+		$result = $this->db->get('cat_sub_programas');
+
+		return $result->row_array();
+	}
+
+	public function get_direcciones()
+	{
+		return $this->db->get('direcciones')->result_array();
+	}
+
+	public function get_view_control_indicadores($id='')
+	{
+		$this->db->where('id', $id);
+		return $this->db->get('direcciones')->row_array();
+	}
+
 
 }
 

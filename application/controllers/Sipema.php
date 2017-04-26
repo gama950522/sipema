@@ -33,7 +33,7 @@ class Sipema extends MY_Controller
         if ($value !== '' && in_array($value, $columns))
         {
             $data['info']      = $this->catalogos_model->get_programas($value);
-            $data['categoria'] = $this->catalogos_model->get_nombre_categoria($value);
+            $data['categoria'] = $this->catalogos_model->get_nombre_categoria('cat_sipema', $value);
             $this->load->view('layout/header', $data);
             $this->load->view('sipema/subprogramas');
             $this->load->view('layout/footer');
@@ -51,6 +51,7 @@ class Sipema extends MY_Controller
         if ($value !== '' && in_array($value, $columns))
         {
             $data['info'] = $this->catalogos_model->get_subprogramas($value);
+            $data['categoria'] = $this->catalogos_model->get_nombre_categoria('cat_programas',$value);
             $this->load->view('layout/header', $data);
             $this->load->view('sipema/division_programas');
             $this->load->view('layout/footer');
@@ -67,10 +68,11 @@ class Sipema extends MY_Controller
         $columns = array_column($ids, 'id');
         if ($value !== '' && in_array($value, $columns))
         {
-            $data['info']          = $this->catalogos_model->get_subprogramas($value);
+            $data['info']          = $this->catalogos_model->get_current_view($value);
+            $data['direcciones']   = $this->catalogos_model->get_direcciones();
             $data['idsubprograma'] = $value;
             $this->load->view('layout/header', $data);
-            $this->load->view('sipema/steps');
+            $this->load->view('sipema/'.($data['info']['descripcion'] === NULL ? 'mantenimiento': $data['info']['descripcion']));
             $this->load->view('layout/footer');
         }
         else
@@ -83,12 +85,16 @@ class Sipema extends MY_Controller
     {
         if ($this->validacion_campos())
         {
-            $data['success'] = $this->registros_model->guardar_poas($this->get_data())->result;
+            $data['success'] = $this->registros_model->add_data($this->input->post());
             $data['url']     = $_SERVER['HTTP_REFERER'];
         }
         else
         {
             $data['success'] = FALSE;
+            foreach ($this->input->post() as $key => $value) 
+            {
+                $data['messages'][$key] = form_error($key);
+            }
         }
         echo json_encode($data);
     }
@@ -101,7 +107,9 @@ class Sipema extends MY_Controller
         $value    = $this->input->post('hid_idprograma');
         $ids      = $this->catalogos_model->get_idcatalogo('cat_programas');
 
-        if ($this->session->userdata('user') === $username && $this->usuarios_model->is_same_password($password) && in_array($value, array_column($ids, 'id')))
+        if ($this->session->userdata('user') === $username 
+            && $this->usuarios_model->is_same_password($password) 
+            && in_array($value, array_column($ids, 'id')))
         {
             $this->session->set_userdata('check_after', TRUE);
             $data['url']     = site_url('sipema/programa/' . $value . '/');
@@ -113,5 +121,25 @@ class Sipema extends MY_Controller
             $data['success'] = FALSE;
         }
         echo json_encode($data);
+    }
+
+
+
+    public function set_table_direcciones($id_direccion)
+    {
+        
+        $view = $this->catalogos_model->get_view_control_indicadores($id_direccion)['descripcion'];
+        if ($view === NULL) 
+        {
+            $view = 'no_disponible';    
+        }
+        
+        echo json_encode($this->load->view( 'tables/'.$view));
+        // if(($data = $this->catalogos_model->get_control_direcciones($id_direccion)) !== NULL)
+        // {
+
+        // }
+
+        //echo json_encode($data);
     }
 }
