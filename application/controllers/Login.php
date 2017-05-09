@@ -35,7 +35,11 @@ class Login extends CI_Controller
     {
         $data_user['username'] = $this->input->post('inp_username');
         $data_user['password'] = hash('sha256', $this->input->post('psw_password'));
-        $res['action'] = $this->usuarios_model->authenticate($data_user);
+        if ($this->usuarios_model->authenticate($data_user) === TRUE)
+        {
+            //redirect('sipema');
+            $res['action'] = TRUE;
+        }
         $res['href']  = site_url('sipema/');
         $res['items'] = $data_user;
         echo json_encode($res);

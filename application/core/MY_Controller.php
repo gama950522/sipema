@@ -10,12 +10,13 @@ class MY_Controller extends CI_Controller
         parent::__construct();
     }
     /**
-     * 
+     * Meter más validaciones correspondientes a cada campo
      * @return array
      */
     public function validacion_campos()
     {
-        
+        //$this->form_validation->set_message('requred', 'El campo es requerido para continuar.');
+        //$this->form_validation->set_message('numeric', 'El campo solo debe contener valores numéricos.');
         foreach ($this->input->post() as $key => $value)
         {
             if (substr($key, 0, 3) === 'txt')
@@ -43,9 +44,8 @@ class MY_Controller extends CI_Controller
                 $this->form_validation->set_rules($key, '', 'trim');
             }
         }
-//        echo '<pre>';
-//        print_r(form_error());
-//        echo '</pre>';
+
+        // $this->$this->form_validation->set_error_delimiters('<div class="alert alert-danger" role="alert">','</div>');
         return $this->form_validation->run();
     }
 

@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-10 col-xs-8">
             <select class="form-control input-lg" id="sel-cat">
-                <option>Selecciona una categoría</option>
+                <option>-- SELECCIONA UNA CATEGORÍA --</option>
                 <?php $cont = 1; ?>
                 <?php foreach ($fields as $row): ?>
                     <option value="<?php echo $row['id'] ?>"><?php echo $cont.'. '. $row['nombre'] ?></option>
@@ -38,6 +38,7 @@
             var cat = document.getElementById('sel-cat').value;
             document.getElementById("enlace").href = "<?php echo site_url('sipema/categoria/'); ?>" + cat + "/";
         });
+        
 
     });
 </script>

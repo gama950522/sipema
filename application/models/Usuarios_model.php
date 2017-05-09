@@ -10,7 +10,7 @@ class Usuarios_model extends MY_Model
         if (is_array($data))
         {
             $data = $this->get_values($data);
-            $this->db->from('usuarios');
+            $this->db->from('usuario');
             $this->db->where('username', $data['username']);
             $this->db->where('password', $data['password']);
             $get = $this->db->get()->row_array();
@@ -22,7 +22,6 @@ class Usuarios_model extends MY_Model
                 'id'         => $get['id'],
                 'user'       => $get['username'],
                 'logged_in'  => TRUE,
-                'check_after'=> FALSE
             );
             $this->session->set_userdata($new_session);
             //print_r($data);
@@ -32,7 +31,7 @@ class Usuarios_model extends MY_Model
 
     public function get_all()
     {
-        return $this->db->get('usuarios')->result();
+        return $this->db->get('usuario')->result();
     }
 
     public function is_same_password($val = '')
@@ -40,7 +39,7 @@ class Usuarios_model extends MY_Model
         if ($val !== '') 
         {
             $this->db->select('password');
-            $this->db->from('usuarios');
+            $this->db->from('usuario');
             $this->db->where('username', $this->session->userdata('user'));
             $result = $this->db->get();
             if ($result->row()->password === $val) 

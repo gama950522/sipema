@@ -15,14 +15,85 @@ class Sipema extends MY_Controller
         }
         $this->load->model('registros_model');
         $this->load->model('catalogos_model');
+        $this->load->model('personal_model');
     }
 
     public function index()
     {
-        $data['fields'] = $this->catalogos_model->get_sipema();
-        $this->load->view('layout/header', $data);
-        $this->load->view('sipema/mir');
+        $perfil = $this->catalogos_model->get_permisos();
+        $data['personal'] = $this->personal_model->get_nombre_personal();
+        $data['programa'] = $this->catalogos_model->get_programa();
+        if ($perfil['nombre'] === 'Secretario') 
+        {
+            $this->load->view('layout/header_static', $data);
+            $this->load->view('sipema/acceso/secretario');
+        }
+        else if($perfil['nombre'] === 'Director (a)')
+        {
+            
+            $this->load->view('layout/header_static', $data);
+            $this->load->view('sipema/acceso');
+        }
+        else if ($perfil['nombre'] === 'Subdirector')
+        {
+            $data['subprograma'] = $this->catalogos_model->get_subprograma();
+            $this->load->view('layout/header_static', $data);
+            $this->load->view('sipema/acceso');
+        }
+        else if ($perfil['nombre'] === 'Administrador') 
+        {
+        }
+        else
+        {
+        }
         $this->load->view('layout/footer');
+    }
+
+    public function cartadescriptiva()
+    {
+        $data['personal'] = $this->personal_model->get_nombre_personal();
+    	$this->load->view('layout/header_static', $data);
+        $this->load->view('sipema/carta_descriptiva');
+        $this->load->view('layout/footer');
+    }
+
+    public function reportes()
+    {
+        $data['personal'] = $this->personal_model->get_nombre_personal();
+        $this->load->view('layout/header_static', $data);
+        $this->load->view('reportes/lista_reportes');
+        $this->load->view('layout/footer');
+    }
+
+
+    public function acceso()
+    {
+        // echo "<pre>";
+        // print_r($this->catalogos_model->get_permisos());
+        // echo "</pre>";
+
+
+        $perfil = $this->catalogos_model->get_permisos();
+        if ($perfil['nombre'] === 'Secretario') 
+        {
+            return 'Secretario';
+        }
+        else if($perfil['nombre'] === 'Director (a)')
+        {
+            return 'Director';
+        }
+        else if ($perfil['nombre'] === 'Subdirector')
+        {
+            return 'Subdirector';
+        }
+        else if ($perfil['nombre'] === 'Administrador') 
+        {
+            return 'Administrador';
+        }
+        else
+        {
+            return $perfil['nombre']. ' "Nivel de acceso no válido"';
+        }
     }
 
 
@@ -81,12 +152,25 @@ class Sipema extends MY_Controller
         }
     }
 
+
+    public function oki()
+    {
+        echo '<pre>';
+        echo json_encode($this->input->post());
+        echo '</pre>';
+
+        echo '<pre>';
+        print_r($this->input->post());
+        echo '</pre>';
+    }
+
     public function guardar_reg()
     {
         if ($this->validacion_campos())
         {
             $data['success'] = $this->registros_model->add_data($this->input->post());
-            $data['url']     = $_SERVER['HTTP_REFERER'];
+            $data['url']     = $data['success']  === TRUE ? $_SERVER['HTTP_REFERER'] : '';
+            $data['messages'] = NULL;
         }
         else
         {

@@ -18,7 +18,7 @@
                             </div>
                             <div class="stepwizard-step">
                                 <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-                                <p>Beneficio Social</p>
+                                <p>Beneficios</p>
                             </div>
                             <div class="stepwizard-step">
                                 <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
@@ -26,7 +26,7 @@
                             </div>
                             <div class="stepwizard-step">
                                 <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
-                                <p>Programación de Metas <br> nivel Componente (MIR)</p>
+                                <p>Programación de Metas <br> nivel Componente, fin y propósito (MIR)</p>
                             </div>
                             <div class="stepwizard-step">
                                 <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
@@ -305,7 +305,7 @@
                             <div class="col-md-12">
                                 <div style="margin-left: -31px; margin-right: -31px">
                                     <div class="table-responsive table-lg">
-                                        <table class="table thead-default table-bordered table-condensed" style="margin-bottom: 0; width: 2000px;" id="tbl-presupuesto">
+                                        <!-- <table class="table thead-default table-bordered table-condensed" style="margin-bottom: 0; width: 2000px;" id="tbl-presupuesto">
                                             <thead>
                                                 <tr>
                                                     <th colspan="2">
@@ -351,6 +351,107 @@
                                                     <td class="form-group"><input type="number" name="int_mto_dic[]" min="0" max="1000000" class="form-control" required="required"></td>
                                                 </tr>
                                             </tbody>
+                                        </table> -->
+                                        <table class="table thead-default table-bordered table-condensed" style="margin-bottom: 0; width: 2000px;" id="tbl-presupuesto">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">
+                                                        Objeto de gasto (COG)
+                                                    </th>
+                                                    <th rowspan="2" style="width: 100px">Montos</th>
+                                                    <th colspan="12">Meses</th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="width: 300px">Partida específica</th>
+                                                    <th style="width: 300px">Nombre de la partida</th>
+
+                                                    <th>Enero</th>
+                                                    <th>Febrero</th>
+                                                    <th>Marzo</th>
+                                                    <th>Abril</th>
+                                                    <th>Mayo</th>
+                                                    <th>Junio</th>
+                                                    <th>Julio</th>
+                                                    <th>Agosto</th>
+                                                    <th>Septiembre</th>
+                                                    <th>Octubre</th>
+                                                    <th>Noviembre</th>
+                                                    <th>Diciembre</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                        <td rowspan="4" class="form-group"><textarea name="str_partida_especifica[]" rows="12" class="form-control" required="required"></textarea></td>
+                                                        <td rowspan="4" class="form-group"><textarea name="str_nombre_partida[]" rows="12" class="form-control" required="required"></textarea></td>
+                                                        
+                                                        
+
+                                                        <th>Presupuesto autorizado</th>
+                                                        <td class="form-group"><input type="number" name="int_mto_ene[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_feb[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_mar[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_abr[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_may[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_jun[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_jul[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_ago[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_sep[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_oct[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_nov[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_dic[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Presupuesto modificado</th>
+                                                        
+                                                        <td class="form-group"><input type="number" name="int_mto_ene[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_feb[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_mar[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_abr[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_may[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_jun[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_jul[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_ago[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_sep[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_oct[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_nov[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_dic[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Presupuesto ejercido</th>
+                                                        
+                                                        <td class="form-group"><input type="number" name="int_mto_ene[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_feb[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_mar[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_abr[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_may[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_jun[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_jul[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_ago[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_sep[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_oct[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_nov[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                        <td class="form-group"><input type="number" name="int_mto_dic[]" min="0" max="1000000" class="form-control" required="required"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Porcentaje de variación</th>
+                                                        
+                                                        <td><span>%</span></td>
+                                                        <td><span>%</span></td>
+                                                        <td><span>%</span></td>
+                                                        <td><span>%</span></td>
+                                                        <td><span>%</span></td>
+                                                        <td><span>%</span></td>
+                                                        <td><span>%</span></td>
+                                                        <td><span>%</span></td>
+                                                        <td><span>%</span></td>
+                                                        <td><span>%</span></td>
+                                                        <td><span>%</span></td>
+                                                        <td><span>%</span></td>
+                                                    </tr>
+                                                    <tr id="separador">
+                                                        <td colspan="15">-</td>
+                                                    </tr>
+                                            </tbody>
                                         </table>
 
                                         <div class="row">
@@ -379,6 +480,86 @@
                                 </div>
                                 <div class="table-responsive">
                                     <div style="margin-left: -31px; margin-right: -31px">
+                                        <table class="table thead-default table-bordered table-condensed">
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="10"><span class="rotate">Programación / avance</span></th>
+                                                    <th colspan="2">Enero</th>
+                                                    <th colspan="2">Febrero</th>
+                                                    <th colspan="2">Marzo</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Resultado Alcanzado</th>
+                                                    <th>Resultado Programado</th>
+                                                    
+                                                    <th>Resultado Alcanzado</th>
+                                                    <th>Resultado Programado</th>
+
+                                                    <th>Resultado Alcanzado</th>
+                                                    <th>Resultado Programado</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="number" name="" value="" placeholder=""></td>
+                                                    <td><input type="number" name="" value="" placeholder=""></td>
+                                                    <td><input type="number" name="" value="" placeholder=""></td>
+                                                    <td><input type="number" name="" value="" placeholder=""></td>
+                                                    <td><input type="number" name="" value="" placeholder=""></td>
+                                                    <td><input type="number" name="" value="" placeholder=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="2">Reporte</th>
+                                                    <th colspan="2">Reporte</th>
+                                                    <th colspan="2">Reporte</th>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><textarea name="" class="form-control"></textarea> </td>
+                                                    <td colspan="2"><textarea name="" class="form-control"></textarea> </td>
+                                                    <td colspan="2"><textarea name="" class="form-control"></textarea> </td>
+                                                </tr>
+
+                                                
+                                                <tr>
+                                                    <th>Abril</th>
+                                                    <th>Mayo</th>
+                                                    <th>Junio</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><textarea name="txt_comp_abr" id="txt_comp_abr" rows="5" class="form-control"></textarea></td>
+                                                    <td><textarea name="txt_comp_may" id="txt_comp_may" rows="5" class="form-control"></textarea></td>
+                                                    <td><textarea name="txt_comp_jun" id="txt_comp_jun" rows="5" class="form-control"></textarea></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Julio</th>
+                                                    <th>Agosto</th>
+                                                    <th>Septiembre</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><textarea name="txt_comp_jul" id="txt_comp_jul" rows="5" class="form-control"></textarea></td>
+                                                    <td><textarea name="txt_comp_ago" id="txt_comp_ago" rows="5" class="form-control"></textarea></td>
+                                                    <td><textarea name="txt_comp_sep" id="txt_comp_sep" rows="5" class="form-control"></textarea></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Octubre</th>
+                                                    <th>Noviembre</th>
+                                                    <th>Diciembre</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><textarea name="txt_comp_oct" id="txt_comp_oct" rows="5" class="form-control"></textarea></td>
+                                                    <td><textarea name="txt_comp_nov" id="txt_comp_nov" rows="5" class="form-control"></textarea></td>
+                                                    <td><textarea name="txt_comp_dic" id="txt_comp_dic" rows="5" class="form-control"></textarea></td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="3">Meta final</th>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" class="form-group">
+                                                        <textarea name="txt_comp_meta_final" id="txt_comp_meta_final" rows="5" class="form-control" required="required"></textarea>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- <div style="margin-left: -31px; margin-right: -31px">
                                         <table class="table thead-default table-bordered table-condensed">
                                             <tbody>
                                                 <tr>
@@ -432,7 +613,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -789,7 +970,7 @@
             {
                 if (!curInputs[i].validity.valid)
                 {
-                    isValid = false;
+                    //isValid = false;
                     $(curInputs[i]).closest('.form-group')
                             .addClass('has-error')
                             .addClass('has-feedback');
@@ -888,7 +1069,7 @@
     function newrow(e)
     {
         var id_table = $(e).parent().parent().parent().children('table').attr('id');
-        $("#" + id_table + " tbody tr:eq(0)").clone(true).appendTo("#" + id_table + "");
+        $("#" + id_table + " tbody #separador").siblings().clone(true).appendTo("#" + id_table + "");
 
         $("#" + id_table + " tbody tr:last td input")
                 .each(function (index, el) {
@@ -913,20 +1094,6 @@
             }
         }
     }
-    // function format(input)
-    // {
-    //     var num = input.value.replace(/\./g, '');
-    //     if (!isNaN(num))
-    //     {
-    //         num = num.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
-    //         num = num.split('').reverse().join('').replace(/^[\.]/, '');
-    //         input.value = "$ " + num;
-    //     } else
-    //     {
-    //         //alert('Solo se permiten numeros');
-    //         input.value = input.value.replace(/[^\d\.]*/g, '');
-    //     }
-    // }
 </script>
 
 <script type="text/javascript">

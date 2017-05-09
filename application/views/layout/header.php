@@ -22,7 +22,6 @@
         <link href="<?php echo site_url('assets/build/css/style.css') ?>" rel="stylesheet">
         <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
         <script src="<?php echo site_url('assets/dist/jquery/jquery.min.js') ?>"></script>
-        <?php echo smiley_js('comment_textarea_alias', 'coments'); ?>
     
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -49,7 +48,7 @@
                             <li><a href="<?php echo site_url('#') ?>" type="button" disabled="disabled">Contrarecibos</a></li>
                             <li><a href="<?php echo site_url('#') ?>" type="button" disabled="disabled">Inventarios</a></li>
                             <li><a href="<?php echo site_url('#') ?>" type="button" disabled="disabled">Correspondencia</a></li>
-                            <li><a href="<?php echo site_url('login/') ?>">SIMEPA</a></li>
+                            <li><a href="<?php echo site_url('login/') ?>">SIPEMA</a></li>
                         </ul>
                     </nav>
                 </div>

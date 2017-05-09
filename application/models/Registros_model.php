@@ -163,6 +163,8 @@ class Registros_model extends MY_Model
         $insert_desglose_viaticos = $this->get_current_data($desglose_viaticos, $ids['viaticos']['id'], 'id_viaticos');
         $this->insert_multiple_data('desglose_viaticos', $insert_desglose_viaticos);
 
+
+        
         $reporte_sipema = array(
             '_id_beneficio_social'         => $ids['beneficio_social']['id'],
             '_id_carta_descriptiva'        => $ids['carta_descriptiva']['id'],

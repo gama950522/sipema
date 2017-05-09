@@ -98,6 +98,9 @@
             $('#hid_idprograma').val($(this).attr('id'));
             //$(this).addClass('active');
         });
+        $('.modal').on('hidden.bs.modal', function (e) {
+            $('frm-check-user').reset();
+        });
     });
 
 </script>

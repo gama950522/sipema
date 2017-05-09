@@ -35,7 +35,8 @@ class MY_Model extends CI_Model {
      * @param array  $data   Datos que se van a insertar
      */
     protected function insert_multiple_data($table, $data) {
-        foreach ($data as $value) {
+        foreach ($data as $value) 
+        {
             $this->db->insert($table, $value);
         }
     }
