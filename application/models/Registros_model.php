@@ -164,7 +164,7 @@ class Registros_model extends MY_Model
         $this->insert_multiple_data('desglose_viaticos', $insert_desglose_viaticos);
 
 
-        
+
         $reporte_sipema = array(
             '_id_beneficio_social'         => $ids['beneficio_social']['id'],
             '_id_carta_descriptiva'        => $ids['carta_descriptiva']['id'],
@@ -188,6 +188,31 @@ class Registros_model extends MY_Model
         $query = $this->db->select('*')->from('carta_descriptiva')->where('id', $carta['id'])->get();
         return $query->row();
     }
+
+    public function add_registro($table = '', $data = array(), $transaction = FALSE)
+    {
+        if ( ! $transaction) { $this->db->trans_start(); }
+        foreach ($data as $key => $value)
+        {
+            /* Si dentro del Array $data (padre) hay otro Array (hijo) entonces 
+             * llamar nuevamente a esta función recursiva se quite del Array padre. 
+             */
+            if (is_array($value))
+            {
+                $this->add_registro($key, $value, TRUE);
+                unset($data[$key]); //quita el elemento que contenga un array dentro de $data
+                continue;
+            }
+
+        }
+        if (count($data) > 0)
+        {
+            $this->db->insert($table, $data);
+        }
+        $this->db->trans_complete();
+    }
+
+    
 
 }
 

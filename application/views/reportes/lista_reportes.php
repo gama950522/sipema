@@ -38,8 +38,7 @@
             </div>
         </div>
         <div class="form-group">
-
-            <button type="button" class="btn btn-default btn-block"><i class="fa fa-print"></i>Imprimir</button>
+            <button type="button" class="btn btn-default btn-block"><i class="fa fa-print"></i>&nbsp; Generar</button>
         </div>
     </div>
 </div>

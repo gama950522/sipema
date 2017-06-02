@@ -531,3 +531,24 @@ input:not([type="submit"])
 {
     /*display: none;*/
 }
+
+.page-header{
+    margin-top: 20px;
+}
+
+footer, .footer{
+    margin-top: 20px;
+}
+
+.form-control:focus[readonly]{
+    border-color: #ccc;
+    box-shadow: none;
+}
+.form-control{
+    box-shadow: none;
+}
+
+output.form-control{
+  background-color: #eee;
+  cursor: default;
+}

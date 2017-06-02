@@ -24,8 +24,7 @@
         <link href="<?php echo site_url('assets/build/css/style.css') ?>" rel="stylesheet">
         <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
         <script src="<?php echo site_url('assets/dist/jquery/jquery.min.js') ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url('assets/build/js/escala_colores.js') ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url('assets/build/js/funciones.js') ?>"></script>
+        
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -57,11 +56,21 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">S<small>IPEMA</small> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="<?php echo base_url('sipema/cartadescriptiva') ?>">Carta descriptiva</a></li>
-                                <li><a href="<?php echo base_url('#') ?>">Beneficios</a></li>
-                                <li><a href="<?php echo base_url('#') ?>">Presupuesto desaregado</a></li>
-                                <li><a href="<?php echo base_url('#') ?>">Programación de metas</a></li>
-                                <li><a href="<?php echo base_url('#') ?>">Viáticos</a></li>
+                                <?php if (! FALSE) : ?>
+                                    <li><a href="<?php echo base_url('sipema/cartadescriptiva') ?>">Carta descriptiva</a></li>
+                                <?php endif; ?>
+                                <?php if (TRUE) : ?>
+                                    <li><a href="<?php echo base_url('sipema/benefcios') ?>">Beneficios</a></li>
+                                <?php endif; ?>
+                                <?php if (TRUE) : ?>
+                                    <li><a href="<?php echo base_url('sipema/presupuestodesagregado') ?>">Presupuesto desaregado</a></li>
+                                <?php endif; ?>
+                                <?php if (TRUE) : ?>
+                                    <li><a href="<?php echo base_url('sipema/programacionmetas') ?>">Programación de metas</a></li>
+                                <?php endif; ?>
+                                <?php if (TRUE) : ?>
+                                    <li><a href="<?php echo base_url('sipema/viaticos') ?>">Viáticos</a></li>
+                                <?php endif; ?>
                             </ul>
                         </li>
                         <li><a href="<?php echo base_url('sipema/reportes') ?>">Reportes</a></li>

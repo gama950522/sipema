@@ -4,7 +4,7 @@ $(document).ready(function () {
         allWells        = $('.setup-content'),
         allNextBtn      = $('.nextBtn');
 
-        allWells.hide();
+        //allWells.hide();
 
         navListItems.click(function (e)
         {
@@ -24,8 +24,8 @@ $(document).ready(function () {
         allNextBtn.click(function ()
         {
             var curStep = $(this).closest(".setup-content"),
-                    curStepBtn = curStep.attr("id"),
-                    nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+                    //curStepBtn = curStep.attr("id"),
+                    //nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
                     curInputs = curStep.find(":input"),
                     isValid = true;
             $(".form-group").removeClass('has-error').removeClass('has-feedback');
@@ -34,19 +34,19 @@ $(document).ready(function () {
             {
                 if (!curInputs[i].validity.valid)
                 {
-                    //isValid = false;
+                    isValid = false;
                     $(curInputs[i]).closest('.form-group')
                             .addClass('has-error')
                             .addClass('has-feedback');
                     $(curInputs[i]).after('<span class="fa fa-info-circle form-control-feedback" aria-hidden="true"></span>');
-                    //$(curInputs[i]).closest(".form-group").addClass("has-error");
                 }
             }
             if (isValid)
             {
                 nextStepWizard.removeAttr('disabled').trigger('click');
                 $('#error').html('');
-            } else
+            } 
+            else
             {
                 $('#error').html('<div class="col-md-12">' +
                         '<div class="alert alert-danger alert-dismissible fade in" role="alert">' +
@@ -192,11 +192,19 @@ $(document).ready(function () {
 
         $("#datepicker input").datepicker({
             format: 'yyyy-mm-dd',
-            language: "es"
+            language: "es",
+            autoclose: true,
+            calendarWeeks: true,
+            toggleActive: true,
+            keyboardNavigation: false,
+            disableTouchKeyboard: false,
+            enableOnReadonly: false,
         });
+
 
         $('form').on('submit', function (evt)
         {
+            evt.preventDefault();
             if ($(this).attr('id') === 'form-reg')
             {
                 evt.preventDefault();

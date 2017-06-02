@@ -49,6 +49,25 @@ class MY_Controller extends CI_Controller
         return $this->form_validation->run();
     }
 
+
+    protected function get_values(array $array, $key = '') {
+        foreach ($array as $clave => $valor) {
+            if (is_array($valor)) {
+                $array[$clave] = $this->get_values($valor, $clave);
+                continue;
+            }
+            if ((substr($clave, 0, 3) === 'int' 
+                OR substr($clave, 0, 3) === 'dbl')
+                OR (substr($key, 0, 3) === 'int' 
+                OR substr($key, 0, 3) === 'dbl')) {
+                $array[$clave] = empty($valor) ? 0 : htmlentities($valor, ENT_QUOTES);
+            } else {
+                $array[$clave] = empty($valor) ? NULL : htmlentities(mb_strtoupper($valor), ENT_QUOTES);
+            }
+        }
+        return $array;
+    }
+
 }
 /* End of file MY_Controller.php */
 /* Location: ./application/core/MY_Controller.php */
